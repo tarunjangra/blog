@@ -1,0 +1,52 @@
+name: tarunjangra.com
+url: http://www.tarunjangra.com
+title: "Tarun Jangra"
+author:
+  name: "Tarun Jangra"
+  email: tarun@izap.in
+description: "Tarun Jangra"
+copyright: "(c) Tarun Jangra, 2016"
+encoding: utf-8
+timezone: Asia/Kolkata
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - fenced_code_blocks
+    - autolink
+    - tables
+    - with_toc_data
+permalink: :year/:month/:day/:title.html
+paginate: 10
+paginate_path: "p/:num"
+excerpt_separator: <!--more-->
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-plantuml
+  - jekyll-sitemap
+  - jekyll-related-posts
+
+# see https://github.com/alfanick/jekyll-related-posts
+related:
+  max_count: 5
+  min_score: 0.1
+  accuracy: 0.75
+
+# jekyll-feed
+feed:
+  title: tarunjangra.com
+  subtitle: Programming Blog
+  path: rss.xml
+
+sass:
+  style: compressed
+  deploy_style: compressed
+  compile_in_place: false
+
+# see https://github.com/pattex/jekyll-tagging
+tag_page_layout: tag-index
+tag_page_dir: tag
+exclude: [vendor]

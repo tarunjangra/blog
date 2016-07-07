@@ -1,0 +1,100 @@
+---
+layout: default
+title: "Blog About Computers"
+description: |
+  Tarun Jangra blogging about object-oriented programming, AWS Services,
+  project management, philosophy, and startup;
+  at least one new post every week.
+keywords:
+  - PHP blog
+  - Go
+  - software development blog
+  - programming blog
+  - Tarun Jangra blog
+  - quality of software
+  - software blog
+  - high quality programming
+---
+
+{% for post in paginator.posts %}
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%-d %B %Y" }}
+            </time>
+          </li>
+          <li>
+            {{ post.content | count_words }} words
+          </li>
+          <li>
+            {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+            {% if time == '1' %}
+              a minute
+            {% else %}
+              {% case time %}
+                {% when '2' %}
+                  two
+                {% when '3' %}
+                  three
+                {% when '4' %}
+                  four
+                {% when '5' %}
+                  five
+                {% else %}
+                  {{ time }}
+              {% endcase %}
+              minutes
+            {% endif %}
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        {{ post.excerpt }}
+      </div>
+      <p>
+        <a href="{{ post.url }}">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+{% endfor %}
+
+<div class="wrapper">
+  <footer>
+    <div class="pagination">
+      <div style="float: left;">
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+            <a href="/"><i class="icon icon-fast-backward"></i></a>
+          {% else %}
+            <a href="/p/{{ paginator.previous_page }}"><i class="icon icon-fast-backward"></i></a>
+          {% endif %}
+        {% else %}
+          <span class="mute"><i class="icon icon-fast-backward"></i></span>
+        {% endif %}
+      </div>
+      page {{ paginator.page }} of {{ paginator.total_pages }}
+      <div style="float: right;">
+        {% if paginator.next_page %}
+          <a href="/p/{{ paginator.next_page }}"><i class="icon icon-fast-forward"></i></a>
+        {% else %}
+          <span class="mute"><i class="icon icon-fast-forward"></i></span>
+        {% endif %}
+      </div>
+    </div>
+  </footer>
+</div>
