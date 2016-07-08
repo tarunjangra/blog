@@ -18,7 +18,7 @@ keywords:
 exclude_from_search: true
 ---
 
-{% badge /images/about/tarun-jangra.jpg 300 300 %}
+{% badge /images/about/tarun-jangra.jpg 300 %}
 
 This is Tarun Jangra, a programmer, a founder and an investor.
 
