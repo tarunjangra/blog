@@ -7,7 +7,7 @@ author:
 description: "Tarun Jangra"
 copyright: "(c) Tarun Jangra, 2016"
 encoding: utf-8
-timezone: Asia/Kolkata
+timezone: America/San_Francisco
 markdown: redcarpet
 highlighter: pygments
 redcarpet:
