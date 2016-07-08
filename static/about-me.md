@@ -18,20 +18,18 @@ keywords:
 exclude_from_search: true
 ---
 
-{% badge /images/about/tarun-jangra.jpg %}
+{% badge /images/about/tarun-jangra.jpg 300 300 %}
 
 This is Tarun Jangra, a programmer, a founder and an investor.
 
 As a **programmer** I have started my journey in 2002 when i earned
 "Oracle Certified Professional Developer 6i" during my Gradution.
-Since then, i've worked/learned different streams (Designing, Programming, Server Administration)
-of computer science according to the demand of my job. Here i do [poetry](https://github.com/tarunjangra)
-mostly in PHP, but also in Ruby, JavaScript, Go and Typescript.
+Since then, i've worked/learned different streams (Designing, Programming, Server 
+Administration) of computer science according to the demand of my job. 
+Here i do [poetry](https://github.com/tarunjangra) mostly in PHP, but also in Ruby,
+JavaScript, Go and Typescript.
 
-I'm very much passionate about Servers complex environment. That's how i've earned Amazon Certifications. Now
-i'm Amazon Certified Solution Architect and Amazon Certified Developer. I love to extend such skills by keep
-working in different direction of DevOps using Chef, Docker, Ansible and so on.
-
+I'm very much passionate about Servers complex environment. That's how i've earned Amazon Certifications. Now i'm Amazon Certified Solution Architect and Amazon Certified Developer. I love to extend such skills by keep working in different direction of DevOps using Chef, Docker, Ansible and so on.
 
 I'm a Engineering co-founder and a lead architect of
 [yoursports.com](https://www.yoursports.com) 
@@ -43,7 +41,6 @@ Besides that, I'm a proud holder of
 [Amazon Solution Architect - Associate in Feb 2016](https://aws.amazon.com/certification/certified-solutions-architect-associate/),
 [Amazon Developer Certified - Associate in Dec 2015](https://aws.amazon.com/certification/certified-developer-associate/).
 
-
 As a **founder** have founded [iZAP.in](http://www.izap.in/),
 a software development company providing full stack solutions
 Which was mainly focused on app development, Recently (Feb 2016) i've founded
@@ -52,7 +49,6 @@ California. And we are trying to provide exclusive DevOps Services through
 Technofox LLC.
 
 Beside that, i'm Engineering co-founder at [yoursports.com](https://www.yoursports.com)
-
 
 Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
