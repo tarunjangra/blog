@@ -20,12 +20,11 @@ addons:
     - fontforge
     - liblapack-dev
 before_install:
-- openssl aes-256-cbc -K $encrypted_185c9067a251_key -iv $encrypted_185c9067a251_iv
-  -in id_rsa.enc -out id_rsa -d
 - set -e
 - git config --global user.email "tarun@izap.in"
 - git config --global user.name "tarunjangra"
-- openssl aes-256-cbc -K $encrypted_bb3jjdh3_key -iv $encrypted_bb3jjdh3_iv -in id_rsa.enc
+- openssl aes-256-cbc -K $encrypted_185c9067a251_key -iv $encrypted_185c9067a251_iv
+  -in id_rsa.enc -out id_rsa -d
   -out id_rsa -d
 - mv id_rsa ~/.ssh
 - chmod 600 ~/.ssh/id_rsa
