@@ -11,8 +11,7 @@ module Yegor
         @url = src
       end
       if !@url.start_with?('http')
-        base = "http://tarunjangra.com#{@url}";
-        @url = CGI::escape(base)
+        @url = "http://tarunjangra.com#{@url}";
       end
     end
     def to_s
