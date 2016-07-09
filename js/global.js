@@ -13,7 +13,7 @@ $(
   }
 );
 
-var disqus_shortname = 'yegor256';
+var disqus_shortname = 'wwwtarunjangracom';
 var disqus_url = document.location.href.split('?')[0].split('#')[0];
 $(
   function() {
