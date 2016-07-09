@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "icons";
-  src: url("http://tarunjangra.com/css/icons?1468098449");
-  src: url("http://tarunjangra.com/css/icons?1468098449") format("embedded-opentype"),
-       url("http://tarunjangra.com/css/icons?1468098449") format("woff"),
-       url("http://tarunjangra.com/css/icons?1468098449") format("truetype"),
-       url("http://tarunjangra.com/css/icons?1468098449") format("svg");
+  src: url("http://tarunjangra.com/css/icons.eot?1468100142");
+  src: url("http://tarunjangra.com/css/icons.eot?#iefix?1468100142") format("embedded-opentype"),
+       url("http://tarunjangra.com/css/icons.woff?1468100142") format("woff"),
+       url("http://tarunjangra.com/css/icons.ttf?1468100142") format("truetype"),
+       url("http://tarunjangra.com/css/icons.svg#icons?1468100142") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "icons";
-    src: url("http://tarunjangra.com/css/icons?1468098449") format("svg");
+    src: url("http://tarunjangra.com/css/icons.svg#icons?1468100142") format("svg");
   }
 }
 
