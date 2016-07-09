@@ -39,7 +39,9 @@ module Yegor
       super
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
-      @width = opts[1].strip
+      if opts[1]
+        @width = opts[1].strip
+      end
       if opts[2]
         @url = opts[2].strip
       end
@@ -47,7 +49,12 @@ module Yegor
 
     def render(context)
       img = "<img src='#{Yegor::Img.new(@src, context)}'" +
-        " style='width:#{@width}px;max-width:100%;' alt='badge'/>"
+        " style='"
+        if @width
+          img += "width:#{@width}px;max-width:100%;' alt='badge'/>"
+        else
+          img += "max-width:100%;' alt='badge'/>"
+        end
       if @url
         img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>"
       end
