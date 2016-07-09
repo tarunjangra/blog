@@ -11,7 +11,7 @@ module Yegor
         @url = src
       end
       if !@url.start_with?('http')
-        base = "http://www.tarunjangra.com#{@url}";
+        base = "http://tarunjangra.com#{@url}";
         @url = "http://cf.jare.io/?u=#{CGI::escape(base)}"
       end
     end
