@@ -12,7 +12,7 @@ module Yegor
       end
       if !@url.start_with?('http')
         base = "http://tarunjangra.com#{@url}";
-        @url = "http://cf.jare.io/?u=#{CGI::escape(base)}"
+        @url = CGI::escape(base)
       end
     end
     def to_s
