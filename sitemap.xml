@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.tarunjangra.com/2016/07/09/hello-world.html</loc>
+<lastmod>2016-07-09T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://www.tarunjangra.com/404.html</loc>
 </url>
 <url>
 <loc>http://www.tarunjangra.com/about-me.html</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/best.html</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/contents.html</loc>
 </url>
 <url>
 <loc>http://www.tarunjangra.com/</loc>
@@ -17,5 +27,21 @@
 </url>
 <url>
 <loc>http://www.tarunjangra.com/unsubscribed.html</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/tag/blogging</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/tag/tarun%2520jangra</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/tag/jekyll</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/tag/jangra</loc>
+</url>
+<url>
+<loc>http://www.tarunjangra.com/2016/07/09/hello-world.amp.html</loc>
+<lastmod>2016-07-09T07:10:57+00:00</lastmod>
 </url>
 </urlset>

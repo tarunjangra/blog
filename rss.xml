@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-08T16:04:31+00:00</updated><id>http://www.tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://www.tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://www.tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-09T07:10:55+00:00</updated><id>http://www.tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://www.tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://www.tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://www.tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
+and github for hosting this blog.&lt;/p&gt;
+
+&lt;p&gt;As described in &lt;a href=&quot;/about-me.html&quot;&gt;About Me&lt;/a&gt;, I&amp;#39;m passionate about programming, cloud computing,
+Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.&lt;/p&gt;
+
+&lt;p&gt;So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.&lt;/p&gt;</content><category term="blogging" /><category term="tarun jangra" /><category term="jekyll" /><category term="jangra" /><summary>In this blog i do not have any thing particular to talk about. So it is just an introduction
+of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
+and github for hosting this blog.
+
+As described in About Me, I&amp;#39;m passionate about programming, cloud computing,
+Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.
+
+So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.</summary></entry></feed>
