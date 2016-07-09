@@ -22,7 +22,7 @@ $(
       );
       var url = encodeURIComponent(document.location.href.split('?')[0].split('#')[0]);
       $.getJSON(
-        'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + url,
+        'http://free.sharedcount.com/?apikey=33fe42ed0045fb028ccd18be4770761de59927fd&url=' + url,
         function (data) {
           if (data.GooglePlusOne !== 0) {
             $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
