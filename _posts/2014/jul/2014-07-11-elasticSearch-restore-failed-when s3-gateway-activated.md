@@ -20,6 +20,8 @@ Hufffff, Unfortunately i met this edge case. I have recovered from this situatio
 - I am taking regular snapshots of my indexes.
 - I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.
 
+<!--more-->
+
 Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.
 
 Struggling here and there, i came to know that i am suffered with Bug in ElasticSearch. I tried to follow instruction at the end of this thread where i was suppose to update/edit metadata file from s3-bucket. I did that but no luck.
