@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ElasticSearch restore failed when s3-gateway is activated"
-date: 2016-07-09
+date: 2014-07-11
 description: |
   ElasticSearch restore failed when s3-gateway is activated. And it made me in the
   kind of situation which are really tough to recorver from.
