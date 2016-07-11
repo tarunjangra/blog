@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?ac0a2e9"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?ac0a2e9"/>
+    <link rel="shortcut icon" href="/favicon.ico?4b0243e"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?4b0243e"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?ac0a2e9"/>
-    <link rel="stylesheet" href="/css/icons.css?ac0a2e9"/>
+    <link rel="stylesheet" href="/css/layout.css?4b0243e"/>
+    <link rel="stylesheet" href="/css/icons.css?4b0243e"/>
     <link rel="canonical" href="http://tarunjangra.com/" />
     <link rel="amphtml" href="http://tarunjangra.com/" />
     <title>Blog About Programming, Cloud, Entrepreneurship - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?ac0a2e9"></script>
+    <script src="/js/global.js?4b0243e"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -190,33 +190,6 @@ Entrepreneurship. So that&#39;s whyat i&#39;ll be writing about.</p>
 <li>I am taking regular snapshots of my indexes.</li>
 <li>I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.</li>
 </ul>
-
-<p>Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.</p>
-
-<p>Struggling here and there, i came to know that i am suffered with Bug in ElasticSearch. I tried to follow instruction at the end of this thread where i was suppose to update/edit metadata file from s3-bucket. I did that but no luck.</p>
-
-<p>Problem i found, All indexes and shards suppose to have _source folders. And i had so many indexes and their shards where _source folder was missing. And those indexes were unrecoverable. I have no solutions at that place and was literately sweating in Air Conditioned Room. </p>
-
-<p>Then one of my colleague, Narinder Kaur has joined me. And she gave me necessary support and we tried some more messes to fix it. Since i already made a mistake, So i took one backup of existing elasticsearch so that i would be able to back at same place in case of any other mess. And solutions we were planning to try was totally crap.</p>
-
-<p>So, Solution we tried. and which actually works….. Wow!.</p>
-
-<ol>
-<li>I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.</li>
-<li>I stopped elasticsearch.</li>
-<li>I rename my old cluster (elasticsearch) to elasticsearch.original.</li>
-<li>Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.</li>
-<li>I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.</li>
-<li>Now i stop elasticsearch again.</li>
-<li>Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})
-<strong>Note</strong>: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.</li>
-<li>I copied all indexes as in 5th step.</li>
-<li>Restart ElasticSearch. and i found all indexes were recovered.</li>
-</ol>
-
-<p>Observation: Well you should run your all custom mappings in blank indexes. I found some errors because i did not execute my mapping.</p>
-
-<p>Thank god, Now all indexes were recovered. And Thanks to Narinder Kaur, she got me required support at that time.</p>
 
       </div>
       <p>
