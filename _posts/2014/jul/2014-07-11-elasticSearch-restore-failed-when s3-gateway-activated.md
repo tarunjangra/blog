@@ -15,10 +15,10 @@ tags:
 
 Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.
 
-# I am on ElasticSearch Version 1.1.0
-# I have two data nodes. One is primary and other is replica.
-# I am taking regular snapshots of my indexes.
-# I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.
+#. I am on ElasticSearch Version 1.1.0
+#. I have two data nodes. One is primary and other is replica.
+#. I am taking regular snapshots of my indexes.
+#. I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.
 
 Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.
 
@@ -30,16 +30,16 @@ Then one of my colleague, Narinder Kaur has joined me. And she gave me necessary
 
 So, Solution we tried. and which actually works….. Wow!.
 
-# I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.
-# I stopped elasticsearch.
-# I rename my old cluster (elasticsearch) to elasticsearch.original.
-# Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.
-# I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.
-# Now i stop elasticsearch again.
-# Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})
+#. I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.
+#. I stopped elasticsearch.
+#. I rename my old cluster (elasticsearch) to elasticsearch.original.
+#. Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.
+#. I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.
+#. Now i stop elasticsearch again.
+#. Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})
 **Note**: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.
-# I copied all indexes as in 5th step.
-# Restart ElasticSearch. and i found all indexes were recovered.
+#. I copied all indexes as in 5th step.
+#. Restart ElasticSearch. and i found all indexes were recovered.
 
 Observation: Well you should run your all custom mappings in blank indexes. I found some errors because i did not execute my mapping.
 
