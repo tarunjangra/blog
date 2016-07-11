@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-11T09:12:32+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-11T09:14:33+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -14,13 +14,13 @@ Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.
 
 So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
 
-&lt;h1 id=&quot;i-am-on-elasticsearch-version-1-1-0&quot;&gt;I am on ElasticSearch Version 1.1.0&lt;/h1&gt;
+&lt;h1 id=&quot;i-am-on-elasticsearch-version-1-1-0&quot;&gt;. I am on ElasticSearch Version 1.1.0&lt;/h1&gt;
 
-&lt;h1 id=&quot;i-have-two-data-nodes-one-is-primary-and-other-is-replica&quot;&gt;I have two data nodes. One is primary and other is replica.&lt;/h1&gt;
+&lt;h1 id=&quot;i-have-two-data-nodes-one-is-primary-and-other-is-replica&quot;&gt;. I have two data nodes. One is primary and other is replica.&lt;/h1&gt;
 
-&lt;h1 id=&quot;i-am-taking-regular-snapshots-of-my-indexes&quot;&gt;I am taking regular snapshots of my indexes.&lt;/h1&gt;
+&lt;h1 id=&quot;i-am-taking-regular-snapshots-of-my-indexes&quot;&gt;. I am taking regular snapshots of my indexes.&lt;/h1&gt;
 
-&lt;h1 id=&quot;i-am-no-more-taking-snapshots-so-i-have-installed-s3-gateway-plugin-to-keep-updating-s3-buckets-for-persistent-indexes&quot;&gt;I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.&lt;/h1&gt;
+&lt;h1 id=&quot;i-am-no-more-taking-snapshots-so-i-have-installed-s3-gateway-plugin-to-keep-updating-s3-buckets-for-persistent-indexes&quot;&gt;. I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.&lt;/h1&gt;
 
 &lt;p&gt;Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.&lt;/p&gt;
 
@@ -32,37 +32,37 @@ So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read
 
 &lt;p&gt;So, Solution we tried. and which actually works….. Wow!.&lt;/p&gt;
 
-&lt;h1 id=&quot;i-updated-my-elasticsearch-yml-and-remove-s3-gateway-settings-related-to-my-s3-bucket&quot;&gt;I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.&lt;/h1&gt;
+&lt;h1 id=&quot;i-updated-my-elasticsearch-yml-and-remove-s3-gateway-settings-related-to-my-s3-bucket&quot;&gt;. I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.&lt;/h1&gt;
 
-&lt;h1 id=&quot;i-stopped-elasticsearch&quot;&gt;I stopped elasticsearch.&lt;/h1&gt;
+&lt;h1 id=&quot;i-stopped-elasticsearch&quot;&gt;. I stopped elasticsearch.&lt;/h1&gt;
 
-&lt;h1 id=&quot;i-rename-my-old-cluster-elasticsearch-to-elasticsearch-original&quot;&gt;I rename my old cluster (elasticsearch) to elasticsearch.original.&lt;/h1&gt;
+&lt;h1 id=&quot;i-rename-my-old-cluster-elasticsearch-to-elasticsearch-original&quot;&gt;. I rename my old cluster (elasticsearch) to elasticsearch.original.&lt;/h1&gt;
 
-&lt;h1 id=&quot;restarted-elasticsearch-and-it-created-new-blank-cluster-where-i-have-no-indexes&quot;&gt;Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.&lt;/h1&gt;
+&lt;h1 id=&quot;restarted-elasticsearch-and-it-created-new-blank-cluster-where-i-have-no-indexes&quot;&gt;. Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.&lt;/h1&gt;
 
-&lt;h1 id=&quot;i-created-all-required-indexes-with-the-same-number-of-shards-and-replicas-i-previously-had-in-my-case-i-had-5-indexes-and-5-shards-per-index&quot;&gt;I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.&lt;/h1&gt;
+&lt;h1 id=&quot;i-created-all-required-indexes-with-the-same-number-of-shards-and-replicas-i-previously-had-in-my-case-i-had-5-indexes-and-5-shards-per-index&quot;&gt;. I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.&lt;/h1&gt;
 
-&lt;h1 id=&quot;now-i-stop-elasticsearch-again&quot;&gt;Now i stop elasticsearch again.&lt;/h1&gt;
+&lt;h1 id=&quot;now-i-stop-elasticsearch-again&quot;&gt;. Now i stop elasticsearch again.&lt;/h1&gt;
 
-&lt;h1 id=&quot;start-deleting-elasticsearch-nodes-0-indices-index-translog-and-move-elasticsearch-original-nodes-0-indices-index-translog-to-elasticsearch-nodes-0-indices-index-translog&quot;&gt;Start deleting (elasticsearch/nodes/0/indices/&lt;index_name&gt;/&lt;0,1,2,3,4&gt;/{index,translog}. And move (elasticsearch.original/nodes/0/indices/&lt;index_name&gt;/&lt;0,1,2,3,4&gt;/{index,translog}) to (elasticsearch/nodes/0/indices/&lt;index_name&gt;/&lt;0,1,2,3,4&gt;/{index,translog})&lt;/h1&gt;
+&lt;h1 id=&quot;start-deleting-elasticsearch-nodes-0-indices-index-translog-and-move-elasticsearch-original-nodes-0-indices-index-translog-to-elasticsearch-nodes-0-indices-index-translog&quot;&gt;. Start deleting (elasticsearch/nodes/0/indices/&lt;index_name&gt;/&lt;0,1,2,3,4&gt;/{index,translog}. And move (elasticsearch.original/nodes/0/indices/&lt;index_name&gt;/&lt;0,1,2,3,4&gt;/{index,translog}) to (elasticsearch/nodes/0/indices/&lt;index_name&gt;/&lt;0,1,2,3,4&gt;/{index,translog})&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.&lt;/p&gt;
 
-&lt;h1 id=&quot;i-copied-all-indexes-as-in-5th-step&quot;&gt;I copied all indexes as in 5th step.&lt;/h1&gt;
+&lt;h1 id=&quot;i-copied-all-indexes-as-in-5th-step&quot;&gt;. I copied all indexes as in 5th step.&lt;/h1&gt;
 
-&lt;h1 id=&quot;restart-elasticsearch-and-i-found-all-indexes-were-recovered&quot;&gt;Restart ElasticSearch. and i found all indexes were recovered.&lt;/h1&gt;
+&lt;h1 id=&quot;restart-elasticsearch-and-i-found-all-indexes-were-recovered&quot;&gt;. Restart ElasticSearch. and i found all indexes were recovered.&lt;/h1&gt;
 
 &lt;p&gt;Observation: Well you should run your all custom mappings in blank indexes. I found some errors because i did not execute my mapping.&lt;/p&gt;
 
 &lt;p&gt;Thank god, Now all indexes were recovered. And Thanks to Narinder Kaur, she got me required support at that time.&lt;/p&gt;</content><category term="blogging" /><category term="tarun jangra" /><category term="elastic search" /><category term="elastica" /><category term="S3-gateway" /><summary>Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.
 
-I am on ElasticSearch Version 1.1.0
+. I am on ElasticSearch Version 1.1.0
 
-I have two data nodes. One is primary and other is replica.
+. I have two data nodes. One is primary and other is replica.
 
-I am taking regular snapshots of my indexes.
+. I am taking regular snapshots of my indexes.
 
-I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.
+. I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.
 
 Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.
 
@@ -74,25 +74,25 @@ Then one of my colleague, Narinder Kaur has joined me. And she gave me necessary
 
 So, Solution we tried. and which actually works….. Wow!.
 
-I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.
+. I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.
 
-I stopped elasticsearch.
+. I stopped elasticsearch.
 
-I rename my old cluster (elasticsearch) to elasticsearch.original.
+. I rename my old cluster (elasticsearch) to elasticsearch.original.
 
-Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.
+. Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.
 
-I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.
+. I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.
 
-Now i stop elasticsearch again.
+. Now i stop elasticsearch again.
 
-Start deleting (elasticsearch/nodes/0/indices///{index,translog}. And move (elasticsearch.original/nodes/0/indices///{index,translog}) to (elasticsearch/nodes/0/indices///{index,translog})
+. Start deleting (elasticsearch/nodes/0/indices///{index,translog}. And move (elasticsearch.original/nodes/0/indices///{index,translog}) to (elasticsearch/nodes/0/indices///{index,translog})
 
 Note: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.
 
-I copied all indexes as in 5th step.
+. I copied all indexes as in 5th step.
 
-Restart ElasticSearch. and i found all indexes were recovered.
+. Restart ElasticSearch. and i found all indexes were recovered.
 
 Observation: Well you should run your all custom mappings in blank indexes. I found some errors because i did not execute my mapping.
 

@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?2cec670"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?2cec670"/>
+    <link rel="shortcut icon" href="/favicon.ico?f18875f"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?f18875f"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?2cec670"/>
-    <link rel="stylesheet" href="/css/icons.css?2cec670"/>
+    <link rel="stylesheet" href="/css/layout.css?f18875f"/>
+    <link rel="stylesheet" href="/css/icons.css?f18875f"/>
     <link rel="canonical" href="http://tarunjangra.com/" />
     <link rel="amphtml" href="http://tarunjangra.com/" />
     <title>Blog About Programming, Cloud, Entrepreneurship - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?2cec670"></script>
+    <script src="/js/global.js?f18875f"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -184,13 +184,13 @@ Entrepreneurship. So that&#39;s whyat i&#39;ll be writing about.</p>
       <div class="main">
         <p>Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.</p>
 
-<h1 id="i-am-on-elasticsearch-version-1-1-0">I am on ElasticSearch Version 1.1.0</h1>
+<h1 id="i-am-on-elasticsearch-version-1-1-0">. I am on ElasticSearch Version 1.1.0</h1>
 
-<h1 id="i-have-two-data-nodes-one-is-primary-and-other-is-replica">I have two data nodes. One is primary and other is replica.</h1>
+<h1 id="i-have-two-data-nodes-one-is-primary-and-other-is-replica">. I have two data nodes. One is primary and other is replica.</h1>
 
-<h1 id="i-am-taking-regular-snapshots-of-my-indexes">I am taking regular snapshots of my indexes.</h1>
+<h1 id="i-am-taking-regular-snapshots-of-my-indexes">. I am taking regular snapshots of my indexes.</h1>
 
-<h1 id="i-am-no-more-taking-snapshots-so-i-have-installed-s3-gateway-plugin-to-keep-updating-s3-buckets-for-persistent-indexes">I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.</h1>
+<h1 id="i-am-no-more-taking-snapshots-so-i-have-installed-s3-gateway-plugin-to-keep-updating-s3-buckets-for-persistent-indexes">. I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.</h1>
 
 <p>Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.</p>
 
@@ -202,25 +202,25 @@ Entrepreneurship. So that&#39;s whyat i&#39;ll be writing about.</p>
 
 <p>So, Solution we tried. and which actually works….. Wow!.</p>
 
-<h1 id="i-updated-my-elasticsearch-yml-and-remove-s3-gateway-settings-related-to-my-s3-bucket">I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.</h1>
+<h1 id="i-updated-my-elasticsearch-yml-and-remove-s3-gateway-settings-related-to-my-s3-bucket">. I updated my elasticsearch.yml, and remove s3-gateway settings related to my s3 bucket.</h1>
 
-<h1 id="i-stopped-elasticsearch">I stopped elasticsearch.</h1>
+<h1 id="i-stopped-elasticsearch">. I stopped elasticsearch.</h1>
 
-<h1 id="i-rename-my-old-cluster-elasticsearch-to-elasticsearch-original">I rename my old cluster (elasticsearch) to elasticsearch.original.</h1>
+<h1 id="i-rename-my-old-cluster-elasticsearch-to-elasticsearch-original">. I rename my old cluster (elasticsearch) to elasticsearch.original.</h1>
 
-<h1 id="restarted-elasticsearch-and-it-created-new-blank-cluster-where-i-have-no-indexes">Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.</h1>
+<h1 id="restarted-elasticsearch-and-it-created-new-blank-cluster-where-i-have-no-indexes">. Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.</h1>
 
-<h1 id="i-created-all-required-indexes-with-the-same-number-of-shards-and-replicas-i-previously-had-in-my-case-i-had-5-indexes-and-5-shards-per-index">I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.</h1>
+<h1 id="i-created-all-required-indexes-with-the-same-number-of-shards-and-replicas-i-previously-had-in-my-case-i-had-5-indexes-and-5-shards-per-index">. I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.</h1>
 
-<h1 id="now-i-stop-elasticsearch-again">Now i stop elasticsearch again.</h1>
+<h1 id="now-i-stop-elasticsearch-again">. Now i stop elasticsearch again.</h1>
 
-<h1 id="start-deleting-elasticsearch-nodes-0-indices-index-translog-and-move-elasticsearch-original-nodes-0-indices-index-translog-to-elasticsearch-nodes-0-indices-index-translog">Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})</h1>
+<h1 id="start-deleting-elasticsearch-nodes-0-indices-index-translog-and-move-elasticsearch-original-nodes-0-indices-index-translog-to-elasticsearch-nodes-0-indices-index-translog">. Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})</h1>
 
 <p><strong>Note</strong>: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.</p>
 
-<h1 id="i-copied-all-indexes-as-in-5th-step">I copied all indexes as in 5th step.</h1>
+<h1 id="i-copied-all-indexes-as-in-5th-step">. I copied all indexes as in 5th step.</h1>
 
-<h1 id="restart-elasticsearch-and-i-found-all-indexes-were-recovered">Restart ElasticSearch. and i found all indexes were recovered.</h1>
+<h1 id="restart-elasticsearch-and-i-found-all-indexes-were-recovered">. Restart ElasticSearch. and i found all indexes were recovered.</h1>
 
 <p>Observation: Well you should run your all custom mappings in blank indexes. I found some errors because i did not execute my mapping.</p>
 
