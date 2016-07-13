@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?4b0243e"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?4b0243e"/>
+    <link rel="shortcut icon" href="/favicon.ico?1397c64"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?1397c64"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?4b0243e"/>
-    <link rel="stylesheet" href="/css/icons.css?4b0243e"/>
+    <link rel="stylesheet" href="/css/layout.css?1397c64"/>
+    <link rel="stylesheet" href="/css/icons.css?1397c64"/>
     <link rel="canonical" href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" />
     <link rel="amphtml" href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.amp.html" />
     <title>ElasticSearch restore failed when s3-gateway is activated - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?4b0243e"></script>
+    <script src="/js/global.js?1397c64"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -196,7 +196,7 @@
 <li>Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.</li>
 <li>I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.</li>
 <li>Now i stop elasticsearch again.</li>
-<li>Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})
+<li>Start deleting (elasticsearch/nodes/0/indices/{index_name}&gt;/{0,1,2,3,4}/{index,translog}. And move (elasticsearch.original/nodes/0/indices/{index_name}/{0,1,2,3,4}/{index,translog}) to (elasticsearch/nodes/0/indices/{index_name}/<0,1,2,3,4>/{index,translog})
 <strong>Note</strong>: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.</li>
 <li>I copied all indexes as in 5th step.</li>
 <li>Restart ElasticSearch. and i found all indexes were recovered.</li>
@@ -250,8 +250,8 @@
 
 </section>
 
-<script src="/js/post.js?4b0243e"></script>
-<script src="//a.disquscdn.com/embed.js?4b0243e"></script>
+<script src="/js/post.js?1397c64"></script>
+<script src="//a.disquscdn.com/embed.js?1397c64"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

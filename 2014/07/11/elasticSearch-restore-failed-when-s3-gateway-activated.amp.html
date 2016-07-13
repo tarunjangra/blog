@@ -80,7 +80,7 @@ kind of situation which are really tough to recorver from.
 <li>Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.</li>
 <li>I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.</li>
 <li>Now i stop elasticsearch again.</li>
-<li>Start deleting (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}. And move (elasticsearch.original/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog}) to (elasticsearch/nodes/0/indices/<index_name>/<0,1,2,3,4>/{index,translog})
+<li>Start deleting (elasticsearch/nodes/0/indices/{index_name}&gt;/{0,1,2,3,4}/{index,translog}. And move (elasticsearch.original/nodes/0/indices/{index_name}/{0,1,2,3,4}/{index,translog}) to (elasticsearch/nodes/0/indices/{index_name}/<0,1,2,3,4>/{index,translog})
 <strong>Note</strong>: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.</li>
 <li>I copied all indexes as in 5th step.</li>
 <li>Restart ElasticSearch. and i found all indexes were recovered.</li>
