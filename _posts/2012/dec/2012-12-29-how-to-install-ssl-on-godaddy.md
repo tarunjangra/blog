@@ -13,10 +13,12 @@ tags:
 
 I was struggling around to install SSL Certificate on ELB. And finally i’ve made that. Following are the steps you need to follow.
 
-##Requirements & Prerequisites:
+###Requirements & Prerequisites:
 
 1. Linux having openssl and apache installed.
 2. Open shell terminal on your Linux Box.
+
+<!--more-->
 
 {% highlight bash %}
 openssl genrsa -des3 -out private.key 1024
@@ -25,13 +27,13 @@ openssl req -new -key private.key -out www.your-web-site.com.csr
 
 You will be prompt to provide some basic information. Make sure you have added “Common Name”; a fully qualified domain name. like “www.xyz.com”
 
-1. Open to www.godaddy.com and go to ssl management control panel
+1. Open to [GoDaddy](http://www.godaddy.com) and go to ssl management control panel
 2. Select your Certificate. And click on Re-Key button.
 3. Copy content of “www.your-web-site.com.csr” and paste the content in “CSR” field. And press Re-Key.
 4. It will prompt you to download the keys. Available options to download are Apache, Nginx and Other. By the way, i used “Other” to download my keys to be used on ELB.
 5. Now unzip the downloaded file. It should have two *.crt files.
 
-##Now back to your terminal.
+###Now back to your terminal.
 
 {% highlight bash %}
 openssl rsa -in private.key -out private.pem
