@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy.html"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?8cc98b1"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?8cc98b1"/>
+    <link rel="shortcut icon" href="/favicon.ico?42c738f"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?42c738f"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?8cc98b1"/>
-    <link rel="stylesheet" href="/css/icons.css?8cc98b1"/>
+    <link rel="stylesheet" href="/css/layout.css?42c738f"/>
+    <link rel="stylesheet" href="/css/icons.css?42c738f"/>
     <link rel="canonical" href="http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy.html" />
     <link rel="amphtml" href="http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy.amp.html" />
     <title>How to install go-daddy ssl certificate on amazon load balancer - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?8cc98b1"></script>
+    <script src="/js/global.js?42c738f"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -118,7 +118,7 @@
           </time>
         </li>
         
-        <li class='unprintable desktop-only'><a href='https://github.com/tarunjangra/blog/commits/master/_posts/2012/dec/2012-12-29-how-to-install-ssl-on-godaddy.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-07-14T00:51:31+0530'>14 July 2016</time></li>
+        <li class='unprintable desktop-only'><a href='https://github.com/tarunjangra/blog/commits/master/_posts/2012/dec/2012-12-29-how-to-install-ssl-on-godaddy.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-07-14T00:56:19+0530'>14 July 2016</time></li>
         <li class="printable">Tarun Jangra</li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
@@ -170,12 +170,14 @@
       <article class="main" itemprop="articleBody">
         <p>I was struggling around to install SSL Certificate on ELB. And finally i’ve made that. Following are the steps you need to follow.</p>
 
-<h2 id="requirements-amp-prerequisites">Requirements &amp; Prerequisites:</h2>
+<h3 id="requirements-amp-prerequisites">Requirements &amp; Prerequisites:</h3>
 
 <ol>
 <li>Linux having openssl and apache installed.</li>
 <li>Open shell terminal on your Linux Box.</li>
 </ol>
+
+<!--more-->
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">openssl genrsa -des3 -out private.key 1024
 openssl req -new -key private.key -out www.your-web-site.com.csr</code></pre></figure>
@@ -183,14 +185,14 @@ openssl req -new -key private.key -out www.your-web-site.com.csr</code></pre></f
 <p>You will be prompt to provide some basic information. Make sure you have added “Common Name”; a fully qualified domain name. like “www.xyz.com”</p>
 
 <ol>
-<li>Open to <a href="http://www.godaddy.com">www.godaddy.com</a> and go to ssl management control panel</li>
+<li>Open to <a href="http://www.godaddy.com">GoDaddy</a> and go to ssl management control panel</li>
 <li>Select your Certificate. And click on Re-Key button.</li>
 <li>Copy content of “www.your-web-site.com.csr” and paste the content in “CSR” field. And press Re-Key.</li>
 <li>It will prompt you to download the keys. Available options to download are Apache, Nginx and Other. By the way, i used “Other” to download my keys to be used on ELB.</li>
 <li>Now unzip the downloaded file. It should have two *.crt files.</li>
 </ol>
 
-<h2 id="now-back-to-your-terminal">Now back to your terminal.</h2>
+<h3 id="now-back-to-your-terminal">Now back to your terminal.</h3>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">openssl rsa -in private.key -out private.pem</code></pre></figure>
 
@@ -225,11 +227,11 @@ openssl req -new -key private.key -out www.your-web-site.com.csr</code></pre></f
     <ul>
       
         <li>
-          <a href="/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" data-score="66.08447892006008">ElasticSearch restore failed when s3-gateway is activated</a>
+          <a href="/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" data-score="311.74883235053886">ElasticSearch restore failed when s3-gateway is activated</a>
         </li>
       
         <li>
-          <a href="/2016/07/09/hello-world.html" data-score="4.264184071851275">My First post with Jekyll</a>
+          <a href="/2016/07/09/hello-world.html" data-score="4.473102625532408">My First post with Jekyll</a>
         </li>
       
     </ul>
@@ -263,8 +265,8 @@ openssl req -new -key private.key -out www.your-web-site.com.csr</code></pre></f
 
 </section>
 
-<script src="/js/post.js?8cc98b1"></script>
-<script src="//a.disquscdn.com/embed.js?8cc98b1"></script>
+<script src="/js/post.js?42c738f"></script>
+<script src="//a.disquscdn.com/embed.js?42c738f"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

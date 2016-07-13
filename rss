@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-13T19:22:05+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-13T19:26:55+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -56,12 +56,14 @@ I have two data nodes. One is primary and other is replica.
 I am taking regular snapshots of my indexes.
 I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.</summary></entry><entry><title>How to install go-daddy ssl certificate on amazon load balancer</title><link href="http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy.html" rel="alternate" type="text/html" title="How to install go-daddy ssl certificate on amazon load balancer" /><published>2012-12-29T00:00:00+00:00</published><updated>2012-12-29T00:00:00+00:00</updated><id>http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy</id><content type="html" xml:base="http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy.html">&lt;p&gt;I was struggling around to install SSL Certificate on ELB. And finally i’ve made that. Following are the steps you need to follow.&lt;/p&gt;
 
-&lt;h2 id=&quot;requirements-amp-prerequisites&quot;&gt;Requirements &amp;amp; Prerequisites:&lt;/h2&gt;
+&lt;h3 id=&quot;requirements-amp-prerequisites&quot;&gt;Requirements &amp;amp; Prerequisites:&lt;/h3&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Linux having openssl and apache installed.&lt;/li&gt;
 &lt;li&gt;Open shell terminal on your Linux Box.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;!--more--&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;openssl genrsa -des3 -out private.key 1024
 openssl req -new -key private.key -out www.your-web-site.com.csr&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -69,14 +71,14 @@ openssl req -new -key private.key -out www.your-web-site.com.csr&lt;/code&gt;&lt
 &lt;p&gt;You will be prompt to provide some basic information. Make sure you have added “Common Name”; a fully qualified domain name. like “www.xyz.com”&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Open to &lt;a href=&quot;http://www.godaddy.com&quot;&gt;www.godaddy.com&lt;/a&gt; and go to ssl management control panel&lt;/li&gt;
+&lt;li&gt;Open to &lt;a href=&quot;http://www.godaddy.com&quot;&gt;GoDaddy&lt;/a&gt; and go to ssl management control panel&lt;/li&gt;
 &lt;li&gt;Select your Certificate. And click on Re-Key button.&lt;/li&gt;
 &lt;li&gt;Copy content of “www.your-web-site.com.csr” and paste the content in “CSR” field. And press Re-Key.&lt;/li&gt;
 &lt;li&gt;It will prompt you to download the keys. Available options to download are Apache, Nginx and Other. By the way, i used “Other” to download my keys to be used on ELB.&lt;/li&gt;
 &lt;li&gt;Now unzip the downloaded file. It should have two *.crt files.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;now-back-to-your-terminal&quot;&gt;Now back to your terminal.&lt;/h2&gt;
+&lt;h3 id=&quot;now-back-to-your-terminal&quot;&gt;Now back to your terminal.&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;openssl rsa -in private.key -out private.pem&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -105,43 +107,4 @@ Requirements &amp;amp; Prerequisites:
 
 
 Linux having openssl and apache installed.
-Open shell terminal on your Linux Box.
-
-
-openssl genrsa -des3 -out private.key 1024
-openssl req -new -key private.key -out www.your-web-site.com.csr
-
-You will be prompt to provide some basic information. Make sure you have added “Common Name”; a fully qualified domain name. like “www.xyz.com”
-
-
-Open to www.godaddy.com and go to ssl management control panel
-Select your Certificate. And click on Re-Key button.
-Copy content of “www.your-web-site.com.csr” and paste the content in “CSR” field. And press Re-Key.
-It will prompt you to download the keys. Available options to download are Apache, Nginx and Other. By the way, i used “Other” to download my keys to be used on ELB.
-Now unzip the downloaded file. It should have two *.crt files.
-
-
-Now back to your terminal.
-
-openssl rsa -in private.key -out private.pem
-
-Now you will have following files in your current location.
-
-
-private.key
-private.pem
-www.web-site.com.csr
-sf_bundle.crt
-your-domain.com.crt
-
-
-Now open your load balancer console and add https support. it will prompt you to add following values.
-
-
-Certificate Name:* -&amp;gt; Put any friendly name
-Private Key:* -&amp;gt; Paste content of private.pem
-Public Key Certificate:* -&amp;gt; Paste content of your-domain.com.crt.
-Certificate Chain: -&amp;gt; Paste content of sf_bundle.crt
-
-
-Once done, Save all these values and here you go.</summary></entry></feed>
+Open shell terminal on your Linux Box.</summary></entry></feed>
