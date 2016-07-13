@@ -3,7 +3,7 @@ layout: post
 title: "How to install go-daddy ssl certificate on amazon load balancer"
 date: 2012-12-29
 description: |
-  Installation of GoDaddy.com SSL certification on amazon elastic loadbalancer.
+  This blog will guide you to install GoDaddy SSL certificate on amazon elastic loadbalancer by following quite easy steps.
 tags:
 - GoDaddy
 - SSL
