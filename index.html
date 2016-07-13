@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?1397c64"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?1397c64"/>
+    <link rel="shortcut icon" href="/favicon.ico?8cc98b1"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?8cc98b1"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?1397c64"/>
-    <link rel="stylesheet" href="/css/icons.css?1397c64"/>
+    <link rel="stylesheet" href="/css/layout.css?8cc98b1"/>
+    <link rel="stylesheet" href="/css/icons.css?8cc98b1"/>
     <link rel="canonical" href="http://tarunjangra.com/" />
     <link rel="amphtml" href="http://tarunjangra.com/" />
     <title>Blog About Programming, Cloud, Entrepreneurship - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?1397c64"></script>
+    <script src="/js/global.js?8cc98b1"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -67,7 +67,7 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="Home page">Home</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;2</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;3</a></li>
             <li><a href="#" title="Tech Conferences">Conferences</a></li>
             <li><a href="#" title="Certifications">Proudly Earned</a></li>
           </ul>
@@ -194,6 +194,93 @@ Entrepreneurship. So that&#39;s whyat i&#39;ll be writing about.</p>
       </div>
       <p>
         <a href="/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2012/12/29/how-to-install-ssl-on-godaddy.html">
+            How to install go-daddy ssl certificate on amazon load balancer
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2012-12-29T00:00:00+00:00">
+              29 December 2012
+            </time>
+          </li>
+          <li>
+            236 words
+          </li>
+          <li>
+            
+            
+              a minute
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://tarunjangra.com/2012/12/29/how-to-install-ssl-on-godaddy.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>I was struggling around to install SSL Certificate on ELB. And finally i’ve made that. Following are the steps you need to follow.</p>
+
+<h2 id="requirements-amp-prerequisites">Requirements &amp; Prerequisites:</h2>
+
+<ol>
+<li>Linux having openssl and apache installed.</li>
+<li>Open shell terminal on your Linux Box.</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">openssl genrsa -des3 -out private.key 1024
+openssl req -new -key private.key -out www.your-web-site.com.csr</code></pre></figure>
+
+<p>You will be prompt to provide some basic information. Make sure you have added “Common Name”; a fully qualified domain name. like “www.xyz.com”</p>
+
+<ol>
+<li>Open to <a href="http://www.godaddy.com">www.godaddy.com</a> and go to ssl management control panel</li>
+<li>Select your Certificate. And click on Re-Key button.</li>
+<li>Copy content of “www.your-web-site.com.csr” and paste the content in “CSR” field. And press Re-Key.</li>
+<li>It will prompt you to download the keys. Available options to download are Apache, Nginx and Other. By the way, i used “Other” to download my keys to be used on ELB.</li>
+<li>Now unzip the downloaded file. It should have two *.crt files.</li>
+</ol>
+
+<h2 id="now-back-to-your-terminal">Now back to your terminal.</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">openssl rsa -in private.key -out private.pem</code></pre></figure>
+
+<p>Now you will have following files in your current location.</p>
+
+<ol>
+<li>private.key</li>
+<li>private.pem</li>
+<li><a href="http://www.web-site.com.csr">www.web-site.com.csr</a></li>
+<li>sf_bundle.crt</li>
+<li>your-domain.com.crt</li>
+</ol>
+
+<p>Now open your load balancer console and add https support. it will prompt you to add following values.</p>
+
+<ol>
+<li>Certificate Name:* -&gt; Put any friendly name</li>
+<li>Private Key:* -&gt; Paste content of private.pem</li>
+<li>Public Key Certificate:* -&gt; Paste content of your-domain.com.crt.</li>
+<li>Certificate Chain: -&gt; Paste content of sf_bundle.crt</li>
+</ol>
+
+<p>Once done, Save all these values and here you go.</p>
+
+      </div>
+      <p>
+        <a href="/2012/12/29/how-to-install-ssl-on-godaddy.html">
           continue...
         </a>
       </p>
