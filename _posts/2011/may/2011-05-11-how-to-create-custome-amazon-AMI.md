@@ -37,10 +37,12 @@ This will take some time and create the desired ami to be uploaded in the bucket
 Now upload your bundle to amazon s3 storage.
 
 {% highlight bash %}
-ec2-upload-bundle -b <S3-bucket-name> -m /mnt/name-of-ami.manifest.xml -a <AWS-access-key-id> -s  <AWS-secret-access-key> --location US-EAST-1C
+ec2-upload-bundle -b <S3-bucket-name> -m /mnt/name-of-ami.manifest.xml -a <AWS-access-key-id> -s  <AWS-secret-access-key> 
+--location US-EAST-1C
 {% endhighlight %}
 
-Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. (I’ve used a European bucket as an example.)
+Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. 
+(I’ve used a European bucket as an example.)
 Now we need to register AMI. Do following< br />
 
 {% highlight bash %}
