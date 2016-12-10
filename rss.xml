@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-10T22:53:04+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-10T23:24:37+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -164,4 +164,32 @@ In this way, all of my server will work for every SQL requested from the system.
  servers are free and which is wastage of Money. So i implemented that in My PHP application and that really makes sense to be 
  available on Cloud to use maximum resources.&lt;/p&gt;</content><category term="RDBMD" /><category term="MySQL" /><category term="Round robin" /><category term="AWS" /><category term="RDS" /><summary>Round robin technique facilitates you to distribute your read queries on number of available resources even if all servers are located
 at different locations. Huge traffic sites like Facebook has to has such techniques working at the background to serve as fast as
- possible.</summary></entry></feed>
+ possible.</summary></entry><entry><title>How to create custom amazon AMI throught CLI Commands</title><link href="http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html" rel="alternate" type="text/html" title="How to create custom amazon AMI throught CLI Commands" /><published>2011-05-11T00:00:00+00:00</published><updated>2011-05-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI</id><content type="html" xml:base="http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html">&lt;p&gt;Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
+This will have you clone of your server anytime you need. I am considering you are able to login your current running 
+instance and you also have your private key and certificate downloaded on some location. &amp;lt;!--more--&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://tarunjangra.com/images/assets/ami_lifecycle.png&quot; alt=&quot;Aamazon AMI&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Upload your private key and certificate on the running instance.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;scp -i path/of/yourkeypair.pem path/of/cert.pem /mnt
+scp -i path/of/yourkeypair.pem path/of/pk.pem /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Login to your instance and check if uploaded files are available in /mnt.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-bundle-vol -d /mnt -k /mnt/pk.pem -c /mnt/cert.pem -u &lt;span class=&quot;m&quot;&gt;673491274719&lt;/span&gt; -p name-of-ami&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This will take some time and create the desired ami to be uploaded in the bucket. So you can use that later anytime you need.
+Now upload your bundle to amazon s3 storage.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-upload-bundle -b &amp;lt;S3-bucket-name&amp;gt; -m /mnt/name-of-ami.manifest.xml -a &amp;lt;AWS-access-key-id&amp;gt; -s  &amp;lt;AWS-secret-access-key&amp;gt; --location US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. (I’ve used a European bucket as an example.)
+Now we need to register AMI. Do following&amp;lt; br /&amp;gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-register &amp;lt;bucket-name&amp;gt;/sampleimage.manifest.xml --region US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It will return the new AMI ID (like ami-).
+That’s it you are done with your custom ami.&lt;/p&gt;</content><category term="AMI" /><category term="AWS" /><category term="Amazon" /><category term="CLI" /><summary>Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
+This will have you clone of your server anytime you need. I am considering you are able to login your current running 
+instance and you also have your private key and certificate downloaded on some location.</summary></entry></feed>

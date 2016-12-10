@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How to create custom amazon AMI throught CLI Commands</title>
+    <link rel="canonical" href="http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html"
+        },
+        "headline": "How to create custom amazon AMI throught CLI Commands",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2011-05-11",
+        "dateModified": "2011-05-11",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "Here i will put together some command which will help you to create your custom AMI to be used for your custom requirement.
+",
+        "keywords": ["AMI", "AWS", "Amazon", "CLI"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>How to create custom amazon AMI throught CLI Commands</h1>
+      <p>Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
+This will have you clone of your server anytime you need. I am considering you are able to login your current running 
+instance and you also have your private key and certificate downloaded on some location. &lt;!--more--&gt;</p>
+
+<p><img src="http://tarunjangra.com/images/assets/ami_lifecycle.png" alt="Aamazon AMI"></p>
+
+<p>Upload your private key and certificate on the running instance.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">scp -i path/of/yourkeypair.pem path/of/cert.pem /mnt
+scp -i path/of/yourkeypair.pem path/of/pk.pem /mnt</code></pre></figure>
+
+<p>Login to your instance and check if uploaded files are available in /mnt.</p>
+
+
+
+<p>This will take some time and create the desired ami to be uploaded in the bucket. So you can use that later anytime you need.
+Now upload your bundle to amazon s3 storage.</p>
+
+
+
+<p>Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. (I’ve used a European bucket as an example.)
+Now we need to register AMI. Do following&lt; br /&gt;</p>
+
+
+
+<p>It will return the new AMI ID (like ami-).
+That’s it you are done with your custom ami.</p>
+
+    </article>
+  </body>
+</html>
