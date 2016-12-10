@@ -24,7 +24,7 @@ done
 cat _temp/links.txt | \
   uniq | \
   sed '/^[ \t]*$/d' | \
-  grep -v 'http://www.yegor256.com' | \
+  grep -v 'http://tarunjangra.com' | \
   grep -v 'linkedin.com' | \
   grep -v '^000 ' > _temp/unique-links.txt
 
