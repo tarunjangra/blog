@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to create custom amazon AMI throught CLI Commands"
-date: 2011-06-10
+date: 2011-05-11
 description: |
   Here i will put together some command which will help you to create your custom AMI to be used for your custom requirement.
 tags:
