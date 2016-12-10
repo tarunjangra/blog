@@ -9,11 +9,10 @@ favicon.ico
 robots.txt
 rss.xml
 unsubscribe.html
-2014/04/06/introduction.html
 tag/aop.html
 p/2/index.html
 js/post.js
-images/yegor-bugayenko-192x192.png
+images/tarun-jangra-192x192.png
 gnuplot/2014/11/hoc-vs-loc.svg
 css/layout.css
 about-me.html
