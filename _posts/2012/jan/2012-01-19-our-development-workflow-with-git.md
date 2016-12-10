@@ -20,7 +20,7 @@ it is suppose to deploy on production server. Which is bit cumbersom process. an
 tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen's 
 branching model.
 
-![Gitflow]({{ site.url }}/assets/git-workflow-gitflow.png)
+![Gitflow]({{ site.url }}/images/assets/git-workflow-gitflow.png)
 
 Master branch will be now our production ready branch. And Development branch will be our dev server branch. These two branches 
 are suppose to be in the system for infinite time. We have learnt to keep  some temporary branches like “Feature branches” and 
