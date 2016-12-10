@@ -14,7 +14,7 @@ tags:
 
 We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
 handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
-based operations. I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
+based operations. <!--more-->I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
 branch only where all developers suppose to push and code is suppose to move to development server and after testing, 
 it is suppose to deploy on production server. Which is bit cumbersom process. and as we are getting in the requirement of better 
 tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen's 
