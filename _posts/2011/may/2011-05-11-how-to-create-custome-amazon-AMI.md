@@ -14,7 +14,9 @@ tags:
 
 Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
 This will have you clone of your server anytime you need. I am considering you are able to login your current running 
-instance and you also have your private key and certificate downloaded on some location. <!--more-->
+instance and you also have your private key and certificate downloaded on some location. 
+
+<!--more-->
 
 ![Aamazon AMI]({{ site.url }}/images/assets/ami_lifecycle.png)
 

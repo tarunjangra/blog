@@ -16,7 +16,11 @@ tags:
 
 Round robin technique facilitates you to distribute your read queries on number of available resources even if all servers are located
 at different locations. Huge traffic sites like Facebook has to has such techniques working at the background to serve as fast as
- possible.<!--more--> I would like to discuss one of my personal implementation experience for such a large potential social networking site.
+ possible.
+ 
+<!--more-->
+
+ I would like to discuss one of my personal implementation experience for such a large potential social networking site.
   Cloud computing is really help full but it also needs logical approach at programming level.
 
 ![MySQL Round-Robin]({{ site.url }}/images/assets/mysql-57-clustering-the-developer-perspective-60-638.jpg)
