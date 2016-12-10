@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Solr setup debian (lenny) + tomcat6 + solr"
-date: 2011-06-10
+date: 2010-03-10
 description: |
   Solr is an indexing engine which runs on the top of JVM. Here we are talking about solr setup on debian lenny distribution.
 tags:
