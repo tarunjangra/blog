@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?cdc4ddd"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?cdc4ddd"/>
+    <link rel="shortcut icon" href="/favicon.ico?35cd3db"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?35cd3db"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?cdc4ddd"/>
-    <link rel="stylesheet" href="/css/icons.css?cdc4ddd"/>
+    <link rel="stylesheet" href="/css/layout.css?35cd3db"/>
+    <link rel="stylesheet" href="/css/icons.css?35cd3db"/>
     <link rel="canonical" href="http://tarunjangra.com/" />
     <link rel="amphtml" href="http://tarunjangra.com/" />
     <title>Blog About Programming, Cloud, Entrepreneurship - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?cdc4ddd"></script>
+    <script src="/js/global.js?35cd3db"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -67,9 +67,9 @@
           </ul>
           <ul class="menu">
             <li><a href="/" title="Home page">Home</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;3</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;4</a></li>
             <li><a href="#" title="Tech Conferences">Conferences</a></li>
-            <li><a href="#" title="Certifications">Proudly Earned</a></li>
+            <li><a href="/proudly-earned.html" title="Certifications">Proudly Earned</a></li>
           </ul>
         </nav>
         <div id="search">
@@ -243,6 +243,74 @@ Entrepreneurship. So that&#39;s whyat i&#39;ll be writing about.</p>
       </div>
       <p>
         <a href="/2012/12/29/how-to-install-godaddy-ssl-on-ELB.html">
+          continue...
+        </a>
+      </p>
+    </section>
+  </div>
+
+  <div class="wrapper">
+    <section class="front">
+      <header>
+        <h1>
+          <a href="/2012/01/19/our-development-workflow-with-git.html">
+            Our development workflow with gitflow
+          </a>
+        </h1>
+        <ul class="subline">
+          <li>
+            <time datetime="2012-01-19T00:00:00+00:00">
+              19 January 2012
+            </time>
+          </li>
+          <li>
+            356 words
+          </li>
+          <li>
+            
+            
+              
+                  two
+                
+              minutes
+            
+            to read
+          </li>
+          <li>
+            <i class="icon icon-comments"></i>
+            <a href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html#disqus_thread">comments</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main">
+        <p>We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
+handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
+based operations. I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
+branch only where all developers suppose to push and code is suppose to move to development server and after testing, 
+it is suppose to deploy on production server. Which is bit cumbersom process. and as we are getting in the requirement of better 
+tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen&#39;s 
+branching model.</p>
+
+<p><img src="http://tarunjangra.com/assets/git-workflow-gitflow.png" alt="Gitflow"></p>
+
+<p>Master branch will be now our production ready branch. And Development branch will be our dev server branch. These two branches 
+are suppose to be in the system for infinite time. We have learnt to keep  some temporary branches like “Feature branches” and 
+“Release branches” which will really play a great role in the architecture we are workingin. We are using “Pivotal Tracker” for 
+our Agile methodology, So when we have new milestone with multiple stories for a particular feature. It means, developer 
+need to create new branche with the name “Feature/<feature-name>“. This branch is suppose to be cloned from master branch 
+and suppose to be in the system till the completion of the feature. And then merge back to master branch. So in the whole 
+release we are suppose to complete all pivotal stories by story ids.</p>
+
+<p>I am looking for some automatic process where all stories get started when developer creates the Feature branch. And when 
+he deliver the whole feature and merge the branch back to the development. It should automatically change the status of the 
+story to be “Delivered”. QA team will test and either accept or reject the corresponding story. I know webhooks provided
+by github.com which can be implemented to achieve this with pivotal tracker.</p>
+
+<p>Overall, Gitflow methodology make the development flow quite better then what we were doing ealrier.</p>
+
+      </div>
+      <p>
+        <a href="/2012/01/19/our-development-workflow-with-git.html">
           continue...
         </a>
       </p>

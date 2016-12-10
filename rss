@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-07-13T19:31:24+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-10T22:01:07+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -107,4 +107,50 @@ Requirements &amp;amp; Prerequisites:
 
 
 Linux having openssl and apache installed.
-Open shell terminal on your Linux Box.</summary></entry></feed>
+Open shell terminal on your Linux Box.</summary></entry><entry><title>Our development workflow with gitflow</title><link href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html" rel="alternate" type="text/html" title="Our development workflow with gitflow" /><published>2012-01-19T00:00:00+00:00</published><updated>2012-01-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2012/01/19/our-development-workflow-with-git</id><content type="html" xml:base="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html">&lt;p&gt;We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
+handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
+based operations. I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
+branch only where all developers suppose to push and code is suppose to move to development server and after testing, 
+it is suppose to deploy on production server. Which is bit cumbersom process. and as we are getting in the requirement of better 
+tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen&amp;#39;s 
+branching model.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://tarunjangra.com/assets/git-workflow-gitflow.png&quot; alt=&quot;Gitflow&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Master branch will be now our production ready branch. And Development branch will be our dev server branch. These two branches 
+are suppose to be in the system for infinite time. We have learnt to keep  some temporary branches like “Feature branches” and 
+“Release branches” which will really play a great role in the architecture we are workingin. We are using “Pivotal Tracker” for 
+our Agile methodology, So when we have new milestone with multiple stories for a particular feature. It means, developer 
+need to create new branche with the name “Feature/&lt;feature-name&gt;“. This branch is suppose to be cloned from master branch 
+and suppose to be in the system till the completion of the feature. And then merge back to master branch. So in the whole 
+release we are suppose to complete all pivotal stories by story ids.&lt;/p&gt;
+
+&lt;p&gt;I am looking for some automatic process where all stories get started when developer creates the Feature branch. And when 
+he deliver the whole feature and merge the branch back to the development. It should automatically change the status of the 
+story to be “Delivered”. QA team will test and either accept or reject the corresponding story. I know webhooks provided
+by github.com which can be implemented to achieve this with pivotal tracker.&lt;/p&gt;
+
+&lt;p&gt;Overall, Gitflow methodology make the development flow quite better then what we were doing ealrier.&lt;/p&gt;</content><category term="GIT" /><category term="Collaboration" /><category term="Agile" /><summary>We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
+handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
+based operations. I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
+branch only where all developers suppose to push and code is suppose to move to development server and after testing, 
+it is suppose to deploy on production server. Which is bit cumbersom process. and as we are getting in the requirement of better 
+tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen&amp;#39;s 
+branching model.
+
+
+
+Master branch will be now our production ready branch. And Development branch will be our dev server branch. These two branches 
+are suppose to be in the system for infinite time. We have learnt to keep  some temporary branches like “Feature branches” and 
+“Release branches” which will really play a great role in the architecture we are workingin. We are using “Pivotal Tracker” for 
+our Agile methodology, So when we have new milestone with multiple stories for a particular feature. It means, developer 
+need to create new branche with the name “Feature/“. This branch is suppose to be cloned from master branch 
+and suppose to be in the system till the completion of the feature. And then merge back to master branch. So in the whole 
+release we are suppose to complete all pivotal stories by story ids.
+
+I am looking for some automatic process where all stories get started when developer creates the Feature branch. And when 
+he deliver the whole feature and merge the branch back to the development. It should automatically change the status of the 
+story to be “Delivered”. QA team will test and either accept or reject the corresponding story. I know webhooks provided
+by github.com which can be implemented to achieve this with pivotal tracker.
+
+Overall, Gitflow methodology make the development flow quite better then what we were doing ealrier.</summary></entry></feed>
