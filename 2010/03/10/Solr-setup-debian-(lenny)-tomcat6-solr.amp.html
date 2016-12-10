@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Solr setup debian (lenny) + tomcat6 + solr</title>
+    <link rel="canonical" href="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html"
+        },
+        "headline": "Solr setup debian (lenny) + tomcat6 + solr",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2010-03-10",
+        "dateModified": "2010-03-10",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "Solr is an indexing engine which runs on the top of JVM. Here we are talking about solr setup on debian lenny distribution.
+",
+        "keywords": ["SOLR", "Indexing Engine", "Debian", "tomcat6", "JDK"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Solr setup debian (lenny) + tomcat6 + solr</h1>
+      <p>I am working on a task to set solr enterprise search for elgg. I am as digging as getting surprised with this amazing 
+search utility. First i am going to explain how to install solr with tomcat6.x. </p>
+
+<h3 id="requirements">Requirements:</h3>
+
+<ol>
+<li>JDK, JRE (OpenJDK, SunJDK)</li>
+<li>Tomcat6.x</li>
+<li>Latest solr</li>
+</ol>
+
+<!--more-->
+
+<h3 id="installation-jdk-jre">Installation JDK,JRE:</h3>
+
+<p>Well i used to setup openjdk and openjre on my lenny server. It is quite easy to use debian package manager. You can install 
+is using</p>
+
+
+
+<p>And i was installed with all jdk and jre environment. You may need to setup JAVA_HOME environment variable if you do not wish 
+to install JDK at default location. You can do this in “.profile” located under your home or “/etc/profile” to make it enable for 
+all available users.</p>
+
+<h3 id="download-tomcate6-x">Download tomcate6.x</h3>
+
+<p>I downloaded tomcat binary “apache tomcat 6.0.24” and untar it at “/usr/local/”. You can choose any of your selected location. 
+So my location of all tomcat binaries was “/usr/local/tomcat”. That’s it, you have done with tomcat installation. 
+You can start tomcat as:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /usr/local/tomcat/bin/
+./startup.sh</code></pre></figure>
+
+<p>Now put <a href="http://localhost:8080">http://localhost:8080</a> in your browser. You will see the response of tomcat server. Now next step is to install solr 
+as a tomcat application. It needs some configurations.</p>
+
+<h3 id="installation-amp-configuration-of-solr">Installation &amp; configuration of Solr</h3>
+
+<p>Download apache solr and unzip it at any accessible location. Now create some directories under tomcat as</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir /usr/local/tomcat/data/solr/elgg/conf -p
+mkdir /usr/local/tomcat/data/solr/elgg/data -p</code></pre></figure>
+
+<p>Now we need to copy “apache-solr-1.4.0.war” file for tomcat deployment. Go to the directory where you unzip the solr file. 
+i found that file as “/apache-solr-1.4.0/dist/apache-solr-1.4.0.war”.</p>
+
+
+
+<p>Now, in /usr/local/tomcat/conf/Catalina/localhost we need to create and save a files which will be read the next time you 
+start Tomcat, and properly deploy Solr. Use a text editor of your choice and create a files name “solrelgg.xml” in the 
+/usr/local/tomcat/conf//Catalina/localhost subdirectory. Put the contents as follow</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;Context</span> <span class="na">docBase=</span><span class="s">”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war”</span> <span class="na">debug=</span><span class="s">”0″</span> <span class="na">crossContext=</span><span class="s">”true”</span><span class="nt">&gt;</span>
+<span class="nt">&lt;Environment</span> <span class="na">name=</span><span class="s">”solr/home”</span> <span class="na">type=</span><span class="s">”java.lang.String”</span> <span class="na">value=</span><span class="s">”/usr/local/tomcat/data/solr/elgg”</span> <span class="na">override=</span><span class="s">”true”</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/Context&gt;</span></code></pre></figure>
+
+<p>Now go to “apache-solr-1.4.0/example/solr/conf” and copy all default configuration files in to our configured configuration
+ directory under tomcat.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>apache-solr-1.4.0/example/solr/conf
+cp * -R /usr/local/tomcat/data/solr/elgg/conf
+<span class="nb">cd</span> /usr/local/tomcat/data/solr/elgg/conf</code></pre></figure>
+
+<p>Now edit “solrconfig.xml” and find “solr.data.dir” parameter. Change it’s value to new data directory. I gave relative path like “
+../data” So now it was pointing to new data directory “/usr/local/tomcat/data/solr/elgg/data”. Well this edit is an optional 
+step. you can skip this. In that case, data directory will be created at default location according to the default value of 
+“solr.data.dir”.
+Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and than browse as:</p>
+
+<p><a href="http://localhost:8080/solrelgg">http://localhost:8080/solrelgg</a></p>
+
+<p>It should show you “Welcome to Solr!” message with “Solr Admin” link.
+I hope, it would work for you. Now elgg integration is just the matter of pushing new entities at create entity hooks and all 
+other crud operations.</p>
+
+    </article>
+  </body>
+</html>

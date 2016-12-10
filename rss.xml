@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-10T23:29:32+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-10T23:58:07+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -192,9 +192,11 @@ scp -i path/of/yourkeypair.pem path/of/pk.pem /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/
 &lt;p&gt;This will take some time and create the desired ami to be uploaded in the bucket. So you can use that later anytime you need.
 Now upload your bundle to amazon s3 storage.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-upload-bundle -b &amp;lt;S3-bucket-name&amp;gt; -m /mnt/name-of-ami.manifest.xml -a &amp;lt;AWS-access-key-id&amp;gt; -s  &amp;lt;AWS-secret-access-key&amp;gt; --location US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-upload-bundle -b &amp;lt;S3-bucket-name&amp;gt; -m /mnt/name-of-ami.manifest.xml -a &amp;lt;AWS-access-key-id&amp;gt; -s  &amp;lt;AWS-secret-access-key&amp;gt; 
+--location US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. (I’ve used a European bucket as an example.)
+&lt;p&gt;Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. 
+(I’ve used a European bucket as an example.)
 Now we need to register AMI. Do following&amp;lt; br /&amp;gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-register &amp;lt;bucket-name&amp;gt;/sampleimage.manifest.xml --region US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -202,4 +204,85 @@ Now we need to register AMI. Do following&amp;lt; br /&amp;gt;&lt;/p&gt;
 &lt;p&gt;It will return the new AMI ID (like ami-).
 That’s it you are done with your custom ami.&lt;/p&gt;</content><category term="AMI" /><category term="AWS" /><category term="Amazon" /><category term="CLI" /><summary>Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
 This will have you clone of your server anytime you need. I am considering you are able to login your current running 
-instance and you also have your private key and certificate downloaded on some location.</summary></entry></feed>
+instance and you also have your private key and certificate downloaded on some location.</summary></entry><entry><title>Solr setup debian (lenny) + tomcat6 + solr</title><link href="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html" rel="alternate" type="text/html" title="Solr setup debian (lenny) + tomcat6 + solr" /><published>2010-03-10T00:00:00+00:00</published><updated>2010-03-10T00:00:00+00:00</updated><id>http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr</id><content type="html" xml:base="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html">&lt;p&gt;I am working on a task to set solr enterprise search for elgg. I am as digging as getting surprised with this amazing 
+search utility. First i am going to explain how to install solr with tomcat6.x. &lt;/p&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;JDK, JRE (OpenJDK, SunJDK)&lt;/li&gt;
+&lt;li&gt;Tomcat6.x&lt;/li&gt;
+&lt;li&gt;Latest solr&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--more--&gt;
+
+&lt;h3 id=&quot;installation-jdk-jre&quot;&gt;Installation JDK,JRE:&lt;/h3&gt;
+
+&lt;p&gt;Well i used to setup openjdk and openjre on my lenny server. It is quite easy to use debian package manager. You can install 
+is using&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;apt-get install openjdk-6-jre, openjdk-6-jdk&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And i was installed with all jdk and jre environment. You may need to setup JAVA_HOME environment variable if you do not wish 
+to install JDK at default location. You can do this in “.profile” located under your home or “/etc/profile” to make it enable for 
+all available users.&lt;/p&gt;
+
+&lt;h3 id=&quot;download-tomcate6-x&quot;&gt;Download tomcate6.x&lt;/h3&gt;
+
+&lt;p&gt;I downloaded tomcat binary “apache tomcat 6.0.24” and untar it at “/usr/local/”. You can choose any of your selected location. 
+So my location of all tomcat binaries was “/usr/local/tomcat”. That’s it, you have done with tomcat installation. 
+You can start tomcat as:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local/tomcat/bin/
+./startup.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now put &lt;a href=&quot;http://localhost:8080&quot;&gt;http://localhost:8080&lt;/a&gt; in your browser. You will see the response of tomcat server. Now next step is to install solr 
+as a tomcat application. It needs some configurations.&lt;/p&gt;
+
+&lt;h3 id=&quot;installation-amp-configuration-of-solr&quot;&gt;Installation &amp;amp; configuration of Solr&lt;/h3&gt;
+
+&lt;p&gt;Download apache solr and unzip it at any accessible location. Now create some directories under tomcat as&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir /usr/local/tomcat/data/solr/elgg/conf -p
+mkdir /usr/local/tomcat/data/solr/elgg/data -p&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now we need to copy “apache-solr-1.4.0.war” file for tomcat deployment. Go to the directory where you unzip the solr file. 
+i found that file as “/apache-solr-1.4.0/dist/apache-solr-1.4.0.war”.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cp apache-solr-1.4.0/dist/apache-solr-1.4.0.war /usr/local/tomcat/data/solr&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, in /usr/local/tomcat/conf/Catalina/localhost we need to create and save a files which will be read the next time you 
+start Tomcat, and properly deploy Solr. Use a text editor of your choice and create a files name “solrelgg.xml” in the 
+/usr/local/tomcat/conf//Catalina/localhost subdirectory. Put the contents as follow&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;Context&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;docBase=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;debug=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”0″&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossContext=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”true”&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;Environment&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”solr/home”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”java.lang.String”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”/usr/local/tomcat/data/solr/elgg”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;override=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”true”&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/Context&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now go to “apache-solr-1.4.0/example/solr/conf” and copy all default configuration files in to our configured configuration
+ directory under tomcat.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;apache-solr-1.4.0/example/solr/conf
+cp * -R /usr/local/tomcat/data/solr/elgg/conf
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/local/tomcat/data/solr/elgg/conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now edit “solrconfig.xml” and find “solr.data.dir” parameter. Change it’s value to new data directory. I gave relative path like “
+../data” So now it was pointing to new data directory “/usr/local/tomcat/data/solr/elgg/data”. Well this edit is an optional 
+step. you can skip this. In that case, data directory will be created at default location according to the default value of 
+“solr.data.dir”.
+Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and than browse as:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:8080/solrelgg&quot;&gt;http://localhost:8080/solrelgg&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It should show you “Welcome to Solr!” message with “Solr Admin” link.
+I hope, it would work for you. Now elgg integration is just the matter of pushing new entities at create entity hooks and all 
+other crud operations.&lt;/p&gt;</content><category term="SOLR" /><category term="Indexing Engine" /><category term="Debian" /><category term="tomcat6" /><category term="JDK" /><summary>I am working on a task to set solr enterprise search for elgg. I am as digging as getting surprised with this amazing 
+search utility. First i am going to explain how to install solr with tomcat6.x. 
+
+Requirements:
+
+
+JDK, JRE (OpenJDK, SunJDK)
+Tomcat6.x
+Latest solr</summary></entry></feed>

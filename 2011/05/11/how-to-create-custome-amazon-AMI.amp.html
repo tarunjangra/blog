@@ -71,9 +71,11 @@ scp -i path/of/yourkeypair.pem path/of/pk.pem /mnt</code></pre></figure>
 <p>This will take some time and create the desired ami to be uploaded in the bucket. So you can use that later anytime you need.
 Now upload your bundle to amazon s3 storage.</p>
 
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ec2-upload-bundle -b &lt;S3-bucket-name&gt; -m /mnt/name-of-ami.manifest.xml -a &lt;AWS-access-key-id&gt; -s  &lt;AWS-secret-access-key&gt; 
+--location US-EAST-1C</code></pre></figure>
 
-
-<p>Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. (I’ve used a European bucket as an example.)
+<p>Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. 
+(I’ve used a European bucket as an example.)
 Now we need to register AMI. Do following&lt; br /&gt;</p>
 
 
