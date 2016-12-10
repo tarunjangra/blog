@@ -27,19 +27,19 @@
     <meta name="twitter:url" content="http://tarunjangra.com/"/>
     <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
     <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?0430aa7"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?0430aa7"/>
+    <link rel="shortcut icon" href="/favicon.ico?8ae5756"/>
+    <link rel="apple-touch-icon" href="/favicon.ico?8ae5756"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
     <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
     <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?0430aa7"/>
-    <link rel="stylesheet" href="/css/icons.css?0430aa7"/>
+    <link rel="stylesheet" href="/css/layout.css?8ae5756"/>
+    <link rel="stylesheet" href="/css/icons.css?8ae5756"/>
     <link rel="canonical" href="http://tarunjangra.com/" />
     <link rel="amphtml" href="http://tarunjangra.com/" />
     <title>Blog About Programming, Cloud, Entrepreneurship - Tarun Jangra
       </title>
     <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?0430aa7"></script>
+    <script src="/js/global.js?8ae5756"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -311,7 +311,7 @@ based operations. </p>
             </time>
           </li>
           <li>
-            426 words
+            427 words
           </li>
           <li>
             
@@ -332,33 +332,7 @@ based operations. </p>
       <div class="main">
         <p>Round robin technique facilitates you to distribute your read queries on number of available resources even if all servers are located
 at different locations. Huge traffic sites like Facebook has to has such techniques working at the background to serve as fast as
- possible. I would like to discuss one of my personal implementation experience for such a large potential social networking site.
-  Cloud computing is really help full but it also needs logical approach at programming level.</p>
-
-<h3 id="approach-1-six-servers-architecture-on-amazon-cloud">Approach 1: Six servers architecture on amazon cloud.</h3>
-
-<p>WOW! I had implemented 1 load balancer, 1 mysql master db, 1 mysql slave db and 3 application server. Such an architecture<br>
-can handle huge traffic. Since there is a separate application server layer where we can add more application servers anytime 
-we need. So user requests get balanced on 3 application servers and they get response. But in my application i had one more 
-problem. When user click on single link it executes 100+ SQLs because there is a framework overhead and some intentional queries.
-Hmmmm, So MySql load is never balanced with this technique and it has to be. Because 1 request is triggering 100+ SQLs.
-So i drill down to find out the solution and decided to separate sql reads and writes. Ok so with this, i get an opportunity 
-to divide separate Writes of MySQL db and initiated one mysql slave server.</p>
-
-<h3 id="does-this-really-get-me-at-the-end-of-performance-level">Does this really get me at the end of performance level?</h3>
-
-<p>No. Because we use read queires more frequently then write. Son in 100+ SQLs i have lesser database writes. So My write server 
-is still have idle resources.</p>
-
-<h3 id="here-is-where-round-robin-comes-in">Here is where Round Robin comes in.</h3>
-
-<p>If i could be able to develop a logic which distributes my 100+ SQLs to any number of replicated instances available. 
-That could really work for me. Say i have 5 read servers for 100+ SQL. Than i can distribute around 20 SQL per server per request. 
-And as we increase number of read server. System can adjust it self to distribute (SQL queries) / (Number of servers) (Qn / Sn). 
-In this way, all of my server will work for every SQL requested from the system. And I could get maximum performance from servers.
- Because there is no use if we have 1000 Servers and 1 server is responding for 1 complete request. Because in this case 999 
- servers are free and which is wastage of Money. So i implemented that in My PHP application and that really makes sense to be 
- available on Cloud to use maximum resources.</p>
+ possible.</p>
 
       </div>
       <p>
