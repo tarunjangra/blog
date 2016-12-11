@@ -45,4 +45,4 @@ install:
 script:
   - set -e
   - bundle exec rake
-  - jgd -u git@github.com:tarunjangra/blog.git
+  - bundle exec jgd -u git@github.com:tarunjangra/blog.git
