@@ -1,1 +1,1 @@
-Sitemap: http://www.tarunjangra.com/sitemap
+Sitemap: http://tarunjangra.com/sitemap.xml

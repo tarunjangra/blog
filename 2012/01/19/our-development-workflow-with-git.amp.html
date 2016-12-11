@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html lang="en">
   <head>
+
     <meta charset="utf-8">
     <title>Our development workflow with gitflow</title>
-    <link rel="canonical" href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html" />
+    <link rel="canonical" href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ gitflow methodology has made it more effective for us.
         "keywords": ["GIT", "Collaboration", "Agile"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -56,15 +58,15 @@ gitflow methodology has made it more effective for us.
 handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
 based operations. </p>
 
-<!--more-->
+
 
 <p>I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
 branch only where all developers suppose to push and code is suppose to move to development server and after testing, 
 it is suppose to deploy on production server. Which is bit cumbersom process. and as we are getting in the requirement of better 
-tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen&#39;s 
+tracked development with less efforts we start feeling to have some serious process to get in. We have followed Vincent Driessen's 
 branching model.</p>
 
-<p><img src="http://tarunjangra.com/images/assets/git-workflow-gitflow.png" alt="Gitflow"></p>
+<p></p>
 
 <p>Master branch will be now our production ready branch. And Development branch will be our dev server branch. These two branches 
 are suppose to be in the system for infinite time. We have learnt to keep  some temporary branches like “Feature branches” and 
@@ -72,7 +74,7 @@ are suppose to be in the system for infinite time. We have learnt to keep  some 
 our Agile methodology, So when we have new milestone with multiple stories for a particular feature. It means, developer 
 need to create new branche with the name “Feature/<feature-name>“. This branch is suppose to be cloned from master branch 
 and suppose to be in the system till the completion of the feature. And then merge back to master branch. So in the whole 
-release we are suppose to complete all pivotal stories by story ids.</p>
+release we are suppose to complete all pivotal stories by story ids.</feature-name></p>
 
 <p>I am looking for some automatic process where all stories get started when developer creates the Feature branch. And when 
 he deliver the whole feature and merge the branch back to the development. It should automatically change the status of the 

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html lang="en">
   <head>
+
     <meta charset="utf-8">
     <title>Round-robin at application level to Balance MySQL Database Load</title>
-    <link rel="canonical" href="http://tarunjangra.com/2011/06/10/Round-robin-at-application-level-to-Balance-MySQL-Database-Load.html" />
+    <link rel="canonical" href="http://tarunjangra.com/2011/06/10/Round-robin-at-application-level-to-Balance-MySQL-Database-Load.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ looking forward to share my ideas and working experiences.
         "keywords": ["RDBMD", "MySQL", "Round robin", "AWS", "RDS"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -56,12 +58,12 @@ looking forward to share my ideas and working experiences.
 at different locations. Huge traffic sites like Facebook has to has such techniques working at the background to serve as fast as
  possible.</p>
 
-<!--more-->
+
 
 <p>I would like to discuss one of my personal implementation experience for such a large potential social networking site.
   Cloud computing is really help full but it also needs logical approach at programming level.</p>
 
-<p><img src="http://tarunjangra.com/images/assets/mysql-57-clustering-the-developer-perspective-60-638.jpg" alt="MySQL Round-Robin"></p>
+<p></p>
 
 <h3 id="approach-1-six-servers-architecture-on-amazon-cloud">Approach 1: Six servers architecture on amazon cloud.</h3>
 

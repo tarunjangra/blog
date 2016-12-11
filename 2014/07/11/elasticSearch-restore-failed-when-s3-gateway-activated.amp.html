@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html lang="en">
   <head>
+
     <meta charset="utf-8">
     <title>ElasticSearch restore failed when s3-gateway is activated</title>
-    <link rel="canonical" href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" />
+    <link rel="canonical" href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type='application/ld+json'>
+    <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,7 +43,8 @@ kind of situation which are really tough to recorver from.
         "keywords": ["blogging", "tarun jangra", "elastic search", "elastica", "S3-gateway"]
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom="amp-custom">
       body { padding: 2em; }
       article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
@@ -61,7 +63,7 @@ kind of situation which are really tough to recorver from.
 <li>I am no more taking snapshots, So I have installed s3-gateway plugin to keep updating s3 buckets for persistent indexes.</li>
 </ul>
 
-<!--more-->
+
 
 <p>Because of bulk import, i have stopped my replica to make import little faster. Once import get completed. I felt high CPU and Memory usage. And since i was aware that my indexes are safe because i am supporting s3-gateway. So i decided to restart remaining data node. Fuck…. It was a big mistake. When i tried to restart, it was not recovering all indexes. And we were about to launch our site in next two hours. And i am left with no index.</p>
 
@@ -80,7 +82,7 @@ kind of situation which are really tough to recorver from.
 <li>Restarted Elasticsearch. And it created new blank cluster. where i have no indexes.</li>
 <li>I created all required indexes with the same number of shards and replicas i previously had. In my case i had 5 indexes and 5 shards per index.</li>
 <li>Now i stop elasticsearch again.</li>
-<li>Start deleting (elasticsearch/nodes/0/indices/{index_name}&gt;/{0,1,2,3,4}/{index,translog}. And move (elasticsearch.original/nodes/0/indices/{index_name}/{0,1,2,3,4}/{index,translog}) to (elasticsearch/nodes/0/indices/{index_name}/<0,1,2,3,4>/{index,translog})
+<li>Start deleting (elasticsearch/nodes/0/indices/{index_name}&gt;/{0,1,2,3,4}/{index,translog}. And move (elasticsearch.original/nodes/0/indices/{index_name}/{0,1,2,3,4}/{index,translog}) to (elasticsearch/nodes/0/indices/{index_name}/&lt;0,1,2,3,4&gt;/{index,translog})
 <strong>Note</strong>: Here, i did not touch _state folder of blank indexes. And now my all indexes has _status folder in each shard and each index.</li>
 <li>I copied all indexes as in 5th step.</li>
 <li>Restart ElasticSearch. and i found all indexes were recovered.</li>

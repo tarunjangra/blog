@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-11T15:38:06+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-11T19:16:00+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
 &lt;p&gt;As described in &lt;a href=&quot;/about-me.html&quot;&gt;About Me&lt;/a&gt;, I&amp;#39;m passionate about programming, cloud computing,
 Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.&lt;/p&gt;
 
-&lt;p&gt;So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.&lt;/p&gt;</content><category term="blogging" /><category term="tarun jangra" /><category term="jekyll" /><category term="jangra" /><summary>In this blog i do not have any thing particular to talk about. So it is just an introduction
+&lt;p&gt;So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="blogging" /><category term="tarun jangra" /><category term="jekyll" /><category term="jangra" /><summary>In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.
 
@@ -48,7 +48,7 @@ So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read
 
 &lt;p&gt;Observation: Well you should run your all custom mappings in blank indexes. I found some errors because i did not execute my mapping.&lt;/p&gt;
 
-&lt;p&gt;Thank god, Now all indexes were recovered. And Thanks to Narinder Kaur, she got me required support at that time.&lt;/p&gt;</content><category term="blogging" /><category term="tarun jangra" /><category term="elastic search" /><category term="elastica" /><category term="S3-gateway" /><summary>Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.
+&lt;p&gt;Thank god, Now all indexes were recovered. And Thanks to Narinder Kaur, she got me required support at that time.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="blogging" /><category term="tarun jangra" /><category term="elastic search" /><category term="elastica" /><category term="S3-gateway" /><summary>Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.
 
 
 I am on ElasticSearch Version 1.1.0
@@ -101,7 +101,7 @@ openssl req -new -key private.key -out www.your-web-site.com.csr&lt;/code&gt;&lt
 &lt;li&gt;Certificate Chain: -&amp;gt; Paste content of sf_bundle.crt&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Once done, Save all these values and here you go.&lt;/p&gt;</content><category term="GoDaddy" /><category term="SSL" /><category term="ELB" /><category term="AWS" /><summary>I was struggling around to install SSL Certificate on ELB. And finally i’ve made that. Following are the steps you need to follow.
+&lt;p&gt;Once done, Save all these values and here you go.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="GoDaddy" /><category term="SSL" /><category term="ELB" /><category term="AWS" /><summary>I was struggling around to install SSL Certificate on ELB. And finally i’ve made that. Following are the steps you need to follow.
 
 Requirements &amp;amp; Prerequisites:
 
@@ -127,17 +127,23 @@ hard disk scheme was:&lt;/p&gt;
 &lt;p&gt;So i was going out of space. What i did, I purchased new 1TB WD sata hard drive. And configure that on secondary sata port. 
 My ubuntu box detect the new hard drive. I make it sure by following command.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;fdisk -l       &lt;span class=&quot;c&quot;&gt;# i got my both partitions as /dev/sda and dev/sdb (new one).&lt;/span&gt;
-vgdisplay    &lt;span class=&quot;c&quot;&gt;# I got the name of the volume group to be used.&lt;/span&gt;
-vgextend  /dev/sdb   &lt;span class=&quot;c&quot;&gt;# this command put my new hard drive in the existing volume group.&lt;/span&gt;
-vgdisplay   &lt;span class=&quot;c&quot;&gt;# To make it sure if this new hard drive is actually added to the new group.&lt;/span&gt;
-lvextend -L 500G /dev/volume-group-name/drive-name  &lt;span class=&quot;c&quot;&gt;# Drive name was assigned to my &amp;quot;home&amp;quot; dir.&lt;/span&gt;
-resize2fs /dev/volume-group-name/drive-name  &lt;span class=&quot;c&quot;&gt;# This took about 10 mins to extend my home with more 500G.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;fdisk -l       
+&lt;span class=&quot;c&quot;&gt;# i got my both partitions as /dev/sda and dev/sdb (new one).&lt;/span&gt;
+vgdisplay    
+&lt;span class=&quot;c&quot;&gt;# I got the name of the volume group to be used.&lt;/span&gt;
+vgextend  /dev/sdb   
+&lt;span class=&quot;c&quot;&gt;# this command put my new hard drive in the existing volume group.&lt;/span&gt;
+vgdisplay   
+&lt;span class=&quot;c&quot;&gt;# To make it sure if this new hard drive is actually added to the new group.&lt;/span&gt;
+lvextend -L 500G /dev/volume-group-name/drive-name  
+&lt;span class=&quot;c&quot;&gt;# Drive name was assigned to my &amp;quot;home&amp;quot; dir.&lt;/span&gt;
+resize2fs /dev/volume-group-name/drive-name  
+&lt;span class=&quot;c&quot;&gt;# This took about 10 mins to extend my home with more 500G.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;So this is how i extend all space. I noticed while extending i was able to access all projects from that extending drive. 
 There was no crash or no restart (usually forced by windows for such tasks :) ). It means process is so efficient, you can use
 your disk even while making this arrangement to increase more space. Anyway, That how i get to work everything within 10 mins. 
-It was really amazing experience.&lt;/p&gt;</content><category term="UNIX" /><category term="Linux" /><category term="LVM" /><category term="Partitioning" /><summary>Today i was wondering when i found, my ubuntu server’s home partition is about to finish. It was having lots of projects we are 
+It was really amazing experience.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="UNIX" /><category term="Linux" /><category term="LVM" /><category term="Partitioning" /><summary>Today i was wondering when i found, my ubuntu server’s home partition is about to finish. It was having lots of projects we are 
 working on. Replacing the old hardisk with the new of bigger size is one solution but it is so much time consuming. Ohhhh it is so scary.
  Copy every thing from old to new hard drive. Install every single application and library my scripts needed.</summary></entry><entry><title>Our development workflow with gitflow</title><link href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html" rel="alternate" type="text/html" title="Our development workflow with gitflow" /><published>2012-01-19T00:00:00+00:00</published><updated>2012-01-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2012/01/19/our-development-workflow-with-git</id><content type="html" xml:base="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html">&lt;p&gt;We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
 handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
@@ -166,7 +172,7 @@ he deliver the whole feature and merge the branch back to the development. It sh
 story to be “Delivered”. QA team will test and either accept or reject the corresponding story. I know webhooks provided
 by github.com which can be implemented to achieve this with pivotal tracker.&lt;/p&gt;
 
-&lt;p&gt;Overall, Gitflow methodology make the development flow quite better then what we were doing ealrier.&lt;/p&gt;</content><category term="GIT" /><category term="Collaboration" /><category term="Agile" /><summary>We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
+&lt;p&gt;Overall, Gitflow methodology make the development flow quite better then what we were doing ealrier.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="GIT" /><category term="Collaboration" /><category term="Agile" /><summary>We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
 handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
 based operations.</summary></entry><entry><title>Round-robin at application level to Balance MySQL Database Load</title><link href="http://tarunjangra.com/2011/06/10/Round-robin-at-application-level-to-Balance-MySQL-Database-Load.html" rel="alternate" type="text/html" title="Round-robin at application level to Balance MySQL Database Load" /><published>2011-06-10T00:00:00+00:00</published><updated>2011-06-10T00:00:00+00:00</updated><id>http://tarunjangra.com/2011/06/10/Round-robin-at-application-level-to-Balance-MySQL-Database-Load</id><content type="html" xml:base="http://tarunjangra.com/2011/06/10/Round-robin-at-application-level-to-Balance-MySQL-Database-Load.html">&lt;p&gt;Round robin technique facilitates you to distribute your read queries on number of available resources even if all servers are located
 at different locations. Huge traffic sites like Facebook has to has such techniques working at the background to serve as fast as
@@ -202,7 +208,7 @@ And as we increase number of read server. System can adjust it self to distribut
 In this way, all of my server will work for every SQL requested from the system. And I could get maximum performance from servers.
  Because there is no use if we have 1000 Servers and 1 server is responding for 1 complete request. Because in this case 999 
  servers are free and which is wastage of Money. So i implemented that in My PHP application and that really makes sense to be 
- available on Cloud to use maximum resources.&lt;/p&gt;</content><category term="RDBMD" /><category term="MySQL" /><category term="Round robin" /><category term="AWS" /><category term="RDS" /><summary>Round robin technique facilitates you to distribute your read queries on number of available resources even if all servers are located
+ available on Cloud to use maximum resources.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="RDBMD" /><category term="MySQL" /><category term="Round robin" /><category term="AWS" /><category term="RDS" /><summary>Round robin technique facilitates you to distribute your read queries on number of available resources even if all servers are located
 at different locations. Huge traffic sites like Facebook has to has such techniques working at the background to serve as fast as
  possible.</summary></entry><entry><title>How to create custom amazon AMI throught CLI Commands</title><link href="http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html" rel="alternate" type="text/html" title="How to create custom amazon AMI throught CLI Commands" /><published>2011-05-11T00:00:00+00:00</published><updated>2011-05-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI</id><content type="html" xml:base="http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html">&lt;p&gt;Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
 This will have you clone of your server anytime you need. I am considering you are able to login your current running 
@@ -219,12 +225,20 @@ scp -i path/of/yourkeypair.pem path/of/pk.pem /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/
 
 &lt;p&gt;Login to your instance and check if uploaded files are available in /mnt.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-bundle-vol -d /mnt -k /mnt/pk.pem -c /mnt/cert.pem -u &lt;span class=&quot;m&quot;&gt;673491274719&lt;/span&gt; -p name-of-ami&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-bundle-vol 
+-d /mnt -k /mnt/pk.pem 
+-c /mnt/cert.pem 
+-u &lt;span class=&quot;m&quot;&gt;673491274719&lt;/span&gt; 
+-p name-of-ami&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This will take some time and create the desired ami to be uploaded in the bucket. So you can use that later anytime you need.
 Now upload your bundle to amazon s3 storage.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-upload-bundle -b &amp;lt;S3-bucket-name&amp;gt; -m /mnt/name-of-ami.manifest.xml -a &amp;lt;AWS-access-key-id&amp;gt; -s  &amp;lt;AWS-secret-access-key&amp;gt; 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-upload-bundle 
+-b &amp;lt;S3-bucket-name&amp;gt; 
+-m /mnt/name-of-ami.manifest.xml 
+-a &amp;lt;AWS-access-key-id&amp;gt; 
+-s  &amp;lt;AWS-secret-access-key&amp;gt; 
 --location US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. 
@@ -234,7 +248,7 @@ Now we need to register AMI. Do following&amp;lt; br /&amp;gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ec2-register &amp;lt;bucket-name&amp;gt;/sampleimage.manifest.xml --region US-EAST-1C&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;It will return the new AMI ID (like ami-).
-That’s it you are done with your custom ami.&lt;/p&gt;</content><category term="AMI" /><category term="AWS" /><category term="Amazon" /><category term="CLI" /><summary>Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
+That’s it you are done with your custom ami.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="AMI" /><category term="AWS" /><category term="Amazon" /><category term="CLI" /><summary>Today, i am going to explain how you can create custom amazon ami to launch instance anytime later. 
 This will have you clone of your server anytime you need. I am considering you are able to login your current running 
 instance and you also have your private key and certificate downloaded on some location.</summary></entry><entry><title>Solr setup debian (lenny) + tomcat6 + solr</title><link href="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html" rel="alternate" type="text/html" title="Solr setup debian (lenny) + tomcat6 + solr" /><published>2010-03-10T00:00:00+00:00</published><updated>2010-03-10T00:00:00+00:00</updated><id>http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr</id><content type="html" xml:base="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html">&lt;p&gt;I am working on a task to set solr enterprise search for elgg. I am as digging as getting surprised with this amazing 
 search utility. First i am going to explain how to install solr with tomcat6.x. &lt;/p&gt;
@@ -288,8 +302,10 @@ i found that file as “/apache-solr-1.4.0/dist/apache-solr-1.4.0.war”.&lt;/p&
 start Tomcat, and properly deploy Solr. Use a text editor of your choice and create a files name “solrelgg.xml” in the 
 /usr/local/tomcat/conf//Catalina/localhost subdirectory. Put the contents as follow&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;Context&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;docBase=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;debug=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”0″&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossContext=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”true”&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;Environment&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”solr/home”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”java.lang.String”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”/usr/local/tomcat/data/solr/elgg”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;override=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”true”&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;Context&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;docBase=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war”&lt;/span&gt; 
+&lt;span class=&quot;na&quot;&gt;debug=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”0″&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;crossContext=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”true”&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;Environment&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”solr/home”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”java.lang.String”&lt;/span&gt; 
+&lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”/usr/local/tomcat/data/solr/elgg”&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;override=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;”true”&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/Context&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now go to “apache-solr-1.4.0/example/solr/conf” and copy all default configuration files in to our configured configuration
@@ -309,7 +325,7 @@ Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and than br
 
 &lt;p&gt;It should show you “Welcome to Solr!” message with “Solr Admin” link.
 I hope, it would work for you. Now elgg integration is just the matter of pushing new entities at create entity hooks and all 
-other crud operations.&lt;/p&gt;</content><category term="SOLR" /><category term="Indexing Engine" /><category term="Debian" /><category term="tomcat6" /><category term="JDK" /><summary>I am working on a task to set solr enterprise search for elgg. I am as digging as getting surprised with this amazing 
+other crud operations.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="SOLR" /><category term="Indexing Engine" /><category term="Debian" /><category term="tomcat6" /><category term="JDK" /><summary>I am working on a task to set solr enterprise search for elgg. I am as digging as getting surprised with this amazing 
 search utility. First i am going to explain how to install solr with tomcat6.x. 
 
 Requirements:
@@ -327,7 +343,7 @@ Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i de
 in love with it. Quite lite as compare to other linux distributions. You won’t believe. But it took around 3 min to install 
 base system of freeBSD with ssh account. Boot time less than 20 second, Impressive……… . I just figured out, how to install 
 required softwares on freeBSD. There is a word called “ports”, quite common for freeBSD community. I was confuseed with all 
-such terms. But now i am feeling better to use this environment. Anyhow overall freeBSD wins at server level for me at least.&lt;/p&gt;</content><category term="UNIX" /><category term="Linux" /><category term="FreeBSD" /><summary>I am working on linux since 2008. I am extensive user of linux even my development environment is on linux. 
+such terms. But now i am feeling better to use this environment. Anyhow overall freeBSD wins at server level for me at least.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="UNIX" /><category term="Linux" /><category term="FreeBSD" /><summary>I am working on linux since 2008. I am extensive user of linux even my development environment is on linux. 
 In linux i like debian based distributions. Ubuntu for is desktop friendlyness and Debian(lenny) for it’s stability. 
 Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD.</summary></entry><entry><title>Decided to move my company on linux (Ubuntu)</title><link href="http://tarunjangra.com/2010/01/25/decided-to-move-on-linux.html" rel="alternate" type="text/html" title="Decided to move my company on linux (Ubuntu)" /><published>2010-01-25T00:00:00+00:00</published><updated>2010-01-25T00:00:00+00:00</updated><id>http://tarunjangra.com/2010/01/25/decided-to-move-on-linux</id><content type="html" xml:base="http://tarunjangra.com/2010/01/25/decided-to-move-on-linux.html">&lt;p&gt;Finally we move to linux. Not only server but clients also. And believe me it is just an amazing experience. Everyone in our 
 company is just happy with this change. Well it took too long to decide this. Because as a developer point of view, We know 
@@ -340,7 +356,7 @@ big windows share is obvious.&lt;/p&gt;
 &lt;p&gt;We have setup all of our machines with Ubuntu 9.10 32bit. Everything is smooth. All of our team already using open softwares 
 on windows. Like OpenOffice, NetBeans, FF, Opera So that’s why none of us did not feel any difficult for our development 
 environment. I am missing IE8, IE7. So the alternative we used is “Virtual Box” to test our development. This is the only 
-reason we need windows now. :)&lt;/p&gt;</content><category term="UNIX" /><category term="Linux" /><summary>Finally we move to linux. Not only server but clients also. And believe me it is just an amazing experience. Everyone in our 
+reason we need windows now. :)&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="UNIX" /><category term="Linux" /><summary>Finally we move to linux. Not only server but clients also. And believe me it is just an amazing experience. Everyone in our 
 company is just happy with this change. Well it took too long to decide this. Because as a developer point of view, We know 
 windows has calibre to be king on clients. This is obvious, particularly here in India. In our education system, we never 
 see any institute to take linux seriously. Moreover who ever see computer first time in India, That have windows. So such a 
