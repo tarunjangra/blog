@@ -26,7 +26,9 @@ with symfony 1.1.
 Browse the document root of your project and type following commands in you bash shell:
 
 {% highlight bash %}
-$ svn co http://svn.symfony-project.com/plugins/sfDoctrinePlugin/branches/1.1 plugins/sfDoctrinePlugin
+$ svn co \
+http://svn.symfony-project.com/plugins/sfDoctrinePlugin/branches/1.1 \
+plugins/sfDoctrinePlugin
 {% endhighlight %}
 It will fetch all required libraries of latest release of “Doctrine” and the version i got today is “Doctrine 1.0.3″. Yes, 
 that’s what i said it will fetch all libraries of current release of “Doctrine”.  Thanks to “Jonathan H. Wage” who is maintaining 

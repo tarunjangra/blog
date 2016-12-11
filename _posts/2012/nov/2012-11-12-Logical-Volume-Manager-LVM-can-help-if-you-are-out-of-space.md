@@ -36,12 +36,18 @@ So i was going out of space. What i did, I purchased new 1TB WD sata hard drive.
 My ubuntu box detect the new hard drive. I make it sure by following command.
 
 {% highlight bash %}
-fdisk -l       # i got my both partitions as /dev/sda and dev/sdb (new one).
-vgdisplay    # I got the name of the volume group to be used.
-vgextend  /dev/sdb   # this command put my new hard drive in the existing volume group.
-vgdisplay   # To make it sure if this new hard drive is actually added to the new group.
-lvextend -L 500G /dev/volume-group-name/drive-name  # Drive name was assigned to my "home" dir.
-resize2fs /dev/volume-group-name/drive-name  # This took about 10 mins to extend my home with more 500G.
+fdisk -l       
+# i got my both partitions as /dev/sda and dev/sdb (new one).
+vgdisplay    
+# I got the name of the volume group to be used.
+vgextend  /dev/sdb   
+# this command put my new hard drive in the existing volume group.
+vgdisplay   
+# To make it sure if this new hard drive is actually added to the new group.
+lvextend -L 500G /dev/volume-group-name/drive-name  
+# Drive name was assigned to my "home" dir.
+resize2fs /dev/volume-group-name/drive-name  
+# This took about 10 mins to extend my home with more 500G.
 {% endhighlight %}
 
 So this is how i extend all space. I noticed while extending i was able to access all projects from that extending drive. 

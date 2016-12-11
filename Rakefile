@@ -16,13 +16,9 @@ task default: [
   :build,
   :pages,
   :garbage,
-  :scss_lint,
-  :spell,
-  :regex,
-  :excerpts,
   :snippets,
   :orphans,
-  :ping,
+  :ping
 ]
 
 def done(msg)

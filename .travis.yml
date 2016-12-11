@@ -44,5 +44,5 @@ install:
   - gnuplot --version
 script:
   - set -e
-  - rake
+  - bundle exec rake
   - jgd -u git@github.com:tarunjangra/blog.git

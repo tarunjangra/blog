@@ -70,8 +70,10 @@ start Tomcat, and properly deploy Solr. Use a text editor of your choice and cre
 /usr/local/tomcat/conf//Catalina/localhost subdirectory. Put the contents as follow
 
 {% highlight xml %}
-<Context docBase=”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war” debug=”0″ crossContext=”true”>
-<Environment name=”solr/home” type=”java.lang.String” value=”/usr/local/tomcat/data/solr/elgg” override=”true” />
+<Context docBase=”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war” 
+debug=”0″ crossContext=”true”>
+<Environment name=”solr/home” type=”java.lang.String” 
+value=”/usr/local/tomcat/data/solr/elgg” override=”true” />
 </Context>
 {% endhighlight %}
 
