@@ -47,7 +47,7 @@ cd /usr/local/tomcat/bin/
 ./startup.sh
 {% endhighlight %}
 
-Now put http://localhost:8080 in your browser. You will see the response of tomcat server. Now next step is to install solr 
+Now put localhost:8080 in your browser. You will see the response of tomcat server. Now next step is to install solr 
 as a tomcat application. It needs some configurations.
 
 ###Installation & configuration of Solr
