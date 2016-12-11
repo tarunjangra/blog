@@ -19,7 +19,6 @@ I was struggling around to install SSL Certificate on ELB. And finally i’ve ma
 2. Open shell terminal on your Linux Box.
 
 <!--more-->
-
 {% highlight bash %}
 openssl genrsa -des3 -out private.key 1024
 openssl req -new -key private.key -out www.your-web-site.com.csr

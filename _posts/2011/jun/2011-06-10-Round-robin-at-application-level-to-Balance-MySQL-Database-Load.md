@@ -19,7 +19,6 @@ at different locations. Huge traffic sites like Facebook has to has such techniq
  possible.
  
 <!--more-->
-
  I would like to discuss one of my personal implementation experience for such a large potential social networking site.
   Cloud computing is really help full but it also needs logical approach at programming level.
 

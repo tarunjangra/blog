@@ -15,6 +15,7 @@ company is just happy with this change. Well it took too long to decide this. Be
 windows has calibre to be king on clients. This is obvious, particularly here in India. In our education system, we never 
 see any institute to take linux seriously. Moreover who ever see computer first time in India, That have windows. So such a 
 big windows share is obvious.
+
 <!--more-->
 We have setup all of our machines with Ubuntu 9.10 32bit. Everything is smooth. All of our team already using open softwares 
 on windows. Like OpenOffice, NetBeans, FF, Opera So that’s why none of us did not feel any difficult for our development 
