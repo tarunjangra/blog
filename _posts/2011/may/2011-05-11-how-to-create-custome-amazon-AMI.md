@@ -17,7 +17,6 @@ This will have you clone of your server anytime you need. I am considering you a
 instance and you also have your private key and certificate downloaded on some location. 
 
 <!--more-->
-
 ![Aamazon AMI]({{ site.url }}/images/assets/ami_lifecycle.png)
 
 Upload your private key and certificate on the running instance.

@@ -21,6 +21,18 @@ permalink: :year/:month/:day/:title.html
 paginate: 10
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile.lock
+  - Gemfile
+  - Rakefile
+  - httpd.conf
+  - id_rsa.enc
+  - s3cfg.enc
+  - uml
+  - node_modules
+  - vendor
 
 gems:
   - jekyll-feed
@@ -49,4 +61,9 @@ sass:
 # see https://github.com/pattex/jekyll-tagging
 tag_page_layout: tag-index
 tag_page_dir: tag
-exclude: [vendor]
+
+# http://jch.penibelst.de/
+compress_html:
+  clippings: [div, p, ul, td, h1, h2]
+  comments: all
+  # endings: all

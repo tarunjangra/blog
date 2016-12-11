@@ -8,7 +8,6 @@
 @import 'disqus';
 @import 'post';
 @import 'wrapper';
-@import 'tables';
 
 %gray {
   color: $gray;
@@ -21,10 +20,14 @@
 
 %light-gray { color: $light-gray; }
 
+.em2 { font-size: 2em; }
+.center { text-align: center; }
 .green { color: $green; }
 .red { color: $red; }
 .orange { color: $orange; }
 .gray { @extend %gray; }
+
+%clear { clear: both; }
 
 %small { font-size: .85 * $em; }
 
@@ -43,6 +46,7 @@
 %unprintable {
   @media print {
     display: none !important;
+    visibility: hidden;
   }
 }
 
@@ -51,8 +55,11 @@
 %printable {
   @media not print  {
     display: none !important;
+    visibility: hidden;
   }
 }
+
+.clear { @extend %clear; }
 
 .printable { @extend %printable; }
 
@@ -81,9 +88,12 @@ del {
 }
 
 .foreign:before {
+  @extend %gray;
   @extend %unprintable;
   @extend %desktop-only;
   font-size: .4 * $em;
+  margin-left: -.2 * $em;
+  margin-right: -.2 * $em;
   vertical-align: top;
 }
 
@@ -151,6 +161,21 @@ del {
     }
   }
 
+  .search {
+    form {
+      position: relative;
+    }
+
+    .google {
+      @extend %desktop-only;
+      height: 2.4em;
+      margin-left: 1em;
+      position: absolute;
+      top: .3em;
+      visibility: hidden;
+    }
+  }
+
   .social {
     a {
       text-decoration: none;
@@ -162,6 +187,7 @@ del {
 
     .photo {
       border-radius: 50%;
+      height: 80px;
       width: 80px;
     }
 
@@ -243,10 +269,15 @@ fieldset {
   }
 }
 
+b,
+strong {
+  font-weight: bold;
+}
+
 h1 {
-  clear: both;
+  @extend %clear;
   font-size: 2 * $em;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 2 * $em;
   margin-bottom: .5 * $em;
 
@@ -257,7 +288,7 @@ h1 {
 
 h2,
 h3 {
-  clear: both;
+  @extend %clear;
   position: relative;
 }
 
@@ -300,6 +331,14 @@ h2 {
   @extend %unprintable;
   text-align: center;
 
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
   .mute {
     @extend %gray;
   }
@@ -309,7 +348,24 @@ h2 {
   }
 }
 
+sup,
+sub {
+  font-size: .6em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.3em;
+}
+
+sub {
+  top: .3em;
+}
+
 hr {
+  @extend %clear;
   border: 0;
   border-top: 1px solid $light-gray;
   height: 0;
@@ -469,4 +525,27 @@ figure {
 
 .plantuml {
   width: 100%;
+}
+
+// see 2015-11-03-chatbot-better-than-ui-for-microservices
+.bullet {
+  background-color: $white;
+  border-radius: 50%;
+  color: lighten($orange, 25);
+  display: inline-block;
+  font-size: .8em;
+  font-weight: bold;
+  height: 1em;
+  line-height: 1em;
+  padding: .2em;
+  text-align: center;
+  vertical-align: middle;
+  width: 1em;
+}
+
+.politics {
+  background-color: $red;
+  color: $white !important;
+  padding: 0 .5em;
+  text-decoration: none;
 }

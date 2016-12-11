@@ -22,7 +22,6 @@ search utility. First i am going to explain how to install solr with tomcat6.x.
 3. Latest solr
 
 <!--more-->
-
 ###Installation JDK,JRE:
 
 Well i used to setup openjdk and openjre on my lenny server. It is quite easy to use debian package manager. You can install 

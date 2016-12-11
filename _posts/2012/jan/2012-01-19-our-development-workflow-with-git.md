@@ -17,7 +17,6 @@ handle better branching, code releases etc. And we found gitflow, A collection o
 based operations. 
 
 <!--more-->
-
 I found it pretty much worthy to share our experience. Earlier than gitflow, we were using git with Master 
 branch only where all developers suppose to push and code is suppose to move to development server and after testing, 
 it is suppose to deploy on production server. Which is bit cumbersom process. and as we are getting in the requirement of better 
