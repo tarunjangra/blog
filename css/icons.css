@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "icons";
-  src: url("/css/icons.eot?1481483761");
-  src: url("/css/icons.eot?#iefix?1481483761") format("embedded-opentype"),
-       url("/css/icons.woff?1481483761") format("woff"),
-       url("/css/icons.ttf?1481483761") format("truetype"),
-       url("/css/icons.svg#icons?1481483761") format("svg");
+  src: url("/css/icons.eot?1481485180");
+  src: url("/css/icons.eot?#iefix?1481485180") format("embedded-opentype"),
+       url("/css/icons.woff?1481485180") format("woff"),
+       url("/css/icons.ttf?1481485180") format("truetype"),
+       url("/css/icons.svg#icons?1481485180") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "icons";
-    src: url("/css/icons.svg#icons?1481483761") format("svg");
+    src: url("/css/icons.svg#icons?1481485180") format("svg");
   }
 }
 
@@ -78,24 +78,24 @@
 .icon-fast-backward:before { content: "\f107"; }
 .icon-fast-forward:before { content: "\f108"; }
 .icon-github:before { content: "\f109"; }
-.icon-gitter:before { content: "\f11a"; }
-.icon-googleplus:before { content: "\f10a"; }
-.icon-hackernews:before { content: "\f10b"; }
-.icon-instagram:before { content: "\f10c"; }
-.icon-itunes:before { content: "\f11b"; }
-.icon-link:before { content: "\f10d"; }
-.icon-linkedin:before { content: "\f10e"; }
-.icon-mail:before { content: "\f10f"; }
-.icon-no:before { content: "\f110"; }
-.icon-odnoklassniki:before { content: "\f11c"; }
-.icon-pdf:before { content: "\f111"; }
-.icon-pinterest:before { content: "\f112"; }
-.icon-podcast:before { content: "\f11d"; }
-.icon-reddit:before { content: "\f113"; }
-.icon-rss:before { content: "\f114"; }
-.icon-stackoverflow:before { content: "\f115"; }
-.icon-stumbleupon:before { content: "\f116"; }
-.icon-twitter:before { content: "\f117"; }
-.icon-vk:before { content: "\f11e"; }
-.icon-yes:before { content: "\f118"; }
-.icon-youtube:before { content: "\f119"; }
+.icon-gitter:before { content: "\f10a"; }
+.icon-googleplus:before { content: "\f10b"; }
+.icon-hackernews:before { content: "\f10c"; }
+.icon-instagram:before { content: "\f10d"; }
+.icon-itunes:before { content: "\f10e"; }
+.icon-link:before { content: "\f10f"; }
+.icon-linkedin:before { content: "\f110"; }
+.icon-mail:before { content: "\f111"; }
+.icon-no:before { content: "\f112"; }
+.icon-odnoklassniki:before { content: "\f113"; }
+.icon-pdf:before { content: "\f114"; }
+.icon-pinterest:before { content: "\f115"; }
+.icon-podcast:before { content: "\f116"; }
+.icon-reddit:before { content: "\f117"; }
+.icon-rss:before { content: "\f118"; }
+.icon-stackoverflow:before { content: "\f119"; }
+.icon-stumbleupon:before { content: "\f11a"; }
+.icon-twitter:before { content: "\f11b"; }
+.icon-vk:before { content: "\f11c"; }
+.icon-yes:before { content: "\f11d"; }
+.icon-youtube:before { content: "\f11e"; }
