@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Logical Volume Manager (LVM) can help if you are out of space</title>
+    <link rel="canonical" href="http://tarunjangra.com/2012/11/12/Logical-Volume-Manager-LVM-can-help-if-you-are-out-of-space.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2012/11/12/Logical-Volume-Manager-LVM-can-help-if-you-are-out-of-space.html"
+        },
+        "headline": "Logical Volume Manager (LVM) can help if you are out of space",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2012-11-12",
+        "dateModified": "2012-11-12",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "LVM is a great tool. Especially when your *nix machine going out of available space. A solution to put new harddisk and allocate as
+per requirement.
+",
+        "keywords": ["UNIX", "Linux", "LVM", "Partitioning"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Logical Volume Manager (LVM) can help if you are out of space</h1>
+      <p>Today i was wondering when i found, my ubuntu server’s home partition is about to finish. It was having lots of projects we are 
+working on. Replacing the old hardisk with the new of bigger size is one solution but it is so much time consuming. Ohhhh it is so scary.
+ Copy every thing from old to new hard drive. Install every single application and library my scripts needed. </p>
+
+<!--more-->
+
+<p><img src="http://tarunjangra.com/images/assets/LVM_original_description.png" alt="Logical Volume Manager"></p>
+
+<p>Obviously that is time consuming process. But thanks to Logical Volume Manager(LVM). Fortunately i have used LVM to configure my old hard drive 
+and that really helped me to extend my “home” drive in minutes without copying and all boring stuff as i explained above. My old 
+hard disk scheme was:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">100MB /boot
+73GB PV <span class="o">(</span>Physical Volume <span class="o">)</span>
+<span class="m">3</span> GB /myDB <span class="o">(</span> my database directory<span class="o">)</span>
+45GB /home <span class="o">(</span>All my projects are located in home<span class="o">)</span></code></pre></figure>
+
+<p>So i was going out of space. What i did, I purchased new 1TB WD sata hard drive. And configure that on secondary sata port. 
+My ubuntu box detect the new hard drive. I make it sure by following command.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">fdisk -l       <span class="c"># i got my both partitions as /dev/sda and dev/sdb (new one).</span>
+vgdisplay    <span class="c"># I got the name of the volume group to be used.</span>
+vgextend  /dev/sdb   <span class="c"># this command put my new hard drive in the existing volume group.</span>
+vgdisplay   <span class="c"># To make it sure if this new hard drive is actually added to the new group.</span>
+lvextend -L 500G /dev/volume-group-name/drive-name  <span class="c"># Drive name was assigned to my &quot;home&quot; dir.</span>
+resize2fs /dev/volume-group-name/drive-name  <span class="c"># This took about 10 mins to extend my home with more 500G.</span></code></pre></figure>
+
+<p>So this is how i extend all space. I noticed while extending i was able to access all projects from that extending drive. 
+There was no crash or no restart (usually forced by windows for such tasks :) ). It means process is so efficient, you can use
+your disk even while making this arrangement to increase more space. Anyway, That how i get to work everything within 10 mins. 
+It was really amazing experience.</p>
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Setup “QuantumDB” plugin on eclipse 3.2 for MySQL</title>
+    <link rel="canonical" href="http://tarunjangra.com/2008/10/08/Setup-QuantumDB-plugin-on-eclipse-3-2-for-MySQL.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2008/10/08/Setup-QuantumDB-plugin-on-eclipse-3-2-for-MySQL.html"
+        },
+        "headline": "Setup “QuantumDB” plugin on eclipse 3.2 for MySQL",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2008-10-08",
+        "dateModified": "2008-10-08",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "QuntumDB is an another candidate in the queue of database browser plugin for one of the most popular Integrated Development 
+Environment Eclipse.
+",
+        "keywords": ["Eclipse", "MySQL", "Browser"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Setup “QuantumDB” plugin on eclipse 3.2 for MySQL</h1>
+      <p>QuantumDb is one of the most popular sql browser. It supports different flavor of databases listed below:</p>
+
+<!--more-->
+
+<ul>
+<li>Adabas</li>
+<li>DB2</li>
+<li>DB2 on AS400</li>
+<li>HSQLDB</li>
+<li>Informix</li>
+<li>MySQL</li>
+<li>Oracle</li>
+<li>Pointbase</li>
+<li>PostgreSQL</li>
+<li>Sybase</li>
+</ul>
+
+<h3 id="requirement">Requirement:</h3>
+
+<p>QuantumDB depends upon “Graphical Edition Framework(GEF)” plugin. So you need to install this package first. Remote URL from 
+where you can install this package is: “<a href="http://download.eclipse.org/tools/gef/update-site/releases/site.xml%E2%80%9D">http://download.eclipse.org/tools/gef/update-site/releases/site.xml”</a>.</p>
+
+<h3 id="installation">Installation:</h3>
+
+<p>Installation is very simple. just go to “Help &gt;&gt; Software Updates &gt;&gt; Find &amp; install” and put new remote site. URL is 
+“<a href="http://quantum.sourceforge.net/update-site%E2%80%9D">http://quantum.sourceforge.net/update-site”</a>. After download and installation, eclipse will ask for restart and here you done.</p>
+
+<h3 id="mysql-connection">MySQL connection:</h3>
+
+<p>By default, QuantumDB fresh installation does not include connection library of mysql. You will have to download mysql connector 
+from “<a href="http://dev.mysql.com/downloads/connector/j/5.1.html%E2%80%9D">http://dev.mysql.com/downloads/connector/j/5.1.html”</a>. Download zipped file and extract it some where. Now find out mysql 
+connector file “mysql-connector-java-5.1.6-bin.jar” and place it some where at your secure location. Now go to eclipse and add 
+new bookmark. Now click on “Add Driver”. It will open the new dialog box and than add driver’s .jar file. Now click on “Browse” 
+button to select the class name. Select “com.mysql.jdbc.Driver” for class name. that’s it, next it will ask you expected 
+information for your mysql hostname, username etc.</p>
+
+    </article>
+  </body>
+</html>

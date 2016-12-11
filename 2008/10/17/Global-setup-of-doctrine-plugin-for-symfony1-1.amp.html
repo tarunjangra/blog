@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Global setup of doctrine plugin for symfony1.1.</title>
+    <link rel="canonical" href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"
+        },
+        "headline": "Global setup of doctrine plugin for symfony1.1.",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2008-10-17",
+        "dateModified": "2008-10-17",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest
+avaialble version.
+",
+        "keywords": ["Doctrine", "Symfony", "PHP"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Global setup of doctrine plugin for symfony1.1.</h1>
+      <p>Here is a small tutorial to make available your doctrine plugin for all of your projects residing on the shared server.</p>
+
+<!--more-->
+
+<p>I have ubuntu 8.04 LTS box. Default symfony installation is located under “/usr/share/php/symfony/”. Locate whatever your 
+installation directory of symfony and type following commands:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> /usr/share/php/symfony/
+<span class="nv">$ </span>svn co http://svn.symfony-project.com/plugins/sfDoctrinePlugin/branches/1.1 plugins/sfDoctrinePlugin
+<span class="nv">$ </span><span class="nb">cd </span>plugins/sfDoctrinePlugin/config
+<span class="nv">$ </span>vi autoload.yml</code></pre></figure>
+
+<p>do following modifications</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">#path:       </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">realpath</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/../lib&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">path:       %SF_SYMFONY_LIB_DIR%/plugins/sfDoctrinePlugin/lib</span></code></pre></figure>
+
+<p>Then save that file and create new file “config.php” with the following script</p>
+
+
+
+<p>Now doctrine plugin will be available for all of your projects located on same shared server.</p>
+
+    </article>
+  </body>
+</html>

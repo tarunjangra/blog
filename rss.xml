@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-11T00:35:39+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-11T15:38:06+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -12,7 +12,7 @@ and github for hosting this blog.
 As described in About Me, I&amp;#39;m passionate about programming, cloud computing,
 Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.
 
-So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
+So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;I am on ElasticSearch Version 1.1.0&lt;/li&gt;
@@ -107,7 +107,39 @@ Requirements &amp;amp; Prerequisites:
 
 
 Linux having openssl and apache installed.
-Open shell terminal on your Linux Box.</summary></entry><entry><title>Our development workflow with gitflow</title><link href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html" rel="alternate" type="text/html" title="Our development workflow with gitflow" /><published>2012-01-19T00:00:00+00:00</published><updated>2012-01-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2012/01/19/our-development-workflow-with-git</id><content type="html" xml:base="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html">&lt;p&gt;We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
+Open shell terminal on your Linux Box.</summary></entry><entry><title>Logical Volume Manager (LVM) can help if you are out of space</title><link href="http://tarunjangra.com/2012/11/12/Logical-Volume-Manager-LVM-can-help-if-you-are-out-of-space.html" rel="alternate" type="text/html" title="Logical Volume Manager (LVM) can help if you are out of space" /><published>2012-11-12T00:00:00+00:00</published><updated>2012-11-12T00:00:00+00:00</updated><id>http://tarunjangra.com/2012/11/12/Logical-Volume-Manager-LVM-can-help-if-you-are-out-of-space</id><content type="html" xml:base="http://tarunjangra.com/2012/11/12/Logical-Volume-Manager-LVM-can-help-if-you-are-out-of-space.html">&lt;p&gt;Today i was wondering when i found, my ubuntu server’s home partition is about to finish. It was having lots of projects we are 
+working on. Replacing the old hardisk with the new of bigger size is one solution but it is so much time consuming. Ohhhh it is so scary.
+ Copy every thing from old to new hard drive. Install every single application and library my scripts needed. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://tarunjangra.com/images/assets/LVM_original_description.png&quot; alt=&quot;Logical Volume Manager&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Obviously that is time consuming process. But thanks to Logical Volume Manager(LVM). Fortunately i have used LVM to configure my old hard drive 
+and that really helped me to extend my “home” drive in minutes without copying and all boring stuff as i explained above. My old 
+hard disk scheme was:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;100MB /boot
+73GB PV &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Physical Volume &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; GB /myDB &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; my database directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+45GB /home &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;All my projects are located in home&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;So i was going out of space. What i did, I purchased new 1TB WD sata hard drive. And configure that on secondary sata port. 
+My ubuntu box detect the new hard drive. I make it sure by following command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;fdisk -l       &lt;span class=&quot;c&quot;&gt;# i got my both partitions as /dev/sda and dev/sdb (new one).&lt;/span&gt;
+vgdisplay    &lt;span class=&quot;c&quot;&gt;# I got the name of the volume group to be used.&lt;/span&gt;
+vgextend  /dev/sdb   &lt;span class=&quot;c&quot;&gt;# this command put my new hard drive in the existing volume group.&lt;/span&gt;
+vgdisplay   &lt;span class=&quot;c&quot;&gt;# To make it sure if this new hard drive is actually added to the new group.&lt;/span&gt;
+lvextend -L 500G /dev/volume-group-name/drive-name  &lt;span class=&quot;c&quot;&gt;# Drive name was assigned to my &amp;quot;home&amp;quot; dir.&lt;/span&gt;
+resize2fs /dev/volume-group-name/drive-name  &lt;span class=&quot;c&quot;&gt;# This took about 10 mins to extend my home with more 500G.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;So this is how i extend all space. I noticed while extending i was able to access all projects from that extending drive. 
+There was no crash or no restart (usually forced by windows for such tasks :) ). It means process is so efficient, you can use
+your disk even while making this arrangement to increase more space. Anyway, That how i get to work everything within 10 mins. 
+It was really amazing experience.&lt;/p&gt;</content><category term="UNIX" /><category term="Linux" /><category term="LVM" /><category term="Partitioning" /><summary>Today i was wondering when i found, my ubuntu server’s home partition is about to finish. It was having lots of projects we are 
+working on. Replacing the old hardisk with the new of bigger size is one solution but it is so much time consuming. Ohhhh it is so scary.
+ Copy every thing from old to new hard drive. Install every single application and library my scripts needed.</summary></entry><entry><title>Our development workflow with gitflow</title><link href="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html" rel="alternate" type="text/html" title="Our development workflow with gitflow" /><published>2012-01-19T00:00:00+00:00</published><updated>2012-01-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2012/01/19/our-development-workflow-with-git</id><content type="html" xml:base="http://tarunjangra.com/2012/01/19/our-development-workflow-with-git.html">&lt;p&gt;We are using git since 2009. Recently we have been forced by a platform to implement better development workflow. Where we 
 handle better branching, code releases etc. And we found gitflow, A collection of git extensions provide high level of git 
 based operations. &lt;/p&gt;
 
@@ -287,10 +319,11 @@ JDK, JRE (OpenJDK, SunJDK)
 Tomcat6.x
 Latest solr</summary></entry><entry><title>My first freeBSD experience</title><link href="http://tarunjangra.com/2010/02/25/My-first-freeBSD-experience.html" rel="alternate" type="text/html" title="My first freeBSD experience" /><published>2010-02-25T00:00:00+00:00</published><updated>2010-02-25T00:00:00+00:00</updated><id>http://tarunjangra.com/2010/02/25/My-first-freeBSD-experience</id><content type="html" xml:base="http://tarunjangra.com/2010/02/25/My-first-freeBSD-experience.html">&lt;p&gt;I am working on linux since 2008. I am extensive user of linux even my development environment is on linux. 
 In linux i like debian based distributions. Ubuntu for is desktop friendlyness and Debian(lenny) for it’s stability. 
-Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD. 
-&amp;lt;!--more--&amp;gt;
-Environment is little 
-complex. Actually not complex, It seems to me because i am not use to of it. After trying freeBSD server for a day, I just fell 
+Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD. &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Environment is little complex. Actually not complex, It seems to me because i am not use to of it. After trying freeBSD server for a day, I just fell 
 in love with it. Quite lite as compare to other linux distributions. You won’t believe. But it took around 3 min to install 
 base system of freeBSD with ssh account. Boot time less than 20 second, Impressive……… . I just figured out, how to install 
 required softwares on freeBSD. There is a word called “ports”, quite common for freeBSD community. I was confuseed with all 
@@ -300,9 +333,11 @@ Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i de
 company is just happy with this change. Well it took too long to decide this. Because as a developer point of view, We know 
 windows has calibre to be king on clients. This is obvious, particularly here in India. In our education system, we never 
 see any institute to take linux seriously. Moreover who ever see computer first time in India, That have windows. So such a 
-big windows share is obvious.
-&amp;lt;!--more--&amp;gt;
-We have setup all of our machines with Ubuntu 9.10 32bit. Everything is smooth. All of our team already using open softwares 
+big windows share is obvious.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We have setup all of our machines with Ubuntu 9.10 32bit. Everything is smooth. All of our team already using open softwares 
 on windows. Like OpenOffice, NetBeans, FF, Opera So that’s why none of us did not feel any difficult for our development 
 environment. I am missing IE8, IE7. So the alternative we used is “Virtual Box” to test our development. This is the only 
 reason we need windows now. :)&lt;/p&gt;</content><category term="UNIX" /><category term="Linux" /><summary>Finally we move to linux. Not only server but clients also. And believe me it is just an amazing experience. Everyone in our 

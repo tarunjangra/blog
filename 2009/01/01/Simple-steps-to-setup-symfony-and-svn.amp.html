@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple steps to setup symfony and svn</title>
+    <link rel="canonical" href="http://tarunjangra.com/2009/01/01/Simple-steps-to-setup-symfony-and-svn.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2009/01/01/Simple-steps-to-setup-symfony-and-svn.html"
+        },
+        "headline": "Simple steps to setup symfony and svn",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2009-01-01",
+        "dateModified": "2009-01-01",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "Symfony is really great PHP framework. It follows strict Model View Controller structure. Here are some installation steps which
+will help you to install symfony.
+",
+        "keywords": ["UNIX", "Linux", "Symfony", "PHP", "MVC"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Simple steps to setup symfony and svn</h1>
+      <p>I setup my ubuntu box with svn server and symfony. Here i want to share simple steps to configure symfony and svn server. 
+I will cover the svn access from file system. I am considering you had installed SVN server. If not than follow these instructions. 
+Now let’s install symfony. I will follow the pear installation.</p>
+
+<!--more-->
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pear channel-discover pear.symfony-project.com
+pear install symfony/symfony</code></pre></figure>
+
+<p>So it will install symfony framework for you. Now we will configure svn with symfony for the access from file system. </p>
+
+<ol>
+<li>Login as a root.</li>
+<li>Create new user “svn” with some specific home directory say /home/svn.</li>
+<li>Create your project directory in your svn user. say /home/svn/new_project.</li>
+<li>Setup repository structure with “svnadmin create /home/svn/new_project”.</li>
+<li>Now browse your svn home with “cd /home/svn”</li>
+<li>Let’s set some permissions with “chown -R www-data new_project”.</li>
+<li>Then “chgrp -R subversion new_project”</li>
+<li>And “chmod -R g+rws new_project”</li>
+<li>Now suppose your project’s home directory is “/home/new_project/public_html” and user of your project is “new_project”. Now we will give access of svn directory to “new_project” user by editing /etc/group. assign svn to new_project group.</li>
+<li>Now login to the user “new_project” and make sure you have both groups with “id -a”. Now browse your projects directory. In my case it is “/home/new_project/public_html”</li>
+<li>Set an environment variable with “export SVN_DIR=/home/svn/new_project”</li>
+<li>Now Create directory structure of your repository for your project. To do so give “svn mkdir -m “initial structure” file:///$SVN_DIR/trunk file:///$SVN_DIR/tags file:///$SVN_DIR/branches”</li>
+<li>Now make sure you are in /home/new_project/public_html and give “symfony generate:project new_project” where “new_project” is the name of your project.</li>
+<li>Now give these two commands to clear cache and log “rm -rf cache/* , rm -rf log/*”.</li>
+<li>Now Import with “svn import -m “initial import” . file:///$SVN_DIR/trunk”.</li>
+<li>Now go to “/home/new_project” and move your project directory to public_html.original with “mv public_html public_html.original”.</li>
+<li>Give “svn co file:///$SVN_DIR/trunk public_html” command to create the working version of your project.</li>
+<li>Now browse your project directory with “cd public_html” and give “svn propedit svn:ignore cache”. It will open your default editor. put “<em>” and save that. similarly for log directory with “svn propedit svn:ignore log”, put “</em>” and save it. It will put your “cache” and “log” directory in the ignore list of svn server.</li>
+<li>Now give [ svn commit -m “added cache/ and log/ content in the ignore list” ] command to commit the ignorance list.</li>
+</ol>
+
+<p>That’s all. It will setup your symfony svn controlled project. I hope it will help some body and save some time.</p>
+
+    </article>
+  </body>
+</html>

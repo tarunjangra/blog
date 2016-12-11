@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>One more behaviour of ruby</title>
+    <link rel="canonical" href="http://tarunjangra.com/2008/05/19/One-more-behaviour-of-ruby.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type='application/ld+json'>
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2008/05/19/One-more-behaviour-of-ruby.html"
+        },
+        "headline": "One more behaviour of ruby",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2008-05-19",
+        "dateModified": "2008-05-19",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "Working with ruby is really fun. and as i'm moving ahead i'm getting more suprised how cool a language could be.
+",
+        "keywords": ["Ruby", "Rubylearning"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>One more behaviour of ruby</h1>
+      <p>Today while working with ruby i noticed one more surprising behaviour of ruby.</p>
+
+<!--more-->
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">arg1</span><span class="o">=</span><span class="s2">&quot;Ruby&quot;</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="s2">&quot;On&quot;</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="s2">&quot;Rails&quot;</span> 
+<span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">arg1</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">arg2</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="n">arg3</span><span class="si">}</span><span class="s2">&quot;</span></code></pre></figure>
+
+<h3 id="what-should-be-the-results">What should be the results?</h3>
+
+<p>Well i was expecting to be printed like “Ruby”,”On”,”Rails” but the result was “RubyonRails”, “On”, “Rails”. To understand this 
+behaviour i did some more experiments in “irb”</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="n">arg1</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">to_s</span>    
+<span class="c1">#result  Array </span>
+<span class="nb">puts</span> <span class="n">arg2</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">to_s</span>  
+<span class="c1">#result String </span>
+<span class="nb">puts</span> <span class="n">arg3</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">to_s</span>    
+<span class="c1">#result String</span></code></pre></figure>
+
+<p>Now the question is, Why arg1 is interpreted as an array? and why not the arg2?</p>
+
+    </article>
+  </body>
+</html>
