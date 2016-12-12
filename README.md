@@ -1,5 +1,8 @@
 <img src="http://www.tarunjangra.com/favicon.ico" width="32px" height="32px" />
 
+[![Build Status](https://travis-ci.org/tarunjangra/blog.svg?branch=master)](https://travis-ci.org/tarunjangra/blog)
+
+This is my blog: [www.tarunjangra.com](http://tarunjangra.com)
 ## License
 
 Copyright (c) 2014-2016 Tarun Jangra
