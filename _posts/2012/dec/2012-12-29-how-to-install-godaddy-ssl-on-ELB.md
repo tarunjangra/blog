@@ -42,7 +42,7 @@ Now you will have following files in your current location.
 
 1. private.key
 2. private.pem
-3. www.web-site.com.csr
+3. ”www.web-site.com.csr”
 4. sf_bundle.crt
 5. your-domain.com.crt
 
