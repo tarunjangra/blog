@@ -16,6 +16,8 @@ In this blog i do not have any thing particular to talk about. So it is just an 
 of my new blog built on Jekyll. Since it is Jekyll based, so i've used Travis-CI for building
 and github for hosting this blog.
 
+<!--more-->
+
 As described in [About Me](/about-me.html), I'm passionate about programming, cloud computing,
 Entrepreneurship. So that's whyat i'll be writing about.
 

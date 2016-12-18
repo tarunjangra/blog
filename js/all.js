@@ -38,16 +38,6 @@ if (typeof($) != 'undefined') {
           $('.share .icon-googleplus').css('border', border);
         }
       });
-      // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
-      // $.getJSON(
-      //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + eurl,
-      //   function(json) {
-      //     var count = json.count;
-      //     if (count > 0) {
-      //       $('.count-twitter').html(number(count)).fadeIn();
-      //     }
-      //   }
-      // );
       $.ajax({
         dataType: 'jsonp',
         async: true,
@@ -93,34 +83,12 @@ if (typeof($) != 'undefined') {
           $('.share .icon-reddit').css('border', border);
         }
       });
-      /*
-      // https://jsonp.afeld.me/
-      $.ajax({
-        dataType: 'jsonp',
-        async: true,
-        timeout: timeout,
-        url: 'http://jsonp.afeld.me/?url=' +
-          'http://www.stumbleupon.com/services/1.01/badge.getinfo%3Furl='
-          + eurl,
-        jsonp: 'callback',
-        jsonpCallback: 'x',
-        success: function(json) {
-          var count = json.result.views;
-          if (count > 0) {
-            $('.count-stumbleupon').html(number(count)).fadeIn();
-          }
-        },
-        error: function() {
-          $('.share .icon-stumbleupon').css('border', border);
-        }
-      });
-      */
       $.ajax({
         dataType: 'json',
         async: true,
         timeout: timeout,
         url: 'http://hn.algolia.com/api/v1/search?restrictSearchableAttributes=url&query="'
-          + encodeURIComponent(url.replace('http://www.yegor256.com', ''))
+          + encodeURIComponent(url.replace('http://tarunjangra.com', ''))
           + '"',
         success: function(json) {
           var count = json.nbHits;
