@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-12T04:58:54+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-18T20:24:20+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;As described in &lt;a href=&quot;/about-me.html&quot;&gt;About Me&lt;/a&gt;, I&amp;#39;m passionate about programming, cloud computing,
 Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.&lt;/p&gt;
 
 &lt;p&gt;So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="blogging" /><category term="tarun jangra" /><category term="jekyll" /><category term="jangra" /><summary>In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
-and github for hosting this blog.
-
-As described in About Me, I&amp;#39;m passionate about programming, cloud computing,
-Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.
-
-So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
+and github for hosting this blog.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;I am on ElasticSearch Version 1.1.0&lt;/li&gt;
@@ -87,7 +84,7 @@ openssl req -new -key private.key -out www.your-web-site.com.csr&lt;/code&gt;&lt
 &lt;ol&gt;
 &lt;li&gt;private.key&lt;/li&gt;
 &lt;li&gt;private.pem&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.web-site.com.csr&quot;&gt;www.web-site.com.csr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;”www.web-site.com.csr”&lt;/li&gt;
 &lt;li&gt;sf_bundle.crt&lt;/li&gt;
 &lt;li&gt;your-domain.com.crt&lt;/li&gt;
 &lt;/ol&gt;
@@ -319,9 +316,7 @@ cp * -R /usr/local/tomcat/data/solr/elgg/conf
 ../data” So now it was pointing to new data directory “/usr/local/tomcat/data/solr/elgg/data”. Well this edit is an optional 
 step. you can skip this. In that case, data directory will be created at default location according to the default value of 
 “solr.data.dir”.
-Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and than browse as:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://localhost:8080/solrelgg&quot;&gt;http://localhost:8080/solrelgg&lt;/a&gt;&lt;/p&gt;
+Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and browse localhost:8080/solrelgg&lt;/p&gt;
 
 &lt;p&gt;It should show you “Welcome to Solr!” message with “Solr Admin” link.
 I hope, it would work for you. Now elgg integration is just the matter of pushing new entities at create entity hooks and all 

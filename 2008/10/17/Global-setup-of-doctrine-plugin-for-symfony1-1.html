@@ -1,273 +1,41 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
-  itemscope="" itemtype="http://schema.org/WebPage">
-  <head>
-    <meta charset="utf-8"/>
-    <meta itemprop="name" content="Global setup of doctrine plugin for symfony1.1." />
-    <meta itemprop="author" content="Tarun Jangra" />
-    <meta itemprop="breadcrumb" content="http://tarunjangra.com" />
-    <meta itemprop="keywords" content="" />
-    <meta itemprop="description" content="Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest avaialble version. " />
-    <meta name="description" content="Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest avaialble version. " />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-    <meta name="twitter:creator" content="@jangratarun"/>
-    <meta name="google-site-verification" content="LbBZQggzMfCTynN2RhklpF6XLElwBM85RK044iJnmTA" />
-    <meta property="twitter:account_id" content="363229840" />
-    <meta property="og:url" content="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"/>
-    
-    <meta property="og:site_name" content="Tarun Jangra's Blog'"/>
-    <meta property="og:title" content="Global setup of doctrine plugin for symfony1.1."/>
-    <meta property="og:description" content="Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest avaialble version. "/>
-    <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="fb:admins" content="1032543096808130"/>
-    <meta name="twitter:site" content="@jangratarun"/>
-    <meta name="twitter:creator" content="@jangratarun"/>
-    <meta name="twitter:url" content="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"/>
-    <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/>
-    <link rel="search" type="application/opensearchdescription+xml" href="opensearch.xml" title="tarunjangra" />
-    <link rel="shortcut icon" href="/favicon.ico?58ef2d3"/>
-    <link rel="apple-touch-icon" href="/favicon.ico?58ef2d3"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/>
-    <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" />
-    <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" />
-    <link rel="stylesheet" href="/css/layout.css?58ef2d3"/>
-    <link rel="stylesheet" href="/css/icons.css?58ef2d3"/>
-    <link rel="canonical" href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html" />
-    <link rel="amphtml" href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.amp.html" />
-    <title>Global setup of doctrine plugin for symfony1.1. - Tarun Jangra
-      </title>
-    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="/js/global.js?58ef2d3"></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <aside class="header-toggle unprintable" id="header-toggle" title="show head menu"
-        onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
-      <header class="header" id="header">
-        <div class="face">
-          <a href="/about-me.html#form" class="sub"><span>subscribe</span></a>
-          <a href="/about-me.html">
-            <img src="/images/about/tarun-jangra-200x200.jpg" class="photo"
-              alt="photo of Tarun Jangra"/>
-          </a>
-        </div>
-        <nav>
-          <ul class="menu social notranslate">
-            <li><a href="http://www.twitter.com/jangratarun" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/tarunjangra" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.facebook.com/jangra.tarun" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://instagram.com/tarunjangra" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/tarunjangra" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UC0ZsPdSN8ZfQBTGrpD2I7-A" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="https://angel.co/tarunjangra" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li>
-            <li><a href="mailto:blog@tarunjangra.com" title="blog@tarunjangra.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
-          </ul>
-          <ul class="menu">
-            <li><a href="/" title="Home page">Home</a></li>
-            <li><a href="/contents.html" title="blog contents">all&#160;23</a></li>
-            <li><a href="#" title="Tech Conferences">Conferences</a></li>
-            <li><a href="/proudly-earned.html" title="Certifications">Proudly Earned</a></li>
-          </ul>
-        </nav>
-        <div id="search">
-          <form method="get" action="https://www.google.com/search" style="position:relative">
-            <input name="sitesearch" value="tarunjangra.com" type="hidden"/>
-            <input id="search-query" class="field field-text"
-              onfocus="$('#google').css('display', 'inline-block');"
-              name="q" placeholder="Search" autocomplete="off"/>
-            <span class="desktop-only">
-              <input type="image" src="/images/google-search-icon.svg" id="google" title="search via Google"
-                style="height:2.4em;display:none;position:absolute;top:.3em;margin-left:1em;" alt="search via Google"/>
-            </span>
-          </form>
-          <div id="search-results" style="display: none;">
-            <div class="entries"></div>
-          </div>
-        </div>
-        <div class="hot">
-          <ul>
-            <li>
-              Join my new chatroom on Gitter to discuss
-              about cloud computing in realtime:
-              <a href="https://gitter.im/tarunjangra/codepipe">tarunjangra/codepipe</a>!
-            </li>
-          </ul>
-        </div>
-      </header>
-    </div>
-    <section itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="wrapper">
-    <header>
-      <p class="printable">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html&amp;format=svg"
-          style="width:125px;height:125px;" alt="QR code"/>
-      </p>
-      <p class="printable">
-        <code>http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html</code>
-      </p>
-      <h1 itemprop="name">Global setup of doctrine plugin for symfony1.1.</h1>
-      
-      <ul class="subline">
-        <li>
-          <time itemprop="datePublished" datetime="2008-10-17T00:00:00+00:00">
-            17 October 2008
-          </time>
-        </li>
-        
-        <li class='unprintable desktop-only'><a href='https://github.com/tarunjangra/blog/commits/master/_posts/2008/oct/2008-10-17-Global-setup-of-doctrine-plugin-for-symfony1-1.md'>modified</a>          on <time itemprop='dateModified' datetime='2016-12-12T00:26:29+0530'>12 December 2016</time></li>
-        <li class="printable">Tarun Jangra</li>
-        <li class="unprintable">
-          <i class="icon icon-comments"></i>
-          <a href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html#disqus_thread">comments</a>
-        </li>
-      </ul>
-      
-      <p class="unprintable"><a href='/tag/Doctrine.html' class='tag notranslate'>Doctrine</a> <a href='/tag/Symfony.html' class='tag notranslate'>Symfony</a> <a href='/tag/PHP.html' class='tag notranslate'>PHP</a></p>
-      <div class="buttons notranslate desktop-only">
-        <nav class="share" role="navigation">
-          <a href="http://www.facebook.com/sharer/sharer.php?u=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"
-            title="Share on Facebook" class="button">
-            <span class="count count-facebook">0</span>
-            <i class="icon icon-facebook notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="https://twitter.com/share?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html&amp;text=Global+setup+of+doctrine+plugin+for+symfony1.1."
-            title="Share on Twitter" class="button">
-            <span class="count count-twitter">0</span>
-            <i class="icon icon-twitter notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="https://plus.google.com/share?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"
-            title="Share on Google+" class="button">
-            <span class="count count-googleplus">0</span>
-            <i class="icon icon-googleplus notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/cws/share?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"
-            title="Share on LinkedIn" class="button">
-            <span class="count count-linkedin">0</span>
-            <i class="icon icon-linkedin notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="http://www.stumbleupon.com/submit?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html&amp;title=Global+setup+of+doctrine+plugin+for+symfony1.1."
-            title="Share on StumbleUpon" class="button">
-            <span class="count count-stumbleupon">0</span>
-            <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="http://reddit.com/submit?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html%3F2008-41&amp;title=Global+setup+of+doctrine+plugin+for+symfony1.1."
-            title="Share on Reddit" class="button">
-            <span class="count count-reddit">0</span>
-            <i class="icon icon-reddit notranslate" aria-hidden="true"></i>
-          </a>
-          <a href="http://news.ycombinator.com/submitlink?u=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html%3F2008-41&amp;t=Global+setup+of+doctrine+plugin+for+symfony1.1."
-            title="Share on Hacker News" class="button">
-            <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
-          </a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <article class="main" itemprop="articleBody">
-        <p>Here is a small tutorial to make available your doctrine plugin for all of your projects residing on the shared server.</p>
-
-<!--more-->
-
-<p>I have ubuntu 8.04 LTS box. Default symfony installation is located under “/usr/share/php/symfony/”. Locate whatever your 
-installation directory of symfony and type following commands:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> /usr/share/php/symfony/
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebPage"> <head> <meta charset="utf-8"/> <meta itemprop="name" content="Global setup of doctrine plugin for symfony1.1." /> <meta itemprop="author" content="Tarun Jangra" /> <meta itemprop="breadcrumb" content="http://tarunjangra.com" /> <meta itemprop="keywords" content="" /> <meta itemprop="description" content="Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest avaialble version. " /> <meta name="description" content="Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest avaialble version. " /> <meta name="keywords" content="" /> <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/> <meta name="twitter:creator" content="@jangratarun"/> <meta name="google-site-verification" content="LbBZQggzMfCTynN2RhklpF6XLElwBM85RK044iJnmTA" /> <meta property="twitter:account_id" content="363229840" /> <meta property="og:url" content="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"/> <meta property="og:site_name" content="Tarun Jangra's Blog'"/> <meta property="og:title" content="Global setup of doctrine plugin for symfony1.1."/> <meta property="og:description" content="Doctrine is an ORM which allows you to connect with different database. Here we will integrate symfony1.1 with doctrine latest avaialble version. "/> <meta property="og:type" content="article" /> <meta property="og:locale" content="en_US" /> <meta property="fb:admins" content="1032543096808130"/> <meta name="twitter:site" content="@jangratarun"/> <meta name="twitter:creator" content="@jangratarun"/> <meta name="twitter:url" content="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html"/> <meta property="article:author" content="https://www.facebook.com/jangra.tarun"/> <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="tarunjangra" /> <link rel="shortcut icon" href="/favicon.ico?b1ec69e"/> <link rel="apple-touch-icon" href="/favicon.ico?b1ec69e"/> <link rel="alternate" type="application/rss+xml" title="RSS for tarunjangra.com" href="http://tarunjangra.com/rss.xml"/> <link rel="author" href="https://plus.google.com/u/0/+TarunJangras?rel=author" /> <link rel="publisher" href="https://plus.google.com/u/0/+TarunJangras" /> <link rel="stylesheet" href="/css/layout.css?b1ec69e"/> <link rel="stylesheet" href="/css/icons.css?b1ec69e"/> <link rel="canonical" href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html" /> <link rel="amphtml" href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.amp.html" /> <title>Global setup of doctrine plugin for symfony1.1. - Tarun Jangra </title> </head> <body><div class="wrapper"> <aside class="header-toggle unprintable" id="header-toggle" title="show head menu" onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside> <header class="header" id="header"><div class="face"> <a href="/about-me.html#form" class="sub"><span>subscribe</span></a> <a href="/about-me.html"> <img src="/images/about/tarun-jangra-200x200.jpg" class="photo" alt="photo of Tarun Jangra"/> </a></div><nav><ul class="menu social notranslate"> <li><a href="http://www.twitter.com/jangratarun" title="follow me in Twitter"><i class="icon icon-twitter notranslate" aria-hidden="true"></i></a></li> <li><a href="/rss" title="RSS feed"><i class="icon icon-rss notranslate" aria-hidden="true"></i></a></li> <li><a href="https://github.com/tarunjangra" title="my GitHub profile"><i class="icon icon-github notranslate" aria-hidden="true"></i></a></li> <li><a href="https://www.facebook.com/jangra.tarun" title="follow me in Facebook"><i class="icon icon-facebook notranslate" aria-hidden="true"></i></a></li> <li><a href="https://instagram.com/tarunjangra" title="follow me in Instagram"><i class="icon icon-instagram notranslate" aria-hidden="true"></i></a></li> <li><a href="https://www.linkedin.com/in/tarunjangra" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li> <li><a href="https://www.youtube.com/channel/UC0ZsPdSN8ZfQBTGrpD2I7-A" title="my Youtube video channel"><i class="icon icon-youtube notranslate" aria-hidden="true"></i></a></li> <li><a href="https://angel.co/tarunjangra" title="my AngelList profile"><i class="icon icon-angellist notranslate" aria-hidden="true"></i></a></li> <li><a href="mailto:blog@tarunjangra.com" title="blog@tarunjangra.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li></ul><ul class="menu"> <li><a href="/" title="Home page">Home</a></li> <li><a href="/contents.html" title="blog contents">all&#160;23</a></li></ul></nav><div id="search"> <form method="get" action="https://www.google.com/search" style="position:relative"> <input name="sitesearch" value="tarunjangra.com" type="hidden"/> <input id="search-query" class="field field-text" onfocus="$('#google').css('display', 'inline-block');" name="q" placeholder="Search" autocomplete="off"/> <span class="desktop-only"> <input type="image" src="/images/google-search-icon.svg" id="google" title="search via Google" style="height:2.4em;display:none;position:absolute;top:.3em;margin-left:1em;" alt="search via Google"/> </span> </form><div id="search-results" style="display: none;"><div class="entries"></div></div></div><div class="hot"><ul> <li> Join my new chatroom on Gitter to discuss about cloud computing in realtime: <a href="https://gitter.im/tarunjangra/codepipe">tarunjangra/codepipe</a>! </li></ul></div></header></div><section itemscope="" itemtype="http://schema.org/BlogPosting"><div class="wrapper"> <header><p class="printable"> <img src="https://api.qrserver.com/v1/create-qr-code/?data=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html&amp;format=svg" style="width:125px;height:125px;" alt="QR code"/></p><p class="printable"> <code>http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html</code></p><h1 itemprop="name">Global setup of doctrine plugin for symfony1.1.</h1><ul class="subline"> <li> <time itemprop="datePublished" datetime="2008-10-17T00:00:00+00:00"> 17 October 2008 </time> </li> <li class='unprintable desktop-only'><a href='https://github.com/tarunjangra/blog/commits/master/_posts/2008/oct/2008-10-17-Global-setup-of-doctrine-plugin-for-symfony1-1.md'>modified</a> on <time itemprop='dateModified' datetime='2016-12-12T00:26:29+0530'>12 December 2016</time></li> <li class="printable">Tarun Jangra</li> <li class="unprintable"> <i class="icon icon-comments"></i> <a href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html#disqus_thread" itemprop="discussionUrl">comments</a> </li></ul><p class="unprintable"><a href='/tag/Doctrine.html' class='tag notranslate'>Doctrine</a> <a href='/tag/Symfony.html' class='tag notranslate'>Symfony</a> <a href='/tag/PHP.html' class='tag notranslate'>PHP</a></p><div class="buttons notranslate desktop-only"> <nav class="share" role="navigation"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html" title="Share on Facebook" class="button"> <span class="count count-facebook">0</span> <i class="icon icon-facebook notranslate" aria-hidden="true"></i> </a> <a href="https://twitter.com/share?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html&amp;text=Global+setup+of+doctrine+plugin+for+symfony1.1." title="Share on Twitter" class="button"> <span class="count count-twitter">0</span> <i class="icon icon-twitter notranslate" aria-hidden="true"></i> </a> <a href="https://plus.google.com/share?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html" title="Share on Google+" class="button"> <span class="count count-googleplus">0</span> <i class="icon icon-googleplus notranslate" aria-hidden="true"></i> </a> <a href="https://www.linkedin.com/cws/share?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html" title="Share on LinkedIn" class="button"> <span class="count count-linkedin">0</span> <i class="icon icon-linkedin notranslate" aria-hidden="true"></i> </a> <a href="http://www.stumbleupon.com/submit?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html&amp;title=Global+setup+of+doctrine+plugin+for+symfony1.1." title="Share on StumbleUpon" class="button"> <span class="count count-stumbleupon">0</span> <i class="icon icon-stumbleupon notranslate" aria-hidden="true"></i> </a> <a href="http://reddit.com/submit?url=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html%3F2008-41&amp;title=Global+setup+of+doctrine+plugin+for+symfony1.1." title="Share on Reddit" class="button"> <span class="count count-reddit">0</span> <i class="icon icon-reddit notranslate" aria-hidden="true"></i> </a> <a href="http://news.ycombinator.com/submitlink?u=http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html%3F2008-41&amp;t=Global+setup+of+doctrine+plugin+for+symfony1.1." title="Share on Hacker News" class="button"> <i class="icon icon-hackernews notranslate" aria-hidden="true"></i> </a> </nav></div></header> <main> <article class="main" itemprop="articleBody"><p>Here is a small tutorial to make available your doctrine plugin for all of your projects residing on the shared server.</p><p>I have ubuntu 8.04 LTS box. Default symfony installation is located under “/usr/share/php/symfony/”. Locate whatever your installation directory of symfony and type following commands:</p><figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> /usr/share/php/symfony/
 <span class="nv">$ </span>svn co <span class="se">\</span>
 http://svn.symfony-project.com/plugins/sfDoctrinePlugin/branches/1.1 <span class="se">\</span>
 plugins/sfDoctrinePlugin
 <span class="nv">$ </span><span class="nb">cd </span>plugins/sfDoctrinePlugin/config
-<span class="nv">$ </span>vi autoload.yml</code></pre></figure>
-
-<p>do following modifications</p>
-
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">#path:       </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">realpath</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/../lib&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
-<span class="x">path:       %SF_SYMFONY_LIB_DIR%/plugins/sfDoctrinePlugin/lib</span></code></pre></figure>
-
-<p>Then save that file and create new file “config.php” with the following script</p>
-
-<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">set_include_path(</span>
+<span class="nv">$ </span>vi autoload.yml</code></pre></figure><p>do following modifications</p><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">#path:       </span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nb">realpath</span><span class="p">(</span><span class="nb">dirname</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;/../lib&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">path:       %SF_SYMFONY_LIB_DIR%/plugins/sfDoctrinePlugin/lib</span></code></pre></figure><p>Then save that file and create new file “config.php” with the following script</p><figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">set_include_path(</span>
 <span class="x">  get_include_path().</span>
 <span class="x">  PATH_SEPARATOR.dirname(__FILE__).</span>
 <span class="x">  &#39;/../lib/&#39;.</span>
 <span class="x">  PATH_SEPARATOR.sfConfig::get(&#39;sf_root_dir&#39;)</span>
-<span class="x">  );</span></code></pre></figure>
-
-<p>Now doctrine plugin will be available for all of your projects located on same shared server.</p>
-
-      </article>
-    </main>
-    
-    
+<span class="x">  );</span></code></pre></figure><p>Now doctrine plugin will be available for all of your projects located on same shared server.</p></article> </main> 
   <div class="unprintable">
     <h2>Related Posts</h2>
     <p>You may also find these posts interesting:</p>
     <ul>
       
         <li>
-          <a href="/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" data-score="1.8207042074875792">ElasticSearch restore failed when s3-gateway is activated</a>
+          <a href="/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" data-score="1.7023698178568771">ElasticSearch restore failed when s3-gateway is activated</a>
         </li>
       
         <li>
-          <a href="/2012/12/29/how-to-install-godaddy-ssl-on-ELB.html" data-score="0.8049755921727286">How to install go-daddy ssl certificate on amazon load balancer</a>
+          <a href="/2012/12/29/how-to-install-godaddy-ssl-on-ELB.html" data-score="0.7877593461887333">How to install go-daddy ssl certificate on amazon load balancer</a>
         </li>
       
         <li>
-          <a href="/2008/10/16/One-more-vote-to-symfony-doctrine-combination.html" data-score="0.6187829098350592">One more vote to symfony + doctrine combination.</a>
+          <a href="/2008/10/16/One-more-vote-to-symfony-doctrine-combination.html" data-score="0.6430512457167972">One more vote to symfony + doctrine combination.</a>
         </li>
       
         <li>
-          <a href="/2016/07/09/hello-world.html" data-score="0.3070992394468123">My First post with Jekyll</a>
+          <a href="/2016/07/09/hello-world.html" data-score="0.3094510477408148">My First post with Jekyll</a>
         </li>
       
         <li>
-          <a href="/2008/05/19/One-more-behaviour-of-ruby.html" data-score="0.2983988061888231">One more behaviour of ruby</a>
+          <a href="/2008/10/08/Setup-QuantumDB-plugin-on-eclipse-3-2-for-MySQL.html" data-score="0.294147816959793">Setup “QuantumDB” plugin on eclipse 3.2 for MySQL</a>
         </li>
       
     </ul>
   </div>
 
-
-    <div class="teamed-banner">
-      <a href="http://www.abcdevops.com">
-        <img src="/images/banners/abcdevops.png" alt="banner"/>
-      </a>
-    </div>
-  </div>
-
-  <div class="disqus" role="complementary">
-    <div id="disqus_thread" class="disqus-thread"></div>
-    <a href="http://disqus.com" class="dsq-brlink">
-      comments powered by
-      <span class="logo-disqus">Disqus</span>
-    </a>
-  </div>
-
-  <div class="wrapper">
-    <footer class="footer">
-      <p>
-        &copy;
-        <span itemprop="author">Tarun Jangra</span>,
-        2016
-      </p>
-    </footer>
-  </div>
-
-</section>
-
-<script src="/js/post.js?58ef2d3"></script>
-<script src="//a.disquscdn.com/embed.js?58ef2d3"></script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-783273-5', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
-</html>
+<div class="teamed-banner"> <a href="http://www.abcdevops.com"> <img src="/images/banners/abcdevops.png" alt="banner"/> </a></div></div><div class="disqus" role="complementary"><div id="disqus_thread" class="disqus-thread"></div><script> var disqus_config = function () { this.page.url = document.location.href.split('?')[0].split('#')[0]; this.page.identifier = this.page.url; }; (function() { var d = document, s = d.createElement('script'); s.src = '//wwwtarunjangracom.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript><div><p class="red"> JavaScript is disabled in your browser, that's why you can't see comments under this post.</p></div></noscript></div><div class="wrapper"> <footer class="footer"><p> &copy; <span itemprop="author">Tarun Jangra</span>, 2016</p></footer></div></section> <script src="//code.jquery.com/jquery-1.9.0.min.js"></script> <script src="/js/all.js?b1ec69e"></script> <script>var disqus_shortname = 'wwwtarunjangracom';</script> <script id="dsq-count-scr" src="//wwwtarunjangracom.disqus.com/count.js" async="async"></script> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-783273-5', 'auto'); ga('send', 'pageview'); </script> <script language="javascript" type="text/javascript"> Cd=document;Cr="&"+Math.random();Cp="&s=1"; Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1"; Cp+="&t="+(new Date()).getTimezoneOffset(); if(self!=top)Cp+="&f=1"; </script> <script language="javascript1.1" type="text/javascript"> if(navigator.javaEnabled())Cp+="&j=1"; </script> <script language="javascript1.2" type="text/javascript"> if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+ screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth); </script> <script language="javascript" type="text/javascript"> Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+ "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+ "' border='0' wi"+"dth='1' he"+"ight='1'/>"); </script> </body> </html>

@@ -6,6 +6,7 @@
     <title>Solr setup debian (lenny) + tomcat6 + solr</title>
     <link rel="canonical" href="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico?b1ec69e">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -114,9 +115,7 @@ start Tomcat, and properly deploy Solr. Use a text editor of your choice and cre
 ../data” So now it was pointing to new data directory “/usr/local/tomcat/data/solr/elgg/data”. Well this edit is an optional 
 step. you can skip this. In that case, data directory will be created at default location according to the default value of 
 “solr.data.dir”.
-Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and than browse as:</p>
-
-<p><a href="http://localhost:8080/solrelgg">http://localhost:8080/solrelgg</a></p>
+Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and browse localhost:8080/solrelgg</p>
 
 <p>It should show you “Welcome to Solr!” message with “Solr Admin” link.
 I hope, it would work for you. Now elgg integration is just the matter of pushing new entities at create entity hooks and all 
