@@ -13,7 +13,7 @@ require 'net/http'
 require 'html-proofer'
 
 task default: [
-  :clean,
+#  :clean,
   :build,
   :pages,
   :garbage,
