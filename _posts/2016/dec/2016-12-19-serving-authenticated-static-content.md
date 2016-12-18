@@ -13,7 +13,9 @@ tags:
 ---
 
 It has always been the pain when we need to server authenticated static content. Because we are bound with programming framework 
-to handle the authentication job. And once authenticated, <!--more-->you have to read the file from the Disk through your programming to 
+to handle the authentication job. And once authenticated, 
+<!--more-->
+you have to read the file from the Disk through your programming to 
 stream to the end user with correct mime type. This was the only solution for me before today.
 
 ![Nginx x-accel module](http://i.imgur.com/ABtCr5z.jpg)
