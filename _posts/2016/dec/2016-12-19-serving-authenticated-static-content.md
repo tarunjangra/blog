@@ -2,6 +2,7 @@
 layout: post
 title: "Serving Authenticated Static Content was pretty expensive before today"
 date: 2016-12-19
+og_image: http://i.imgur.com/ABtCr5z.jpg
 description: |
   I've never used this feature of httpd servers like apache, nginx which allows me to serve authenticated static content to the 
   end user without so much dependency on my application language.
