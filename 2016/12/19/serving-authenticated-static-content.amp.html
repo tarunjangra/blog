@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Serving Authenticated Static Content was pretty expensive before today</title>
+    <link rel="canonical" href="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico?d8530e6">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html"
+        },
+        "headline": "Serving Authenticated Static Content was pretty expensive before today",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2016-12-19",
+        "dateModified": "2016-12-19",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "I've never used this feature of httpd servers like apache, nginx which allows me to serve authenticated static content to the 
+end user without so much dependency on my application language.
+",
+        "keywords": ["nginx", "apache", "httpd", "module"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Serving Authenticated Static Content was pretty expensive before today</h1>
+      <p>It has always been the pain when we need to server authenticated static content. Because we are bound with programming framework 
+to handle the authentication job. And once authenticated, </p>
+
+
+
+<p>you have to read the file from the Disk through your programming to 
+stream to the end user with correct mime type. This was the only solution for me before today.</p>
+
+<p></p>
+
+<p>While working on some project, i’ve found XSendfile and X-Accel. X-accel allows for internal redirection to a location 
+determined by a header returned from a backend.</p>
+
+<p>This allows you to handle authentication, logging or whatever else you please in your backend and then have NGINX handle 
+serving the contents from redirected location to the end user, thus freeing up the backend to handle other requests. This 
+feature is commonly known as X-Sendfile.</p>
+
+<p>NGINX also has this feature, but implemented a little bit differently. In NGINX this feature is called X-Accel-Redirect.</p>
+
+<p>There are two main differences:</p>
+
+<ol>
+<li>The header must contain a URI.</li>
+<li>The location should be defined as internal; to prevent the client from going directly to the URI.</li>
+</ol>
+
+<p>We have been missing this feature in our elgg development. Now we will definitely use this module to get the better
+ performance while service static content to the end user. No more stream reading from disk and serve further.</p>
+
+    </article>
+  </body>
+</html>

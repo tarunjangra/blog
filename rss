@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-18T20:24:20+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2016-12-22T18:46:45+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>Serving Authenticated Static Content was pretty expensive before today</title><link href="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html" rel="alternate" type="text/html" title="Serving Authenticated Static Content was pretty expensive before today" /><published>2016-12-19T00:00:00+00:00</published><updated>2016-12-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/12/19/serving-authenticated-static-content</id><content type="html" xml:base="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html">&lt;p&gt;It has always been the pain when we need to server authenticated static content. Because we are bound with programming framework 
+to handle the authentication job. And once authenticated, &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;you have to read the file from the Disk through your programming to 
+stream to the end user with correct mime type. This was the only solution for me before today.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/ABtCr5z.jpg&quot; alt=&quot;Nginx x-accel module&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;While working on some project, i’ve found XSendfile and X-Accel. X-accel allows for internal redirection to a location 
+determined by a header returned from a backend.&lt;/p&gt;
+
+&lt;p&gt;This allows you to handle authentication, logging or whatever else you please in your backend and then have NGINX handle 
+serving the contents from redirected location to the end user, thus freeing up the backend to handle other requests. This 
+feature is commonly known as X-Sendfile.&lt;/p&gt;
+
+&lt;p&gt;NGINX also has this feature, but implemented a little bit differently. In NGINX this feature is called X-Accel-Redirect.&lt;/p&gt;
+
+&lt;p&gt;There are two main differences:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The header must contain a URI.&lt;/li&gt;
+&lt;li&gt;The location should be defined as internal; to prevent the client from going directly to the URI.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We have been missing this feature in our elgg development. Now we will definitely use this module to get the better
+ performance while service static content to the end user. No more stream reading from disk and serve further.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="nginx" /><category term="apache" /><category term="httpd" /><category term="module" /><summary>It has always been the pain when we need to server authenticated static content. Because we are bound with programming framework 
+to handle the authentication job. And once authenticated,</summary></entry><entry><title>My First post with Jekyll</title><link href="http://tarunjangra.com/2016/07/09/hello-world.html" rel="alternate" type="text/html" title="My First post with Jekyll" /><published>2016-07-09T00:00:00+00:00</published><updated>2016-07-09T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/07/09/hello-world</id><content type="html" xml:base="http://tarunjangra.com/2016/07/09/hello-world.html">&lt;p&gt;In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
 and github for hosting this blog.&lt;/p&gt;
 
@@ -340,19 +368,4 @@ base system of freeBSD with ssh account. Boot time less than 20 second, Impressi
 required softwares on freeBSD. There is a word called “ports”, quite common for freeBSD community. I was confuseed with all 
 such terms. But now i am feeling better to use this environment. Anyhow overall freeBSD wins at server level for me at least.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="UNIX" /><category term="Linux" /><category term="FreeBSD" /><summary>I am working on linux since 2008. I am extensive user of linux even my development environment is on linux. 
 In linux i like debian based distributions. Ubuntu for is desktop friendlyness and Debian(lenny) for it’s stability. 
-Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD.</summary></entry><entry><title>Decided to move my company on linux (Ubuntu)</title><link href="http://tarunjangra.com/2010/01/25/decided-to-move-on-linux.html" rel="alternate" type="text/html" title="Decided to move my company on linux (Ubuntu)" /><published>2010-01-25T00:00:00+00:00</published><updated>2010-01-25T00:00:00+00:00</updated><id>http://tarunjangra.com/2010/01/25/decided-to-move-on-linux</id><content type="html" xml:base="http://tarunjangra.com/2010/01/25/decided-to-move-on-linux.html">&lt;p&gt;Finally we move to linux. Not only server but clients also. And believe me it is just an amazing experience. Everyone in our 
-company is just happy with this change. Well it took too long to decide this. Because as a developer point of view, We know 
-windows has calibre to be king on clients. This is obvious, particularly here in India. In our education system, we never 
-see any institute to take linux seriously. Moreover who ever see computer first time in India, That have windows. So such a 
-big windows share is obvious.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;We have setup all of our machines with Ubuntu 9.10 32bit. Everything is smooth. All of our team already using open softwares 
-on windows. Like OpenOffice, NetBeans, FF, Opera So that’s why none of us did not feel any difficult for our development 
-environment. I am missing IE8, IE7. So the alternative we used is “Virtual Box” to test our development. This is the only 
-reason we need windows now. :)&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="UNIX" /><category term="Linux" /><summary>Finally we move to linux. Not only server but clients also. And believe me it is just an amazing experience. Everyone in our 
-company is just happy with this change. Well it took too long to decide this. Because as a developer point of view, We know 
-windows has calibre to be king on clients. This is obvious, particularly here in India. In our education system, we never 
-see any institute to take linux seriously. Moreover who ever see computer first time in India, That have windows. So such a 
-big windows share is obvious.</summary></entry></feed>
+Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD.</summary></entry></feed>
