@@ -70,6 +70,3 @@ subscribers in my list).
 </fieldset></form>
 
 You can always [unsubscribe](/unsubscribe.html).
-
-<script src="http://platform.twitter.com/oct.js" async='async' defer='defer'></script>
-<script src="/js/about.js?{{ site.data['hash'] }}"></script>

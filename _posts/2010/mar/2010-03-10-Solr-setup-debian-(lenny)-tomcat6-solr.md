@@ -90,9 +90,7 @@ Now edit “solrconfig.xml” and find “solr.data.dir” parameter. Change it�
 ../data” So now it was pointing to new data directory “/usr/local/tomcat/data/solr/elgg/data”. Well this edit is an optional 
 step. you can skip this. In that case, data directory will be created at default location according to the default value of 
 “solr.data.dir”.
-Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and than browse as:
-
-http://localhost:8080/solrelgg
+Now start tomcat server using “/usr/local/tomcat/bin/startup.sh” and browse localhost:8080/solrelgg
 
 It should show you “Welcome to Solr!” message with “Solr Admin” link.
 I hope, it would work for you. Now elgg integration is just the matter of pushing new entities at create entity hooks and all 

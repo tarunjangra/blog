@@ -13,12 +13,20 @@ require 'net/http'
 require 'html-proofer'
 
 task default: [
+#  :clean,
   :build,
   :pages,
   :garbage,
   :snippets,
   :orphans,
-  :ping
+#  :jslint,
+#  :proofer,
+#  :rubocop,
+#  :scss_lint,
+#  :spell,
+  :regex,
+  :excerpts,
+  :ping,
 ]
 
 def done(msg)

@@ -12,6 +12,10 @@ tags:
 ---
 
 I am going to dive in more serious and complex application development and for that; I need some specific approach to get 
-reliable results. I found the answer, is UML (Unified Modeling Language). I am really interested to explore about but don’t 
-know where to start. It is very dense area and it is extremely easy to lose in various types of different shapes defined by 
-UML. While my research, I found an excellent guide for UML to start from. Here it is. It is a great start for beginners.
+reliable results. I found the answer, is UML (Unified Modeling Language). 
+
+<!--more-->
+
+I am really interested to explore about but don’t know where to start. It is very dense area and it is extremely easy to lose
+ in various types of different shapes defined by UML. While my research, I found an excellent guide for UML to start from. Here 
+ it is. It is a great start for beginners.
