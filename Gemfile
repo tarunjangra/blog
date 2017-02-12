@@ -2,10 +2,10 @@
 # Just run "bundle"
 #
 source 'https://rubygems.org'
-ruby '2.3.0'
+#ruby '2.3.0'
 
 gem 'rake', '10.4.2'
-gem 'jekyll', '3.1.2'
+gem 'jekyll', '3.1.6'
 gem 'sass', '3.4.22'
 gem 'jekyll-feed', '0.6.0'
 gem 'jekyll-gist', '1.4.0'

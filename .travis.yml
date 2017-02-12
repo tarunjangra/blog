@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.3.0
+  - 2.2.2
 sudo: required
 branches:
   only:
@@ -45,4 +45,5 @@ install:
 script:
   - set -e
   - bundle exec rake
+  - export JEKYLL_ENV=production
   - bundle exec jgd -u git@github.com:tarunjangra/blog.git
