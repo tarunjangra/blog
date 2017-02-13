@@ -6,7 +6,7 @@
     <title>Logical Volume Manager (LVM) can help if you are out of space</title>
     <link rel="canonical" href="http://tarunjangra.com/2012/11/12/Logical-Volume-Manager-LVM-can-help-if-you-are-out-of-space.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico?f8a10ab">
+    <link rel="shortcut icon" href="/favicon.ico?69f019d">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -67,12 +67,26 @@ working on. Replacing the old hardisk with the new of bigger size is one solutio
 and that really helped me to extend my “home” drive in minutes without copying and all boring stuff as i explained above. My old 
 hard disk scheme was:</p>
 
-
+<pre>100MB /boot
+73GB PV (Physical Volume )
+3 GB /myDB ( my database directory)
+45GB /home (All my projects are located in home)</pre>
 
 <p>So i was going out of space. What i did, I purchased new 1TB WD sata hard drive. And configure that on secondary sata port. 
 My ubuntu box detect the new hard drive. I make it sure by following command.</p>
 
-
+<pre>fdisk -l       
+# i got my both partitions as /dev/sda and dev/sdb (new one).
+vgdisplay    
+# I got the name of the volume group to be used.
+vgextend  /dev/sdb   
+# this command put my new hard drive in the existing volume group.
+vgdisplay   
+# To make it sure if this new hard drive is actually added to the new group.
+lvextend -L 500G /dev/volume-group-name/drive-name  
+# Drive name was assigned to my "home" dir.
+resize2fs /dev/volume-group-name/drive-name  
+# This took about 10 mins to extend my home with more 500G.</pre>
 
 <p>So this is how i extend all space. I noticed while extending i was able to access all projects from that extending drive. 
 There was no crash or no restart (usually forced by windows for such tasks :) ). It means process is so efficient, you can use

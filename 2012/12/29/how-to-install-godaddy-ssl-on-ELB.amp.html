@@ -6,7 +6,7 @@
     <title>How to install go-daddy ssl certificate on amazon load balancer</title>
     <link rel="canonical" href="http://tarunjangra.com/2012/12/29/how-to-install-godaddy-ssl-on-ELB.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico?f8a10ab">
+    <link rel="shortcut icon" href="/favicon.ico?69f019d">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -65,7 +65,8 @@
 
 
 
-
+<pre>openssl genrsa -des3 -out private.key 1024
+openssl req -new -key private.key -out www.your-web-site.com.csr</pre>
 
 <p>You will be prompt to provide some basic information. Make sure you have added “Common Name”; a fully qualified domain name. like “www.xyz.com”</p>
 
@@ -79,7 +80,7 @@
 
 <h3 id="now-back-to-your-terminal">Now back to your terminal.</h3>
 
-
+<pre>openssl rsa -in private.key -out private.pem</pre>
 
 <p>Now you will have following files in your current location.</p>
 

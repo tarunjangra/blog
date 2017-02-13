@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2017-02-13T00:01:46+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>Serving Authenticated Static Content was pretty expensive before today</title><link href="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html" rel="alternate" type="text/html" title="Serving Authenticated Static Content was pretty expensive before today" /><published>2016-12-19T00:00:00+00:00</published><updated>2016-12-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/12/19/serving-authenticated-static-content</id><content type="html" xml:base="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html">&lt;p&gt;It has always been the pain when we need to server authenticated static content. Because we are bound with programming framework 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://tarunjangra.com/rss.xml" rel="self" type="application/atom+xml" /><link href="http://tarunjangra.com/" rel="alternate" type="text/html" /><updated>2017-02-13T01:27:02+00:00</updated><id>http://tarunjangra.com/</id><title>Tarun Jangra</title><subtitle>Tarun Jangra</subtitle><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><entry><title>Serving Authenticated Static Content was pretty expensive before today</title><link href="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html" rel="alternate" type="text/html" title="Serving Authenticated Static Content was pretty expensive before today" /><published>2016-12-19T00:00:00+00:00</published><updated>2016-12-19T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/12/19/serving-authenticated-static-content</id><content type="html" xml:base="http://tarunjangra.com/2016/12/19/serving-authenticated-static-content.html">&lt;p&gt;It has always been the pain when we need to server authenticated static content. Because we are bound with programming framework 
 to handle the authentication job. And once authenticated, &lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -37,7 +37,126 @@ Entrepreneurship. So that&amp;#39;s whyat i&amp;#39;ll be writing about.&lt;/p&g
 
 &lt;p&gt;So just want to say &amp;quot;Hello&amp;quot; and Thank you to take time to read this blog.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="blogging" /><category term="tarun jangra" /><category term="jekyll" /><category term="jangra" /><summary>In this blog i do not have any thing particular to talk about. So it is just an introduction
 of my new blog built on Jekyll. Since it is Jekyll based, so i&amp;#39;ve used Travis-CI for building
-and github for hosting this blog.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
+and github for hosting this blog.</summary></entry><entry><title>Amazon Elastic Cloud Computing (EC2)</title><link href="http://tarunjangra.com/2016/03/02/amazon-ec2.html" rel="alternate" type="text/html" title="Amazon Elastic Cloud Computing (EC2)" /><published>2016-03-02T00:00:00+00:00</published><updated>2016-03-02T00:00:00+00:00</updated><id>http://tarunjangra.com/2016/03/02/amazon-ec2</id><content type="html" xml:base="http://tarunjangra.com/2016/03/02/amazon-ec2.html">&lt;p&gt;Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides re-sizable compute capacity in the cloud. 
+Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale 
+capacity, both up and down, as your computing requirements change.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;figure&gt;&lt;img src=&#39;/images/assets/ec2-750x410.png&#39; style=&#39;width:600px;max-width:100%;&#39; alt=&#39;Amazon EC2&#39;/&gt;&lt;figcaption&gt;Amazon EC2&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;We are working from last 10 years in IT I remember time where if we needed a new Active Directory Server or a new SQL Server 
+we have to go to HP or go to DELL order new servers. we then had to get deliver to our data centers. we had to get racked.
+ we had to do the networking setup them the internet accessible etc and you know your provisioning time should be anywhere
+  from 5 to 10 business days. &lt;/p&gt;
+
+&lt;p&gt;Then i started public cloud and was really exciting to see the capabilities of cloud in step having of 5 to 10 days 
+  lead time you would reduce to literally just couple of minutes you can have that server up and running so that&amp;#39;s 
+  really how cloud computing change the IT industry in the last 5 to 10 years so Amazon EC2 changes the economics of 
+  computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools 
+  to build failure resilient applications and isolate themselves from common failure scenarios. So we just look at the first 
+  section the advantage of the cloud computing is utility based model you can pay only by the hour. If you want to spin up 
+  the development environment and just test on it and then terminate you only pay for 1 or 2 hours the environment is live 
+  the old model way you would buy the server hardware you would be stuck with it.&lt;/p&gt;
+
+&lt;h2 id=&quot;elastic-compute-cloud-pricing-options&quot;&gt;Elastic Compute Cloud Pricing Options&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Free Tier&lt;/strong&gt; you get 735 hours free on certain micro instances.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;On Demand&lt;/strong&gt; Which allow you to pay a fixed rate by the hour with no commitment.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reserved&lt;/strong&gt; Which provide you with a capacity reservation, and offer a significant discount on the hourly charge for 
+an instance. Then you have 1 Year or 3 Year Terms so reserved just saying i need 10 servers of this size and i am willing 
+to pay either up-front contractual willing to commit for 1 to 3 years and if you do use reserved instances then you get 
+massive discounts compared with on demand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spot&lt;/strong&gt; This is enable you to bid whatever price you want to pay for instance capacity, providing for even greater savings 
+if your applications have flexible start and end times.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;elastic-compute-cloud-on-demand-vs-reserved-vs-spot&quot;&gt;Elastic Compute Cloud On Demand vs Reserved vs Spot&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;On Demand Instances&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Users that want the low cost and flexibility of Amazon EC2 without any up-front payment or long-term commitment.&lt;/li&gt;
+&lt;li&gt;Applications with short term, spike, or unpredictable workloads that cannot be interrupted.&lt;/li&gt;
+&lt;li&gt;Applications being developed or tested on Amazon EC2 for the first time.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reserved Instances&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Applications with steady state or predictable usage so reserved might be your 3 or 4 web servers that you always want 
+to turned on and then your on demand instances might be is the part of an auto scaling event.&lt;/li&gt;
+&lt;li&gt;Applications that require reserved capacity.&lt;/li&gt;
+&lt;li&gt;Users able to make upfront payment to reduce their total computing costs even further.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spot Instances&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Applications that have flexible start and end times.&lt;/li&gt;
+&lt;li&gt;Applications that are only feasible at very low compute prices.&lt;/li&gt;
+&lt;li&gt;Users with urgent computing needs for large amounts &amp;nbsp;of additional capacity.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;elastic-compute-cloud-nbsp-on-demand-instances&quot;&gt;Elastic Compute Cloud&amp;nbsp;On Demand Instances**&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;General Purpose Instances&lt;/li&gt;
+&lt;li&gt;Compute Optimized Instances
+
+&lt;ul&gt;
+&lt;li&gt;Compute Intensive Applications&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Memory Optimized Instances
+
+&lt;ul&gt;
+&lt;li&gt;Database &amp;amp; Memory Caching Applications&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GPU Instances Instances
+
+&lt;ul&gt;
+&lt;li&gt;High Performance Parallel Computing (eg Hadoop)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Storage Optimized Instances
+
+&lt;ul&gt;
+&lt;li&gt;Data warehousing and Parallel Computing&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;local-instance-storage-vs-elastic-block-storage&quot;&gt;Local Instance Storage vs Elastic Block Storage&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Local Instance Storage&lt;/strong&gt;: Data stored on a local instance store will persist only as long as that instance is alive. So you terminate that 
+Instances you loose all the data on that virtual hardware.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Elastic Block Storage Backed Storage&lt;/strong&gt;: Data that is stored on an Amazon Elastic Block Storage volume will persist independently of the life of the instance.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;storage-backed-by-elastic-block-storage&quot;&gt;Storage backed by Elastic Block Storage&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Provisioned IOPS Solid State Drive&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Designed for I/O intensive applications such as large relational or No-SQL databases.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;General purpose Solid State Drive&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Designed for 99.999% availability.&lt;/li&gt;
+&lt;li&gt;Ratio of 3 IOPS per GB, offer single digit millisecond latency, and also have the ability to burst up to 3000 IOPS 
+for short periods.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Magnetic&lt;/strong&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lowest cost per gigabyte of all Elastic Block Storage volume types. Magnetic volumes are ideal for workloads where data 
+is accessed infrequently, and applications where the lowest storage cost is important.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="tarun jangra" /><category term="EC2" /><category term="AWS" /><summary>Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides re-sizable compute capacity in the cloud. 
+Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale 
+capacity, both up and down, as your computing requirements change.</summary></entry><entry><title>ElasticSearch restore failed when s3-gateway is activated</title><link href="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html" rel="alternate" type="text/html" title="ElasticSearch restore failed when s3-gateway is activated" /><published>2014-07-11T00:00:00+00:00</published><updated>2014-07-11T00:00:00+00:00</updated><id>http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated</id><content type="html" xml:base="http://tarunjangra.com/2014/07/11/elasticSearch-restore-failed-when-s3-gateway-activated.html">&lt;p&gt;Hufffff, Unfortunately i met this edge case. I have recovered from this situation. Here’s my scenario.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;I am on ElasticSearch Version 1.1.0&lt;/li&gt;
@@ -356,16 +475,4 @@ Requirements:
 
 JDK, JRE (OpenJDK, SunJDK)
 Tomcat6.x
-Latest solr</summary></entry><entry><title>My first freeBSD experience</title><link href="http://tarunjangra.com/2010/02/25/My-first-freeBSD-experience.html" rel="alternate" type="text/html" title="My first freeBSD experience" /><published>2010-02-25T00:00:00+00:00</published><updated>2010-02-25T00:00:00+00:00</updated><id>http://tarunjangra.com/2010/02/25/My-first-freeBSD-experience</id><content type="html" xml:base="http://tarunjangra.com/2010/02/25/My-first-freeBSD-experience.html">&lt;p&gt;I am working on linux since 2008. I am extensive user of linux even my development environment is on linux. 
-In linux i like debian based distributions. Ubuntu for is desktop friendlyness and Debian(lenny) for it’s stability. 
-Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD. &lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;Environment is little complex. Actually not complex, It seems to me because i am not use to of it. After trying freeBSD server for a day, I just fell 
-in love with it. Quite lite as compare to other linux distributions. You won’t believe. But it took around 3 min to install 
-base system of freeBSD with ssh account. Boot time less than 20 second, Impressive……… . I just figured out, how to install 
-required softwares on freeBSD. There is a word called “ports”, quite common for freeBSD community. I was confuseed with all 
-such terms. But now i am feeling better to use this environment. Anyhow overall freeBSD wins at server level for me at least.&lt;/p&gt;</content><author><name>Tarun Jangra</name><email>tarun@izap.in</email></author><category term="UNIX" /><category term="Linux" /><category term="FreeBSD" /><summary>I am working on linux since 2008. I am extensive user of linux even my development environment is on linux. 
-In linux i like debian based distributions. Ubuntu for is desktop friendlyness and Debian(lenny) for it’s stability. 
-Right now, i am using debian lenny. There was 0 crash on my AMD64. So today i decide to give try to freeBSD.</summary></entry></feed>
+Latest solr</summary></entry></feed>

@@ -6,7 +6,7 @@
     <title>Solr setup debian (lenny) + tomcat6 + solr</title>
     <link rel="canonical" href="http://tarunjangra.com/2010/03/10/Solr-setup-debian-(lenny)-tomcat6-solr.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico?f8a10ab">
+    <link rel="shortcut icon" href="/favicon.ico?69f019d">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -72,7 +72,7 @@ search utility. First i am going to explain how to install solr with tomcat6.x. 
 <p>Well i used to setup openjdk and openjre on my lenny server. It is quite easy to use debian package manager. You can install 
 is using</p>
 
-
+<pre>apt-get install openjdk-6-jre, openjdk-6-jdk</pre>
 
 <p>And i was installed with all jdk and jre environment. You may need to setup JAVA_HOME environment variable if you do not wish 
 to install JDK at default location. You can do this in “.profile” located under your home or “/etc/profile” to make it enable for 
@@ -84,7 +84,8 @@ all available users.</p>
 So my location of all tomcat binaries was “/usr/local/tomcat”. That’s it, you have done with tomcat installation. 
 You can start tomcat as:</p>
 
-
+<pre>cd /usr/local/tomcat/bin/
+./startup.sh</pre>
 
 <p>Now put localhost:8080 in your browser. You will see the response of tomcat server. Now next step is to install solr 
 as a tomcat application. It needs some configurations.</p>
@@ -93,23 +94,30 @@ as a tomcat application. It needs some configurations.</p>
 
 <p>Download apache solr and unzip it at any accessible location. Now create some directories under tomcat as</p>
 
-
+<pre>mkdir /usr/local/tomcat/data/solr/elgg/conf -p
+mkdir /usr/local/tomcat/data/solr/elgg/data -p</pre>
 
 <p>Now we need to copy “apache-solr-1.4.0.war” file for tomcat deployment. Go to the directory where you unzip the solr file. 
 i found that file as “/apache-solr-1.4.0/dist/apache-solr-1.4.0.war”.</p>
 
-
+<pre>cp apache-solr-1.4.0/dist/apache-solr-1.4.0.war /usr/local/tomcat/data/solr</pre>
 
 <p>Now, in /usr/local/tomcat/conf/Catalina/localhost we need to create and save a files which will be read the next time you 
 start Tomcat, and properly deploy Solr. Use a text editor of your choice and create a files name “solrelgg.xml” in the 
 /usr/local/tomcat/conf//Catalina/localhost subdirectory. Put the contents as follow</p>
 
-
+<pre>&lt;Context docBase=”/usr/local/tomcat/data/solr/apache-solr-1.4.0.war” 
+debug=”0″ crossContext=”true”&gt;
+&lt;Environment name=”solr/home” type=”java.lang.String” 
+value=”/usr/local/tomcat/data/solr/elgg” override=”true” /&gt;
+&lt;/Context&gt;</pre>
 
 <p>Now go to “apache-solr-1.4.0/example/solr/conf” and copy all default configuration files in to our configured configuration
  directory under tomcat.</p>
 
-
+<pre>cd apache-solr-1.4.0/example/solr/conf
+cp * -R /usr/local/tomcat/data/solr/elgg/conf
+cd /usr/local/tomcat/data/solr/elgg/conf</pre>
 
 <p>Now edit “solrconfig.xml” and find “solr.data.dir” parameter. Change it’s value to new data directory. I gave relative path like “
 ../data” So now it was pointing to new data directory “/usr/local/tomcat/data/solr/elgg/data”. Well this edit is an optional 

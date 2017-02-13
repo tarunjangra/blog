@@ -6,7 +6,7 @@
     <title>How to create custom amazon AMI throught CLI Commands</title>
     <link rel="canonical" href="http://tarunjangra.com/2011/05/11/how-to-create-custome-amazon-AMI.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico?f8a10ab">
+    <link rel="shortcut icon" href="/favicon.ico?69f019d">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -64,22 +64,32 @@ instance and you also have your private key and certificate downloaded on some l
 
 <p>Upload your private key and certificate on the running instance.</p>
 
-
+<pre>scp -i path/of/yourkeypair.pem path/of/cert.pem /mnt
+scp -i path/of/yourkeypair.pem path/of/pk.pem /mnt</pre>
 
 <p>Login to your instance and check if uploaded files are available in /mnt.</p>
 
-
+<pre>ec2-bundle-vol 
+-d /mnt -k /mnt/pk.pem 
+-c /mnt/cert.pem 
+-u 673491274719 
+-p name-of-ami</pre>
 
 <p>This will take some time and create the desired ami to be uploaded in the bucket. So you can use that later anytime you need.
 Now upload your bundle to amazon s3 storage.</p>
 
-
+<pre>ec2-upload-bundle 
+-b &lt;S3-bucket-name&gt; 
+-m /mnt/name-of-ami.manifest.xml 
+-a &lt;AWS-access-key-id&gt; 
+-s  &lt;AWS-secret-access-key&gt; 
+--location US-EAST-1C</pre>
 
 <p>Note: Remember to upload to an S3 bucket in correct region. Also: if the bucket does not exit, it will be created for you. 
 (I’ve used a European bucket as an example.)
 Now we need to register AMI. Do following&lt; br /&gt;</p>
 
-
+<pre>ec2-register &lt;bucket-name&gt;/sampleimage.manifest.xml --region US-EAST-1C</pre>
 
 <p>It will return the new AMI ID (like ami-).
 That’s it you are done with your custom ami.</p>

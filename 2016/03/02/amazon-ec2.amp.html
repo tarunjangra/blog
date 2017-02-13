@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Amazon Elastic Cloud Computing (EC2)</title>
+    <link rel="canonical" href="http://tarunjangra.com/2016/03/02/amazon-ec2.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico?69f019d">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "http://tarunjangra.com/2016/03/02/amazon-ec2.html"
+        },
+        "headline": "Amazon Elastic Cloud Computing (EC2)",
+        "image": {
+          "@type": "ImageObject",
+          "url": "http://tarunjangra.com/images/about/tarun-jangar-600x600.jpg",
+          "height": 600,
+          "width": 600
+        },
+        "datePublished": "2016-03-02",
+        "dateModified": "2016-03-02",
+        "author": {
+          "@type": "Person",
+          "name": "Tarun Jangra"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "tarunjangra.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "http://tarunjangra.com/about/tarun-jangra-500x500.jpg",
+            "width": 500,
+            "height": 500
+          }
+        },
+        "description": "Amazon Elastic Cloud Computing (EC2) which is highly Optimized 
+virtualization of operating systems running distributedly
+",
+        "keywords": ["tarun jangra", "EC2", "AWS"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom="amp-custom">
+      body { padding: 2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <h1>Amazon Elastic Cloud Computing (EC2)</h1>
+      <p>Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides re-sizable compute capacity in the cloud. 
+Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale 
+capacity, both up and down, as your computing requirements change.</p>
+
+
+
+
+
+<p>We are working from last 10 years in IT I remember time where if we needed a new Active Directory Server or a new SQL Server 
+we have to go to HP or go to DELL order new servers. we then had to get deliver to our data centers. we had to get racked.
+ we had to do the networking setup them the internet accessible etc and you know your provisioning time should be anywhere
+  from 5 to 10 business days. </p>
+
+<p>Then i started public cloud and was really exciting to see the capabilities of cloud in step having of 5 to 10 days 
+  lead time you would reduce to literally just couple of minutes you can have that server up and running so that's 
+  really how cloud computing change the IT industry in the last 5 to 10 years so Amazon EC2 changes the economics of 
+  computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools 
+  to build failure resilient applications and isolate themselves from common failure scenarios. So we just look at the first 
+  section the advantage of the cloud computing is utility based model you can pay only by the hour. If you want to spin up 
+  the development environment and just test on it and then terminate you only pay for 1 or 2 hours the environment is live 
+  the old model way you would buy the server hardware you would be stuck with it.</p>
+
+<h2 id="elastic-compute-cloud-pricing-options">Elastic Compute Cloud Pricing Options</h2>
+
+<ol>
+<li>
+<strong>Free Tier</strong> you get 735 hours free on certain micro instances.</li>
+<li>
+<strong>On Demand</strong> Which allow you to pay a fixed rate by the hour with no commitment.</li>
+<li>
+<strong>Reserved</strong> Which provide you with a capacity reservation, and offer a significant discount on the hourly charge for 
+an instance. Then you have 1 Year or 3 Year Terms so reserved just saying i need 10 servers of this size and i am willing 
+to pay either up-front contractual willing to commit for 1 to 3 years and if you do use reserved instances then you get 
+massive discounts compared with on demand.</li>
+<li>
+<strong>Spot</strong> This is enable you to bid whatever price you want to pay for instance capacity, providing for even greater savings 
+if your applications have flexible start and end times.</li>
+</ol>
+
+<h2 id="elastic-compute-cloud-on-demand-vs-reserved-vs-spot">Elastic Compute Cloud On Demand vs Reserved vs Spot</h2>
+
+<ol>
+<li>
+<strong>On Demand Instances</strong>
+
+<ul>
+<li>Users that want the low cost and flexibility of Amazon EC2 without any up-front payment or long-term commitment.</li>
+<li>Applications with short term, spike, or unpredictable workloads that cannot be interrupted.</li>
+<li>Applications being developed or tested on Amazon EC2 for the first time.</li>
+</ul>
+</li>
+<li>
+<strong>Reserved Instances</strong>
+
+<ul>
+<li>Applications with steady state or predictable usage so reserved might be your 3 or 4 web servers that you always want 
+to turned on and then your on demand instances might be is the part of an auto scaling event.</li>
+<li>Applications that require reserved capacity.</li>
+<li>Users able to make upfront payment to reduce their total computing costs even further.</li>
+</ul>
+</li>
+<li>
+<strong>Spot Instances</strong>
+
+<ul>
+<li>Applications that have flexible start and end times.</li>
+<li>Applications that are only feasible at very low compute prices.</li>
+<li>Users with urgent computing needs for large amounts  of additional capacity.</li>
+</ul>
+</li>
+</ol>
+
+<h2 id="elastic-compute-cloud-nbsp-on-demand-instances">Elastic Compute Cloud On Demand Instances**</h2>
+
+<ol>
+<li>General Purpose Instances</li>
+<li>Compute Optimized Instances
+
+<ul>
+<li>Compute Intensive Applications</li>
+</ul>
+</li>
+<li>Memory Optimized Instances
+
+<ul>
+<li>Database &amp; Memory Caching Applications</li>
+</ul>
+</li>
+<li>GPU Instances Instances
+
+<ul>
+<li>High Performance Parallel Computing (eg Hadoop)</li>
+</ul>
+</li>
+<li>Storage Optimized Instances
+
+<ul>
+<li>Data warehousing and Parallel Computing</li>
+</ul>
+</li>
+</ol>
+
+<h2 id="local-instance-storage-vs-elastic-block-storage">Local Instance Storage vs Elastic Block Storage</h2>
+
+<ol>
+<li>
+<strong>Local Instance Storage</strong>: Data stored on a local instance store will persist only as long as that instance is alive. So you terminate that 
+Instances you loose all the data on that virtual hardware.</li>
+<li>
+<strong>Elastic Block Storage Backed Storage</strong>: Data that is stored on an Amazon Elastic Block Storage volume will persist independently of the life of the instance.</li>
+</ol>
+
+<h2 id="storage-backed-by-elastic-block-storage">Storage backed by Elastic Block Storage</h2>
+
+<ol>
+<li>
+<strong>Provisioned IOPS Solid State Drive</strong>
+
+<ul>
+<li>Designed for I/O intensive applications such as large relational or No-SQL databases.</li>
+</ul>
+</li>
+<li>
+<strong>General purpose Solid State Drive</strong>
+
+<ul>
+<li>Designed for 99.999% availability.</li>
+<li>Ratio of 3 IOPS per GB, offer single digit millisecond latency, and also have the ability to burst up to 3000 IOPS 
+for short periods.</li>
+</ul>
+</li>
+<li>
+<strong>Magnetic</strong>
+
+<ul>
+<li>Lowest cost per gigabyte of all Elastic Block Storage volume types. Magnetic volumes are ideal for workloads where data 
+is accessed infrequently, and applications where the lowest storage cost is important.</li>
+</ul>
+</li>
+</ol>
+
+    </article>
+  </body>
+</html>

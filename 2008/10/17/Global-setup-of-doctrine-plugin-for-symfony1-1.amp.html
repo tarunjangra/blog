@@ -6,7 +6,7 @@
     <title>Global setup of doctrine plugin for symfony1.1.</title>
     <link rel="canonical" href="http://tarunjangra.com/2008/10/17/Global-setup-of-doctrine-plugin-for-symfony1-1.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico?f8a10ab">
+    <link rel="shortcut icon" href="/favicon.ico?69f019d">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -62,15 +62,26 @@ avaialble version.
 <p>I have ubuntu 8.04 LTS box. Default symfony installation is located under “/usr/share/php/symfony/”. Locate whatever your 
 installation directory of symfony and type following commands:</p>
 
-
+<pre>$ cd /usr/share/php/symfony/
+$ svn co \
+http://svn.symfony-project.com/plugins/sfDoctrinePlugin/branches/1.1 \
+plugins/sfDoctrinePlugin
+$ cd plugins/sfDoctrinePlugin/config
+$ vi autoload.yml</pre>
 
 <p>do following modifications</p>
 
-
+<pre>#path:       &lt;?php echo realpath(dirname(__FILE__) . '/../lib') . "\n"; ?&gt;
+path:       %SF_SYMFONY_LIB_DIR%/plugins/sfDoctrinePlugin/lib</pre>
 
 <p>Then save that file and create new file “config.php” with the following script</p>
 
-
+<pre>set_include_path(
+  get_include_path().
+  PATH_SEPARATOR.dirname(__FILE__).
+  '/../lib/'.
+  PATH_SEPARATOR.sfConfig::get('sf_root_dir')
+  );</pre>
 
 <p>Now doctrine plugin will be available for all of your projects located on same shared server.</p>
 
