@@ -16,6 +16,24 @@ keywords:
   - articles about software development
   - articles about programming
 exclude_from_search: true
+script: |
+  $(
+    function() {
+      total = 0;
+      $('.comment-count:last-child').bind(
+        'DOMSubtreeModified',
+        function() {
+          var m = /(\d+ ).*/.exec($(this).html());
+          if (m) {
+            total += m[1];
+          }
+        }
+      )
+      $('#total_comments').html(
+        ' (' + total + ' comments total)'
+      );
+    }
+  );
 ---
 
 All tags (alphabetic order):
@@ -26,7 +44,7 @@ Intensity of writing:
 
 {% figure /stats.svg 700 %}
 
-This is a full list of blogs published:
+This is a full list of blogs published: <span id="total_comments"></span>:
 
 {{ site.posts | tagged_list }}
 

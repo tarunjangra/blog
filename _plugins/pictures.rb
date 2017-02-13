@@ -28,9 +28,6 @@ module Yegor
       else
         @url = src
       end
-      if !@url.start_with?('http')
-        @url = "http://tarunjangra.com#{@url}";
-      end
     end
     def to_s
       CGI.escapeHTML(@url)
