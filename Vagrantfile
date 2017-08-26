@@ -30,7 +30,7 @@ config.vm.post_up_message = "Provisioning environment #{options['environment']}"
 config.vm.provision 'shell', path: 'provision/rvm.sh', args: "stable", privileged: false
 config.vm.provision 'shell', path: 'provision/ruby.sh', args: '2.2.7',privileged: false
 config.vm.provision 'shell', path: 'provision/ruby.sh', args: '2.2.2 rails haml',privileged: false
-config.vm.provision 'shell', path: 'provision/install.sh', args: [options['timezone'], options['environment'], options['username'], options['group']]
+config.vm.provision 'shell', path: 'provision/install.sh', args: [options['timezone'], options['environment'], options['username'], options['group']], run: 'always'
 # network settings
 config.vm.network 'private_network', ip: options['ip']
 end
