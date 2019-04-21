@@ -50,6 +50,8 @@ Technofox LLC.
 
 Beside that, i'm Engineering co-founder at [yoursports.com](https://www.yoursports.com)
 
+I found [Toptal](https://www.toptal.com), an exclusive community of world class programmers. Where I got my postion as well.
+
 Once a month I send a summary email of my writing activity. If
 you're interested to know what's going on here, I can add you to my
 mailing list. Just give me your email address and briefly explain who are
