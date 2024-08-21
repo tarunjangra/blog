@@ -7,8 +7,8 @@ description: |
   Tarun Jangra is a programmer, software architect, writer, blogger,
   project manager, CEO, seed investor and entrepreneur.
 keywords:
-  - PHP, Ruby, Go, Typescrip, Javascript
-  - TypeScript
+  - PHP, Ruby, Go, Typescript, Javascript
+  - NestJS, NextJS, React
   - tarun jangra
   - quality of software
   - software blog
