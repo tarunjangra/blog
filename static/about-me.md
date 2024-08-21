@@ -8,7 +8,7 @@ description: |
   project manager, CEO, seed investor and entrepreneur.
 keywords:
   - PHP, Ruby, Go, Typescrip, Javascript
-  - programming
+  - TypeScript
   - tarun jangra
   - quality of software
   - software blog
@@ -20,55 +20,31 @@ exclude_from_search: true
 
 {% badge /images/about/tarun-jangra.jpg %}
 
-This is Tarun Jangra, a programmer, a founder and an investor.
+Accomplished senior software engineer offering over 10+ years of demonstrated career success architecting and developing cutting edge web applications, APIs, Server Scripts. Extensive experience leading and collaborating with development teams in a vast range of industries and foremost technologies. Determined leader of software initiatives in organisations of various sizes. Results driven professional, recognised for taking on major initiatives, adapting to rapidly changing environments and resolving mission critical issues to ensure bottom line success.
 
-As a **programmer** I have started my journey in 2002 when i earned
-"Oracle Certified Professional Developer 6i" during my Gradution.
-Since then, i've worked/learned different streams (Designing, Programming, Server 
-Administration) of computer science according to the demand of my job. 
-Here i do [poetry](https://github.com/tarunjangra) mostly in PHP, but also in Ruby,
-JavaScript, Go and Typescript.
+Expertise in:
+1. Distributed Computing Platforms { Elasticsearch, Algolia, MongoDB, NoSQL technologies, EC2, node.js, Gearman}
+2. Web Servers (Nginx, Nginx Push module for long polling, Apache, Lighttpd)
+3. Cloud Computing {AWS, Google Cloue Engine}
+4. Orchestration {Chef, Docker, Vagrant}
+5. Continuous Integration {Jenkin, CodeShip, travis ci}
+6. Operating Systems { Debian, CentOs, Ubuntu} 
+7. Programming Languages, {Go, C/C++, Java} 
+8. Scripting Languages, {Ruby, PHP, Bash script, JavaScript, TypeScript}
 
-I'm very much passionate about Servers complex environment. That's how i've earned Amazon Certifications. Now i'm Amazon Certified Solution Architect and Amazon Certified Developer. I love to extend such skills by keep working in different direction of DevOps using Chef, Docker, Ansible and so on.
+Contributed to:
+1. As Ruby mentor at rubylearning.org
+2. Elgg platform, we have delivered more than 15 plugins. izap_videos is one which is in top 5 recommended and top 5 downloaded.
 
-I'm a Engineering co-founder and a lead architect of
-[yoursports.com](https://www.yoursports.com) 
-
-I'm an Oracle Certified Professional Since 2002
-([OCP Forms 6i Developer Tracke](https://blogs.oracle.com/certification/entry/oracle_retires_oracle_internet)).
-
-Besides that, I'm a proud holder of 
-[Amazon Solution Architect - Associate in Feb 2016](https://aws.amazon.com/certification/certified-solutions-architect-associate/),
-[Amazon Developer Certified - Associate in Dec 2015](https://aws.amazon.com/certification/certified-developer-associate/).
-
-As a **founder** have founded [iZAP.in](http://www.izap.in/),
-a software development company providing full stack solutions
-Which was mainly focused on app development, Recently (Feb 2016) i've founded
-[Technofox LLC](https://www.corporationwiki.com/p/2mw88u/technofox-llc) in
-California. And we are trying to provide exclusive DevOps Services through
-Technofox LLC.
-
-Beside that, i'm Engineering co-founder at [yoursports.com](https://www.yoursports.com)
-
-[Toptal Devops skill](https://www.toptal.com/devops), an exclusive community of world class programmers.
-
-Once a month I send a summary email of my writing activity. If
-you're interested to know what's going on here, I can add you to my
-mailing list. Just give me your email address and briefly explain who are
-you and why you're interested (I'm trying to avoid anonymous
-subscribers in my list).
-
-<form class="unprintable" action="http://formspree.io/blog@tarunjangra.com" method="POST"><fieldset id="form">
-  <input type="hidden" name="_next" value="http://www.tarunjangra.com/subscribed.html"/>
-  <input type="hidden" name="_subject" value="subscribe me"/>
-  <input type="hidden" name="_format" value="text"/>
-  <label for="email">Your email</label>
-  <input id="email" class="field field-text" name="email" size="25" maxlength="255" type="email" required="required"/>
-  <label for="reason">Who are you? Why interested?</label>
-  <textarea id="reason" cols="50" name="reason" class="field field-text" rows="4" required="required"></textarea>
-  <label for="subscribe">&nbsp;</label>
-  <button id="subscribe" class="field">Subscribe</button>
-  <span class="note">1000+ Happy Subscribers and Counting...</span>
-</fieldset></form>
-
-You can always [unsubscribe](/unsubscribe.html).
+Conferences i've attended so far.
+* 2017: Attended Google Cloud Next (Kubernet & Containerisation ) in San Francisco, CA
+* 2015: Attended DockerConf 2015 In San Francisco.
+* 2015: Attended at GopherConf 2015 In Denver.
+* 2014: Attended at RubyConfIndia @Goa.
+* 2013: Attended at RubyConfIndia @Pune.
+* 2013: Attended at Cloud AWS summit @Delhi.
+* 2012: Attended at QT Conf @Bangalore. 
+* 2010: Business Technology Summit on Cloud computing, Virtualization and Emerging Technologies on the SOA front 
+* 2009: Attended Training on Integration and portal development using Weblogic platform. 
+* 2009: Attended Training on Embedded Linux development. 
+* 2009: Attended Training on Device Driver development for Linux.
